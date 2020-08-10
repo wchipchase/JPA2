@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="0" runstate="Runnable" testcasecount="46" result="Failed" total="12" passed="9" failed="3" inconclusive="0" skipped="0" asserts="22" engine-version="3.11.1.0" clr-version="4.0.30319.42000" start-time="2020-07-28 15:07:53Z" end-time="2020-07-28 15:13:37Z" duration="344.419183">
+  <command-line><![CDATA["C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\packages\NUnit.ConsoleRunner.3.11.1\tools\nunit3-console.exe" C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\bin\Debug\AutomationTests.exe --where "cat == 'smoketest'"]]></command-line>
+  <filter>
+    <cat>smoketest</cat>
+  </filter>
+  <test-suite type="Assembly" id="0-1053" name="AutomationTests.exe" fullname="C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\bin\Debug\AutomationTests.exe" runstate="Runnable" testcasecount="46" result="Failed" site="Child" start-time="2020-07-28 15:07:53Z" end-time="2020-07-28 15:13:37Z" duration="343.946702" total="12" passed="9" failed="3" warnings="0" inconclusive="0" skipped="0" asserts="22">
+    <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18363.0" platform="Win32NT" cwd="C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\packages\NUnit.ConsoleRunner.3.11.1\tools" machine-name="LT-IS-WCHIPCHAS" user="wchipchase" user-domain="NSANET" culture="en-US" uiculture="en-US" os-architecture="x86" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\packages\NUnit.ConsoleRunner.3.11.1\tools" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.5.2" />
+      <setting name="ImageRequiresX86" value="True" />
+      <setting name="RunAsX86" value="True" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="RuntimeFramework" value="net-4.0" />
+      <setting name="NumberOfTestWorkers" value="12" />
+    </settings>
+    <properties>
+      <property name="_PID" value="17544" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestSuite" id="0-1054" name="AutomationTests" fullname="AutomationTests" runstate="Runnable" testcasecount="46" result="Failed" site="Child" start-time="2020-07-28 15:07:53Z" end-time="2020-07-28 15:13:37Z" duration="343.936914" total="12" passed="9" failed="3" warnings="0" inconclusive="0" skipped="0" asserts="22">
+      <properties />
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="0-1000" name="PartnerPortal" fullname="AutomationTests.PartnerPortal" classname="AutomationTests.PartnerPortal" runstate="Runnable" testcasecount="12" result="Failed" site="Child" start-time="2020-07-28 15:07:53Z" end-time="2020-07-28 15:13:37Z" duration="343.935019" total="12" passed="9" failed="3" warnings="0" inconclusive="0" skipped="0" asserts="22">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="0-1007" name="AddAMemberPartnerPortal" fullname="AutomationTests.PartnerPortal.AddAMemberPartnerPortal" methodname="AddAMemberPartnerPortal" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="510606980" result="Passed" start-time="2020-07-28 15:07:53Z" end-time="2020-07-28 15:08:30Z" duration="36.894029" asserts="0">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <output><![CDATA[CF Cookie is null. Obtaining JWT.
+magicCookie: 
+]]></output>
+        </test-case>
+        <test-case id="0-1010" name="AddAMemberPartnerPortalDifferentSponsor" fullname="AutomationTests.PartnerPortal.AddAMemberPartnerPortalDifferentSponsor" methodname="AddAMemberPartnerPortalDifferentSponsor" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="730658190" result="Failed" label="Error" start-time="2020-07-28 15:08:30Z" end-time="2020-07-28 15:09:10Z" duration="39.390505" asserts="0">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <failure>
+            <message><![CDATA[System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
+  ----> OpenQA.Selenium.ElementNotInteractableException : element not interactable
+  (Session info: chrome=84.0.4147.89)]]></message>
+            <stack-trace><![CDATA[   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OpenQA.Selenium.Support.PageObjects.WebDriverObjectProxy.InvokeMethod(IMethodCallMessage msg, Object representedValue)
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OpenQA.Selenium.IWebElement.Click()
+   at AutomationTests.PageActions.PartnerPortal.TeamActions.FillOutContactFormAndSubmitApplicationOtherSponsor() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\PartnerPortal\TeamActions.cs:line 105
+   at AutomationTests.PartnerPortal.AddAMemberPartnerPortalDifferentSponsor() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 124
+--ElementNotInteractableException
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()]]></stack-trace>
+          </failure>
+          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
+]]></output>
+        </test-case>
+        <test-case id="0-1005" name="CustomerFilterValidation" fullname="AutomationTests.PartnerPortal.CustomerFilterValidation" methodname="CustomerFilterValidation" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="684799979" result="Passed" start-time="2020-07-28 15:09:10Z" end-time="2020-07-28 15:09:24Z" duration="14.549083" asserts="0">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
+]]></output>
+        </test-case>
+        <test-case id="0-1009" name="GuestCheckoutPremiumCapsulesVisa" fullname="AutomationTests.PartnerPortal.GuestCheckoutPremiumCapsulesVisa" methodname="GuestCheckoutPremiumCapsulesVisa" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="245829586" result="Passed" start-time="2020-07-28 15:09:24Z" end-time="2020-07-28 15:10:03Z" duration="38.537473" asserts="11">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
+1
+]]></output>
+        </test-case>
+        <test-case id="0-1008" name="PurchaseProductsASLoggedInAssociate" fullname="AutomationTests.PartnerPortal.PurchaseProductsASLoggedInAssociate" methodname="PurchaseProductsASLoggedInAssociate" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="521356731" result="Passed" start-time="2020-07-28 15:10:03Z" end-time="2020-07-28 15:10:47Z" duration="44.152014" asserts="3">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
+]]></output>
+        </test-case>
+        <test-case id="0-1006" name="PurchaseProductsWithInvalidCC" fullname="AutomationTests.PartnerPortal.PurchaseProductsWithInvalidCC" methodname="PurchaseProductsWithInvalidCC" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1259269817" result="Passed" start-time="2020-07-28 15:10:47Z" end-time="2020-07-28 15:11:05Z" duration="18.469742" asserts="3">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
+]]></output>
+        </test-case>
+        <test-case id="0-1012" name="SwitchCountryInCart" fullname="AutomationTests.PartnerPortal.SwitchCountryInCart" methodname="SwitchCountryInCart" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="897826462" result="Passed" start-time="2020-07-28 15:11:05Z" end-time="2020-07-28 15:11:19Z" duration="13.245990" asserts="1">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
+]]></output>
+        </test-case>
+        <test-case id="0-1002" name="TeamFilterValidation" fullname="AutomationTests.PartnerPortal.TeamFilterValidation" methodname="TeamFilterValidation" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="231745174" result="Failed" label="Error" start-time="2020-07-28 15:11:19Z" end-time="2020-07-28 15:11:50Z" duration="30.929618" asserts="0">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <failure>
+            <message><![CDATA[System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
+  ----> OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <span class="a-button__inner">...</span> is not clickable at point (1088, 288). Other element would receive the click: <div aria-hidden="true" class="m-accordion__content js-m-accordion__content" id="position">...</div>
+  (Session info: chrome=84.0.4147.89)]]></message>
+            <stack-trace><![CDATA[   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OpenQA.Selenium.Support.PageObjects.WebDriverObjectProxy.InvokeMethod(IMethodCallMessage msg, Object representedValue)
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OpenQA.Selenium.IWebElement.Click()
+   at AutomationTests.PageActions.PartnerPortal.TeamActions.AddAndApplyFilters() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\PartnerPortal\TeamActions.cs:line 30
+   at AutomationTests.PartnerPortal.TeamFilterValidation() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 36
+--ElementClickInterceptedException
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()]]></stack-trace>
+          </failure>
+          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
+]]></output>
+        </test-case>
+        <test-case id="0-1011" name="ValdiateContactForm" fullname="AutomationTests.PartnerPortal.ValdiateContactForm" methodname="ValdiateContactForm" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1724517648" result="Passed" start-time="2020-07-28 15:11:50Z" end-time="2020-07-28 15:11:57Z" duration="7.206476" asserts="1">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
+]]></output>
+        </test-case>
+        <test-case id="0-1001" name="ValidateDashboardCards" fullname="AutomationTests.PartnerPortal.ValidateDashboardCards" methodname="ValidateDashboardCards" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="121995617" result="Passed" start-time="2020-07-28 15:11:57Z" end-time="2020-07-28 15:12:33Z" duration="36.245223" asserts="3">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
+]]></output>
+        </test-case>
+        <test-case id="0-1004" name="ValidateDownloadCSV" fullname="AutomationTests.PartnerPortal.ValidateDownloadCSV" methodname="ValidateDownloadCSV" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="397127537" result="Passed" start-time="2020-07-28 15:12:33Z" end-time="2020-07-28 15:13:06Z" duration="32.768038" asserts="0">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
+]]></output>
+        </test-case>
+        <test-case id="0-1003" name="ValidatingFirstAndLastNameFilters" fullname="AutomationTests.PartnerPortal.ValidatingFirstAndLastNameFilters" methodname="ValidatingFirstAndLastNameFilters" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="2022087123" result="Failed" label="Error" start-time="2020-07-28 15:13:06Z" end-time="2020-07-28 15:13:37Z" duration="31.540943" asserts="0">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <failure>
+            <message><![CDATA[System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
+  ----> OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <span class="a-button__inner">...</span> is not clickable at point (932, 326). Other element would receive the click: <div class="m-loading-overlay m-loading-overlay--active m-loading-overlay--top-aligned">...</div>
+  (Session info: chrome=84.0.4147.89)]]></message>
+            <stack-trace><![CDATA[   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at OpenQA.Selenium.Support.PageObjects.WebDriverObjectProxy.InvokeMethod(IMethodCallMessage msg, Object representedValue)
+   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at OpenQA.Selenium.IWebElement.Click()
+   at AutomationTests.PageActions.PartnerPortal.TeamActions.ValidateNameFilter() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\PartnerPortal\TeamActions.cs:line 44
+   at AutomationTests.PartnerPortal.ValidatingFirstAndLastNameFilters() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 46
+--ElementClickInterceptedException
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()]]></stack-trace>
+          </failure>
+          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
