@@ -12,8 +12,10 @@ namespace AutomationTests.PageObjects.OmegaPage
 {
     class OmegaPageObjects
     {
-        public OmegaPageObjects()
+        Driver Driver;
+        public OmegaPageObjects(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 

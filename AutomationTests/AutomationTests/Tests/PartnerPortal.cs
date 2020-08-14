@@ -4,25 +4,61 @@ using AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAction
 using AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsActions;
 using AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMenuItemsActions.IndividualCapsuleActions;
 using NUnit.Framework;
+using System;
 using System.Threading;
 
 namespace AutomationTests
 {
-    [TestFixture]
+    [TestFixture, Parallelizable(ParallelScope.All)]
     class PartnerPortal
     {
+        [ThreadStatic]
+        static Driver Driver;
+        [ThreadStatic]
+        static LoginActions lgac;
+        [ThreadStatic]
+        static DashboardActions dbac;
+        [ThreadStatic]
+        static TeamActions tmac;
+        [ThreadStatic]
+        static CustomerActions csac;
+        [ThreadStatic]
+        static PPCartActions ppac;
+        [ThreadStatic]
+        static NavigationActions nav;
+        [ThreadStatic]
+        static CapsuleActions cpac;
+        [ThreadStatic]
+        static CartActions ctac;
+
+        [SetUp]
+        public void SetUpTest()
+        {
+            Driver = new Driver(Driver.BrowserType.Chrome);
+            Driver.WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            Driver.WebDriver.Manage().Window.Maximize();
+            Driver.WebDriver.Navigate().GoToUrl("https://www.staging.juiceplus.com/ie/en/");
+            lgac = new LoginActions(Driver);
+            dbac = new DashboardActions(Driver);
+            tmac = new TeamActions(Driver);
+            csac = new CustomerActions(Driver);
+            ppac = new PPCartActions(Driver);
+            nav = new NavigationActions(Driver);
+            cpac = new CapsuleActions(Driver);
+            ctac = new CartActions(Driver);
+        }
 
         [Test]
         [Category("smoketest")]
         [Category("alltest")]
         public void ValidateDashboardCards()
         {
-            LoginActions.LoginAsPartner();
-            DashboardActions.ValidatePerformanceBonusCard();
+            lgac.LoginAsPartner();
+            dbac.ValidatePerformanceBonusCard();
             Thread.Sleep(2000);
-            DashboardActions.ValidatePromoteOutBonusCard();
+            dbac.ValidatePromoteOutBonusCard();
             Thread.Sleep(2000);
-            DashboardActions.ValidateComissionCard();
+            dbac.ValidateComissionCard();
         }
 
         [Test]
@@ -30,10 +66,10 @@ namespace AutomationTests
         [Category("alltest")]
         public void TeamFilterValidation()
         {
-            LoginActions.LoginAsPartner();
-            TeamActions.NavigateToTeams();
-            TeamActions.ClickFilterButton();
-            TeamActions.AddAndApplyFilters();
+            lgac.LoginAsPartner();
+            tmac.NavigateToTeams();
+            tmac.ClickFilterButton();
+            tmac.AddAndApplyFilters();
         }
 
         [Test]
@@ -41,9 +77,9 @@ namespace AutomationTests
         [Category("alltest")]
         public void ValidatingFirstAndLastNameFilters()
         {
-            LoginActions.LoginAsPartner();
-            TeamActions.NavigateToTeams();
-            TeamActions.ValidateNameFilter();
+            lgac.LoginAsPartner();
+            tmac.NavigateToTeams();
+            tmac.ValidateNameFilter();
         }
 
         [Test]
@@ -51,9 +87,9 @@ namespace AutomationTests
         [Category("alltest")]
         public void ValidateDownloadCSV()
         {
-            LoginActions.LoginAsPartner();
-            TeamActions.NavigateToTeams();
-            TeamActions.ClickDownloadAndSelectCSV();
+            lgac.LoginAsPartner();
+            tmac.NavigateToTeams();
+            tmac.ClickDownloadAndSelectCSV();
         }
 
         [Test]
@@ -61,10 +97,10 @@ namespace AutomationTests
         [Category("alltest")]
         public void CustomerFilterValidation()
         {
-            LoginActions.LoginAsPartner();
-            CustomerActions.NavigateToCustomers();
-            CustomerActions.ClickFilterButton();
-            CustomerActions.AddAndApplyFilters();
+            lgac.LoginAsPartner();
+            csac.NavigateToCustomers();
+            csac.ClickFilterButton();
+            csac.AddAndApplyFilters();
         }
 
         [Test]
@@ -72,12 +108,12 @@ namespace AutomationTests
         [Category("alltest")]
         public void PurchaseProductsWithInvalidCC()
         {
-            PPCartActions.NavigateToJuicePlusWebsite();
-            PPCartActions.AddProductsToCart();
-            PPCartActions.CheckoutWithItems();
-            PPCartActions.CheckoutLogin();
-            PPCartActions.FillInDeliveryAddressAndProceed();
-            PPCartActions.EnterInvalidPaymentInfoAndConfirmOrder();
+            ppac.NavigateToJuicePlusWebsite();
+            ppac.AddProductsToCart();
+            ppac.CheckoutWithItems();
+            ppac.CheckoutLogin();
+            ppac.FillInDeliveryAddressAndProceed();
+            ppac.EnterInvalidPaymentInfoAndConfirmOrder();
         }
 
         [Test]
@@ -85,10 +121,10 @@ namespace AutomationTests
         [Category("alltest")]
         public void AddAMemberPartnerPortal()
         {
-            LoginActions.LoginAsPartner();
-            TeamActions.NavigateToTeams();
-            TeamActions.ClickOnAddMemberAndFillOutPersonalForm();
-            TeamActions.FillOutContactFormAndSubmitApplication();
+            lgac.LoginAsPartner();
+            tmac.NavigateToTeams();
+            tmac.ClickOnAddMemberAndFillOutPersonalForm();
+            tmac.FillOutContactFormAndSubmitApplication();
         }
 
         [Test]
@@ -96,12 +132,12 @@ namespace AutomationTests
         [Category("alltest")]
         public void PurchaseProductsASLoggedInAssociate()
         {
-            PPCartActions.NavigateToJuicePlusWebsite();
-            PPCartActions.AddProductsToCart();
-            PPCartActions.CheckoutWithItems();
-            PPCartActions.CheckoutLogin();
-            PPCartActions.FillInDeliveryAddressAndProceed();
-            PPCartActions.EnterPaymentInfoAndConfirmOrder();
+            ppac.NavigateToJuicePlusWebsite();
+            ppac.AddProductsToCart();
+            ppac.CheckoutWithItems();
+            ppac.CheckoutLogin();
+            ppac.FillInDeliveryAddressAndProceed();
+            ppac.EnterPaymentInfoAndConfirmOrder();
         }
 
         [Test]
@@ -109,8 +145,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void GuestCheckoutPremiumCapsulesVisa()
         {
-            CapsuleActions.AddPremiumCapsuleToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            cpac.AddPremiumCapsuleToCart();
+            ctac.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -118,10 +154,10 @@ namespace AutomationTests
         [Category("alltest")]
         public void AddAMemberPartnerPortalDifferentSponsor()
         {
-            LoginActions.LoginAsPartner();
-            TeamActions.NavigateToTeams();
-            TeamActions.ClickOnAddMemberAndFillOutPersonalForm();
-            TeamActions.FillOutContactFormAndSubmitApplicationOtherSponsor();
+            lgac.LoginAsPartner();
+            tmac.NavigateToTeams();
+            tmac.ClickOnAddMemberAndFillOutPersonalForm();
+            tmac.FillOutContactFormAndSubmitApplicationOtherSponsor();
         }
 
         [Test]
@@ -129,7 +165,7 @@ namespace AutomationTests
         [Category("alltest")]
         public void ValdiateContactForm()
         {
-            NavigationActions.NavigateCompany_ContactUs();
+            nav.NavigateCompany_ContactUs();
         }
 
         [Test]
@@ -137,11 +173,11 @@ namespace AutomationTests
         [Category("alltest")]
         public void SwitchCountryInCart()
         {
-            PPCartActions.NavigateToJuicePlusWebsite();
-            PPCartActions.AddProductsToCart();
-            PPCartActions.CartIcon1();
-            PPCartActions.ChangeCountry();
-            PPCartActions.CartIcon0();
+            ppac.NavigateToJuicePlusWebsite();
+            ppac.AddProductsToCart();
+            ppac.CartIcon1();
+            ppac.ChangeCountry();
+            ppac.CartIcon0();
         }
 
         [Test]
@@ -149,11 +185,11 @@ namespace AutomationTests
         [Category("alltest")]
         public void SharedCartPortalOrders()
         {
-            LoginActions.LoginAsPartner();
-            CustomerActions.NavigateToCustomers();
-            CustomerActions.SelectFirstCustomer();
-            CustomerActions.SelectFirstCustomerDetails();
-            CustomerActions.SelectFirstCustomerOrders();
+            lgac.LoginAsPartner();
+            csac.NavigateToCustomers();
+            csac.SelectFirstCustomer();
+            csac.SelectFirstCustomerDetails();
+            csac.SelectFirstCustomerOrders();
         }
 
         [TearDown]

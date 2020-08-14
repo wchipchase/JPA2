@@ -12,8 +12,10 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CartPage
 {
     class CartPageObjects
     {
-        public CartPageObjects()
+        Driver Driver;
+        public CartPageObjects(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 
@@ -27,9 +29,9 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CartPage
 
         public void NavigateToProceedToCheckoutAndClick()
         {
-            CartPageObjects cpo = new CartPageObjects();
+            //CartPageObjects cpo = new CartPageObjects();
             IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
-            js.ExecuteScript("arguments[0].click();", cpo.ProceedToCheckoutButton);
+            js.ExecuteScript("arguments[0].click();", ProceedToCheckoutButton);
         }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.ClassName, Using = "o-cart-overview__title")]

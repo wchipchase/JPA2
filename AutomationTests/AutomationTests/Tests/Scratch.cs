@@ -28,16 +28,31 @@ using System.Threading.Tasks;
 
 namespace AutomationTests.Tests
 {
+    [TestFixture]
     class Scratch
     {
+        [ThreadStatic]
+        static Driver Driver;
+        [ThreadStatic]
+        static CustomerActions cust;
+        [ThreadStatic]
+        static LoginActions lact;
+
+        [SetUp]
+        public void SetUpTest()
+        {
+            Driver = new Driver(Driver.BrowserType.Chrome);
+            cust = new CustomerActions(Driver);
+            lact = new LoginActions(Driver);
+        }
         [Test]
         public void SwitchCountryInCart()
         {
-            LoginActions.LoginAsPartner();
-            CustomerActions.NavigateToCustomers();
-            CustomerActions.SelectFirstCustomer();
-            CustomerActions.SelectFirstCustomerDetails();
-            CustomerActions.SelectFirstCustomerOrders();
+            lact.LoginAsPartner();
+            cust.NavigateToCustomers();
+            cust.SelectFirstCustomer();
+            cust.SelectFirstCustomerDetails();
+            cust.SelectFirstCustomerOrders();
         }
         public void TearDown()
         {

@@ -13,10 +13,17 @@ namespace AutomationTests.PageActions
 {
     class ContactUsActions
     {
-        public static void AddNewValidMessage(string firstName, string lastName, string email, string phone,
+        Driver Driver;
+        ContactUsPageObjects contact;
+
+        public ContactUsActions(Driver driver)
+        {
+            Driver = driver;
+            contact = new ContactUsPageObjects(Driver);
+        }
+        public void AddNewValidMessage(string firstName, string lastName, string email, string phone,
             string address1, string address2, string city, string state, string zipcode, string message)
         {
-            ContactUsPageObjects contact = new ContactUsPageObjects();
             contact.FirstName.SendKeys(firstName);
             contact.LastName.SendKeys(lastName);
             contact.Email.SendKeys(email);
@@ -33,9 +40,8 @@ namespace AutomationTests.PageActions
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Thank you! We have received your message."));
         }
 
-        public static void AddNewInvalidMessage(string firstName)
+        public void AddNewInvalidMessage(string firstName)
         {
-            ContactUsPageObjects contact = new ContactUsPageObjects();
             contact.FirstName.SendKeys(firstName);
             contact.Send_Message_Btn.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Oops! You did not complete the form properly"));

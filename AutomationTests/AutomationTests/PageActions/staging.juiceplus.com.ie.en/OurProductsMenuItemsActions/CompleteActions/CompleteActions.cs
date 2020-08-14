@@ -18,18 +18,31 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 {
     class CompleteActions
     {
-        public static void AddCompleteJuicePlusShakesToCart()
+        Driver Driver;
+        NavigationHeaderPageObjects nav;
+        CompletePageObjects cpo;
+        LandingPageObjects lan;
+        CompleteOrderPageObjects copo;
+        CartPageObjects carp;
+        NavigationActions navac;
+
+        public CompleteActions(Driver driver)
+        {
+            Driver = driver;
+        }
+        public void AddCompleteJuicePlusShakesToCart()
         {
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-            CompletePageObjects cpo = new CompletePageObjects();
-            LandingPageObjects lan = new LandingPageObjects();
-            CompleteOrderPageObjects copo = new CompleteOrderPageObjects();
-            CartPageObjects carp = new CartPageObjects();
+            nav = new NavigationHeaderPageObjects(Driver);
+            cpo = new CompletePageObjects(Driver);
+            lan = new LandingPageObjects(Driver);
+            copo = new CompleteOrderPageObjects(Driver);
+            carp = new CartPageObjects(Driver);
+            navac = new NavigationActions(Driver);
 
             try
             {
-                NavigationActions.NavigateOurProductsCompleteClick();
+                navac.NavigateOurProductsCompleteClick();
                 
                 try
                 {
@@ -122,18 +135,13 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 
         }
 
-        public static void AddCompleteJuicePlusBarsToCart()
+        public void AddCompleteJuicePlusBarsToCart()
         {
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-            CompletePageObjects cpo = new CompletePageObjects();
-            LandingPageObjects lan = new LandingPageObjects();
-            CompleteOrderPageObjects copo = new CompleteOrderPageObjects();
-            CartPageObjects carp = new CartPageObjects();
 
             try
             {
-                NavigationActions.NavigateOurProductsCompleteClick();
+                navac.NavigateOurProductsCompleteClick();
 
                 try
                 {
@@ -226,17 +234,17 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 
         }
 
-        public static void AddCompleteVegetableSoupToCart()
+        public void AddCompleteVegetableSoupToCart()
         {
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-            CompletePageObjects cpo = new CompletePageObjects();
-            LandingPageObjects lan = new LandingPageObjects();
-            CompleteOrderPageObjects copo = new CompleteOrderPageObjects();
-            CartPageObjects carp = new CartPageObjects();
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            CompletePageObjects cpo = new CompletePageObjects(Driver);
+            LandingPageObjects lan = new LandingPageObjects(Driver);
+            CompleteOrderPageObjects copo = new CompleteOrderPageObjects(Driver);
+            CartPageObjects carp = new CartPageObjects(Driver);
             try
             {
-                NavigationActions.NavigateOurProductsCompleteClick();
+                navac.NavigateOurProductsCompleteClick();
 
                 try
                 {
@@ -329,18 +337,18 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 
         }
 
-        public static void AddCompleteCombiBoxToCart()
+        public void AddCompleteCombiBoxToCart()
         {
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-            CompletePageObjects cpo = new CompletePageObjects();
-            LandingPageObjects lan = new LandingPageObjects();
-            CompleteOrderPageObjects copo = new CompleteOrderPageObjects();
-            CartPageObjects carp = new CartPageObjects();
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            CompletePageObjects cpo = new CompletePageObjects(Driver);
+            LandingPageObjects lan = new LandingPageObjects(Driver);
+            CompleteOrderPageObjects copo = new CompleteOrderPageObjects(Driver);
+            CartPageObjects carp = new CartPageObjects(Driver);
 
             try
             {
-                NavigationActions.NavigateOurProductsCompleteClick();
+                navac.NavigateOurProductsCompleteClick();
 
                 try
                 {
@@ -434,18 +442,18 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 
         }
 
-        public static void AddCompleteBoosterToCart()
+        public void AddCompleteBoosterToCart()
         {
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-            CompletePageObjects cpo = new CompletePageObjects();
-            LandingPageObjects lan = new LandingPageObjects();
-            CompleteOrderPageObjects copo = new CompleteOrderPageObjects();
-            CartPageObjects carp = new CartPageObjects();
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            CompletePageObjects cpo = new CompletePageObjects(Driver);
+            LandingPageObjects lan = new LandingPageObjects(Driver);
+            CompleteOrderPageObjects copo = new CompleteOrderPageObjects(Driver);
+            CartPageObjects carp = new CartPageObjects(Driver);
 
             try
             {
-                NavigationActions.NavigateOurProductsCompleteClick();
+                navac.NavigateOurProductsCompleteClick();
 
                 try
                 {

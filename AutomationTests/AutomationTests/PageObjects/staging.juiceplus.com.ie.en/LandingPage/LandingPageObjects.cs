@@ -12,8 +12,10 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en
 {
     class LandingPageObjects
     {
-        public LandingPageObjects()
+        Driver Driver;
+        public LandingPageObjects(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 

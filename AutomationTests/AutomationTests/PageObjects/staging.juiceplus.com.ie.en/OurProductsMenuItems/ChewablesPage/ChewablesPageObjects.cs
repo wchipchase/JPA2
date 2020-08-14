@@ -12,8 +12,10 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.ChewablesPage
 {
     class ChewablesPageObjects
     {
-        public ChewablesPageObjects()
+        Driver Driver;
+        public ChewablesPageObjects(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 

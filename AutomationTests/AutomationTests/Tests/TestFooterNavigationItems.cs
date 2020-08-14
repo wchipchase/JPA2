@@ -12,32 +12,42 @@ namespace AutomationTests
 {
     class TestFooterNavigationItems
     {
-        NavigationActions nav = new NavigationActions();
+        [ThreadStatic]
+        static Driver Driver;
+        [ThreadStatic]
+        static NavigationActions nav;
+
+        [SetUp]
+        public void SetUpTest()
+        {
+            Driver = new Driver(Driver.BrowserType.Chrome);
+            nav = new NavigationActions(Driver);
+        }
 
         [Test]
         public void TestAllFooterNavigation()
         {
-            
-            NavigationActions.NavigateCompany_AboutUs();
-            NavigationActions.NavigateCompany_GivingBack();
-            NavigationActions.NavigateCompany_ContactUs();
-            NavigationActions.NavigateJuicePlus_HowCapsAreMade();
-            //NavigationActions.NavigateJuicePlus_ClinicalResearch();
+
+            nav.NavigateCompany_AboutUs();
+            nav.NavigateCompany_GivingBack();
+            nav.NavigateCompany_ContactUs();
+            nav.NavigateJuicePlus_HowCapsAreMade();
+            //nav.NavigateJuicePlus_ClinicalResearch();
             //NavigationActions.NavigateJuicePlus_InformedChoice();
-            NavigationActions.NavigateResources_OneSimpleChange();
-            NavigationActions.NavigateResources_HealthyStartforFamilies();
+            nav.NavigateResources_OneSimpleChange();
+            nav.NavigateResources_HealthyStartforFamilies();
             //NavigationActions.NavigateResources_LetsGoBeyond();
-            NavigationActions.NavigateTermsOfUse();
-            NavigationActions.NavigatePrivacyPolicy();
-            NavigationActions.NavigateReturnPolicy();
-            NavigationActions.NavigateTermsofService();
-            NavigationActions.NavigateCountrySelect();
+            nav.NavigateTermsOfUse();
+            nav.NavigatePrivacyPolicy();
+            nav.NavigateReturnPolicy();
+            nav.NavigateTermsofService();
+            nav.NavigateCountrySelect();
             Driver.WebDriver.Url = "https://www.staging.juiceplus.com/ie/en/";
-            NavigationActions.NavigateFacebookClick();
+            nav.NavigateFacebookClick();
             Driver.WebDriver.Url = "https://www.staging.juiceplus.com/ie/en/";
-            NavigationActions.NavigateInstagramClick();
+            nav.NavigateInstagramClick();
             Driver.WebDriver.Url = "https://www.staging.juiceplus.com/ie/en/";
-            NavigationActions.NavigateYoutubeClick();
+            nav.NavigateYoutubeClick();
             Driver.WebDriver.Url = "https://www.staging.juiceplus.com/ie/en/";
         }
 

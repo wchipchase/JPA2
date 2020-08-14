@@ -17,12 +17,17 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 {
     class NavigationActions
     {
-        
-        public static void NavigateOurProductsCapsulesClick()
+        Driver Driver;
+
+        public NavigationActions(Driver driver)
+        {
+            Driver = driver;
+        }
+        public void NavigateOurProductsCapsulesClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.OurProductsNavLink).Perform();
                 nav.OurProductsNavLink.Click();
@@ -38,12 +43,12 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
             
         }
 
-        public static void NavigateOurProductsOverViewClick()
+        public void NavigateOurProductsOverViewClick()
         {
 
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.OurProductsNavLink).Perform();
                 nav.OurProductsNavLink.Click();
@@ -57,11 +62,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
         }
 
 
-        public static void NavigateOurProductsChewablesClick()
+        public void NavigateOurProductsChewablesClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.OurProductsNavLink).Perform();
                 nav.OurProductsNavLink.Click();
@@ -75,11 +80,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateOurProductsOmegaClick()
+        public void NavigateOurProductsOmegaClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.OurProductsNavLink).Perform();
                 nav.OurProductsNavLink.Click();
@@ -93,11 +98,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateOurProductsCompleteClick()
+        public void NavigateOurProductsCompleteClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.OurProductsNavLink).Perform();
                 nav.OurProductsNavLink.Click();
@@ -111,11 +116,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateOurProductsUpliftClick()
+        public void NavigateOurProductsUpliftClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.OurProductsNavLink).Perform();
                 nav.OurProductsNavLink.Click();
@@ -129,11 +134,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateOurProductsWhatIsJuicePlusClick()
+        public void NavigateOurProductsWhatIsJuicePlusClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.OurProductsNavLink).Perform();
                 nav.OurProductsNavLink.Click();
@@ -149,11 +154,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
         }
 
 
-        public static void NavigateLiveBetterOverviewClick()
+        public void NavigateLiveBetterOverviewClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.LiveBetterNavigationLink).Perform();
                 nav.LiveBetterNavLink.Click();
@@ -167,11 +172,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateLiveBetterHealthyFamilyClick()
+        public void NavigateLiveBetterHealthyFamilyClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.LiveBetterNavLink).Perform();
                 nav.LiveBetterNavLink.Click();
@@ -187,11 +192,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         
 
-        public static void NavigateLiveBetterActiveLifestyleClick()
+        public void NavigateLiveBetterActiveLifestyleClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.LiveBetterNavLink).Perform();
                 nav.LiveBetterNavLink.Click();
@@ -205,11 +210,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateLiveBetterFeelGoodLookGoodClick()
+        public void NavigateLiveBetterFeelGoodLookGoodClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.LiveBetterNavLink).Perform();
                 nav.LiveBetterNavLink.Click();
@@ -223,11 +228,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateLiveBetterOneSimpleChangeClick()
+        public void NavigateLiveBetterOneSimpleChangeClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.LiveBetterNavLink).Perform();
                 nav.LiveBetterNavLink.Click();
@@ -241,11 +246,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateOurCommunityOverviewClick()
+        public void NavigateOurCommunityOverviewClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.OurCommunityNavLink).Perform();
                 nav.OurCommunityNavLink.Click();
@@ -259,11 +264,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateOurCommunityBlogClick()
+        public void NavigateOurCommunityBlogClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.OurCommunityNavLink).Perform();
                 nav.OurCommunityNavLink.Click();
@@ -277,11 +282,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateOurCommunityGivingBackClick()
+        public void NavigateOurCommunityGivingBackClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.OurCommunityNavLink).Perform();
                 nav.OurCommunityNavLink.Click();
@@ -295,11 +300,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateOurCommunityGoBeyondClick()
+        public void NavigateOurCommunityGoBeyondClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 //Actions action = new Actions(Driver.WebDriver);
                 //action.MoveToElement(nav.OurCommunityNavLink).Perform();
                 nav.OurCommunityNavLink.Click();
@@ -313,11 +318,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateJoinUsClick()
+        public void NavigateJoinUsClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 nav.JoinUsNavigationLink.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Join Us"));
             }
@@ -328,11 +333,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavSearchIconClick()
+        public void NavSearchIconClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 nav.SearchIcon.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Juice Plus+ Capsules"));
             }
@@ -342,11 +347,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
             }
         }
 
-        public static void NavLoginButtonClick()
+        public void NavLoginButtonClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 nav.LoginButton.Click();
                 //Assert.IsTrue(Driver.WebDriver.PageSource.Contains(""));
             }
@@ -357,11 +362,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavNewsletterClick()
+        public void NavNewsletterClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 nav.NewsletterLink.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains(""));
             }
@@ -372,11 +377,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavCartIconClick()
+        public void NavCartIconClick()
         {
             try
             {
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 nav.CartIconCounter.Click();
                 //Assert.IsTrue(Driver.WebDriver.PageSource.Contains("You have no itmes in your cart."));
             }
@@ -387,11 +392,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateFacebookClick()
+        public void NavigateFacebookClick()
         {
             try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.FacebookIcon);
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("facebook"));
@@ -403,11 +408,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateCountryClick()
+        public void NavigateCountryClick()
         {
             try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.IrelandFooter);
                 js.ExecuteScript("arguments[0].click();", nav.CountrySelectionUnitedKingdom);
@@ -420,11 +425,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateInstagramClick()
+        public void NavigateInstagramClick()
         {
             try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.InstagramIcon);
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("juiceplus_uk"));
@@ -436,11 +441,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateYoutubeClick()
+        public void NavigateYoutubeClick()
         {
             try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.YoutubeIcon);
                 //Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Juice PLUS+"));
@@ -452,11 +457,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateCompany_AboutUs()
+        public void NavigateCompany_AboutUs()
         {
             try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.AboutUsFooter);
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("About Juice Plus+"));
@@ -468,11 +473,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateCompany_GivingBack()
+        public void NavigateCompany_GivingBack()
         {
             try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.GivingBackFooter);
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Giving Back"));
@@ -484,25 +489,26 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateCompany_ContactUs()
+        public void NavigateCompany_ContactUs()
 
-        {try
+        {
+            try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.ContactUsFooter);
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Contact Us"));
             }
-        catch(Exception e)
+            catch(Exception e)
             {
                 Console.WriteLine(e);
             }
         }
 
-        public static void NavigateJuicePlus_HowCapsAreMade()
+        public void NavigateJuicePlus_HowCapsAreMade()
         {try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.HowCapsulesAreMadeFooter);
                 Thread.Sleep(5000);
@@ -515,11 +521,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateJuicePlus_ClinicalResearch()
+        public void NavigateJuicePlus_ClinicalResearch()
         {
             try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.ClinicalResearchFooter);
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Juice Plus+ Clinical Research"));
@@ -531,11 +537,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateJuicePlus_InformedChoice()
+        public void NavigateJuicePlus_InformedChoice()
         {
             try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.InformedChoiceFooter);
                 Driver.WebDriver.Close();
@@ -548,11 +554,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
             }
         }
 
-        public static void NavigateResources_OneSimpleChange()
+        public void NavigateResources_OneSimpleChange()
         {
             try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.OneSimpleChangeFooter);
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("One Simple Change"));
@@ -564,11 +570,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
             }
         }
 
-        public static void NavigateResources_HealthyStartforFamilies()
+        public void NavigateResources_HealthyStartforFamilies()
         {
             try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.HealthyStartsLink);
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Join the Study and enjoy free product for your child!"));
@@ -582,12 +588,12 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
 
 
-        public static void NavigateResources_LetsGoBeyond()
+        public void NavigateResources_LetsGoBeyond()
             
         {
             try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.GoBeyondFooter);
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Let's Go Beyond"));
@@ -599,11 +605,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateMore_TowerGarden()
+        public void NavigateMore_TowerGarden()
         {
             try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.TowerGardenFooter);
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Grow Your Own Food with Tower Garden"));
@@ -614,11 +620,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
             }
         }
 
-        public static void NavigateCountrySelect()
+        public void NavigateCountrySelect()
         {
             try
             {
-                NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.CountryLocationFooter);
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Choose your country and language"));
@@ -630,33 +636,33 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
 
         }
 
-        public static void NavigateTermsOfUse()
+        public void NavigateTermsOfUse()
         {
-            NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+            NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
             IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
             js.ExecuteScript("arguments[0].click();", nav.TermsOfUseFooter);
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Terms of Use"));
         }
 
-        public static void NavigatePrivacyPolicy()
+        public void NavigatePrivacyPolicy()
         {
-            NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+            NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
             IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
             js.ExecuteScript("arguments[0].click();", nav.PrivacyPolicyFooter);
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Privacy and Cookie Policy"));
         }
 
-        public static void NavigateReturnPolicy()
+        public void NavigateReturnPolicy()
         {
-            NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+            NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
             IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
             js.ExecuteScript("arguments[0].click();", nav.ReturnPolicyFooter);
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Return Policy"));
         }
 
-        public static void NavigateTermsofService()
+        public void NavigateTermsofService()
         {
-            NavigationFooterPageObjects nav = new NavigationFooterPageObjects();
+            NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
             IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
             js.ExecuteScript("arguments[0].click();", nav.TermsOfServiceFooter);
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Terms of Service Policy"));

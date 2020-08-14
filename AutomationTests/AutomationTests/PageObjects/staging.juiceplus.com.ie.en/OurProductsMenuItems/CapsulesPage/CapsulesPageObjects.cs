@@ -13,8 +13,10 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CapsulesPage
 {
     class CapsulesPageObjects
     {
-        public CapsulesPageObjects()
+        Driver Driver;
+        public CapsulesPageObjects(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 

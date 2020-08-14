@@ -11,8 +11,10 @@ namespace AutomationTests.PageObjects
 {
     class ContactUsPageObjects
     {
-        public ContactUsPageObjects()
+        Driver Driver;
+        public ContactUsPageObjects(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 

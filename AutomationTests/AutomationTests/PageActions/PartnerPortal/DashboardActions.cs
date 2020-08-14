@@ -2,6 +2,7 @@
 using AutomationTests.PageObjects.PartnerPortal;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,13 @@ namespace AutomationTests.PageActions.PartnerPortal
 {
     class DashboardActions
     {
-        public static IWebElement WaitUntilElementVisible(By elementLocator, int timeout = 10)
+        Driver Driver;
+        public DashboardActions(Driver driver)
+        {
+            Driver = driver;
+            //PageFactory.InitElements(Driver.WebDriver, this);
+        }
+        public IWebElement WaitUntilElementVisible(By elementLocator, int timeout = 10)
         {
             try
             {
@@ -27,30 +34,30 @@ namespace AutomationTests.PageActions.PartnerPortal
             }
         }
 
-        public static void ValidateComissionCard()
+        public void ValidateComissionCard()
         {
-            Dashboard dbo = new Dashboard();
+            Dashboard dbo = new Dashboard(Driver);
             dbo.ComissionsCard.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Personal Volume"));
         }
 
-        public static void ValidatePerformanceBonusCard()
+        public void ValidatePerformanceBonusCard()
         {
-            Dashboard dbo = new Dashboard();
+            Dashboard dbo = new Dashboard(Driver);
             dbo.PerformanceBonusCard.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Performance Bonus Qualification"));
         }
 
-        public static void ValidatePromoteOutBonusCard()
+        public void ValidatePromoteOutBonusCard()
         {
-            Dashboard dbo = new Dashboard();
+            Dashboard dbo = new Dashboard(Driver);
             dbo.PromoteOutBonusCard.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Promote Out Bonus Qualification"));
         }
 
-        public static void ClickPendingRenewal()
+        public void ClickPendingRenewal()
         {
-            Dashboard dbo = new Dashboard();
+            Dashboard dbo = new Dashboard(Driver);
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
             waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-portal-section-header__title")));
             dbo.ScrollViewport();
@@ -58,9 +65,9 @@ namespace AutomationTests.PageActions.PartnerPortal
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Team"));
         }
 
-        public static void ClickPaymentIssues()
+        public void ClickPaymentIssues()
         {
-            Dashboard dbo = new Dashboard();
+            Dashboard dbo = new Dashboard(Driver);
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
             waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-portal-section-header__title")));
             dbo.ScrollViewport();
@@ -70,9 +77,9 @@ namespace AutomationTests.PageActions.PartnerPortal
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Customer"));
         }
 
-        public static void ClickAnniversaries()
+        public void ClickAnniversaries()
         {
-            Dashboard dbo = new Dashboard();
+            Dashboard dbo = new Dashboard(Driver);
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
             waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-portal-section-header__title")));
             dbo.ScrollViewport();

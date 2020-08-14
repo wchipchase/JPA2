@@ -13,8 +13,10 @@ namespace AutomationTests.PageObjects.PartnerPortal
     class Dashboard
 
     {
-        public Dashboard()
+        Driver Driver;
+        public Dashboard(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 

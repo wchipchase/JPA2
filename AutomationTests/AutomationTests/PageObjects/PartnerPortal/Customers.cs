@@ -11,8 +11,10 @@ namespace AutomationTests.PageObjects.PartnerPortal
 {
     class Customers
     {
-        public Customers()
+        Driver Driver;
+        public Customers(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 

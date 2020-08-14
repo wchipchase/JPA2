@@ -22,7 +22,12 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
 {
     class CartActions
     {
-        public static IWebElement WaitUntilElementVisible(By elementLocator, int timeout = 10)
+        Driver Driver;
+        public CartActions(Driver driver)
+        {
+            Driver = driver;
+        }
+        public IWebElement WaitUntilElementVisible(By elementLocator, int timeout = 10)
         {
             try
             {
@@ -36,11 +41,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
             }
         }
 
-        public static void NavigateToProceedToCheckoutAndClick()
+        public void NavigateToProceedToCheckoutAndClick()
         {
             try
             {
-                CartPageObjects cpo = new CartPageObjects();
+                CartPageObjects cpo = new CartPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", cpo.ProceedToCheckoutButton);
             }
@@ -51,14 +56,14 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
 
         }
 
-        public static void CheckoutWithCartItemsVisa()
+        public void CheckoutWithCartItemsVisa()
         {
             try
             {
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-                ChewablesPageObjects cpo = new ChewablesPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+                ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
                 //waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-icon-badge__counter")));
                 //nav.CheckoutButton.Click();
                 ////waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[.='Proceed to checkout']")));
@@ -67,7 +72,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
                 //cpo.ProceedToCheckoutButton.Click();
                 waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[.='Checkout as guest']")));
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("New to Juice Plus+?"));
-                CheckoutPageObjects cop = new CheckoutPageObjects();
+                CheckoutPageObjects cop = new CheckoutPageObjects(Driver);
                 cop.CheckoutAsGuestButton.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Billing Address"));
                 Thread.Sleep(500);
@@ -108,14 +113,14 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
 
         }
 
-        public static void CheckoutWithCartItemsMC()
+        public void CheckoutWithCartItemsMC()
         {
             try
             {
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-                ChewablesPageObjects cpo = new ChewablesPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+                ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
                 //nav.CheckoutButton.Click();
                 //Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Your Cart"));
                 //CartPageObjects cpo = new CartPageObjects();
@@ -131,7 +136,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
                 {
                     Console.WriteLine(e);
                 }
-                CheckoutPageObjects cop = new CheckoutPageObjects();
+                CheckoutPageObjects cop = new CheckoutPageObjects(Driver);
                 cop.CheckoutAsGuestButton.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Billing Address"));
                 waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Name("shipping.contact.firstName")));
@@ -174,17 +179,17 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
 
         }
 
-        public static void CheckoutWithCartItemsVisaLoggedInRep()
+        public void CheckoutWithCartItemsVisaLoggedInRep()
         {
             try
             {
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-                ChewablesPageObjects cpo = new ChewablesPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+                ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
                 waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[.='Checkout as guest']")));
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("New to Juice Plus+?"));
-                CheckoutPageObjects cop = new CheckoutPageObjects();
+                CheckoutPageObjects cop = new CheckoutPageObjects(Driver);
                 cop.LoginUsernamePasswordButton.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Shipping Address"));
                 Thread.Sleep(500);

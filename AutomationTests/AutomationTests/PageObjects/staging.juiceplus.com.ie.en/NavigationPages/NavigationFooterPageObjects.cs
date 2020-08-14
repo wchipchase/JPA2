@@ -11,8 +11,10 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.Navigation
 {
     class NavigationFooterPageObjects
     {
-        public NavigationFooterPageObjects()
+        Driver Driver;
+        public NavigationFooterPageObjects(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 

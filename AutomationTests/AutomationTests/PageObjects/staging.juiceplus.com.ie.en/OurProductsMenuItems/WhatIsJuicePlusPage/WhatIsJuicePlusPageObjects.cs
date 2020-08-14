@@ -11,8 +11,10 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.OurProductsMen
 {
     class WhatIsJuicePlusPageObjects
     {
-        public WhatIsJuicePlusPageObjects()
+        Driver Driver;
+        public WhatIsJuicePlusPageObjects(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 

@@ -20,14 +20,21 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.MixedProductAc
 {
     class MixedProductActions
     {
+        Driver Driver;
+        NavigationActions navac;
 
-        public static void AddUpliftInstallmentPayCapsulePayInFullRecurringToCart()
+        public MixedProductActions(Driver driver)
+        {
+            Driver = driver;
+            navac = new NavigationActions(Driver);
+        }
+        public void AddUpliftInstallmentPayCapsulePayInFullRecurringToCart()
         {
             try
             {
                 WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-                NavigationActions.NavigateOurProductsUpliftClick();
-                UpliftPageObjects upo = new UpliftPageObjects();
+                navac.NavigateOurProductsUpliftClick();
+                UpliftPageObjects upo = new UpliftPageObjects(Driver);
                 try
                 {
                     Assert.IsFalse(Driver.WebDriver.PageSource.Contains("£"));
@@ -39,12 +46,12 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.MixedProductAc
                     Console.WriteLine(e);
                 }
 
-                LandingPageObjects lan = new LandingPageObjects();
+                LandingPageObjects lan = new LandingPageObjects(Driver);
                 Thread.Sleep(1000);
                 lan.CookieAlertAcceptButton.Click();
                 Task.Delay(500).Wait(1500);
                 upo.ScrollViewport();
-                UpliftOrderPageObjects uopo = new UpliftOrderPageObjects();
+                UpliftOrderPageObjects uopo = new UpliftOrderPageObjects(Driver);
                 var NumOfProducts = uopo.NumOfProductOrder.GetAttribute("value");
                 try
                 {
@@ -83,7 +90,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.MixedProductAc
                 }
 
                 uopo.AddToCartOrder.Click();
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
                 Thread.Sleep(1000);
                 var NumInCart = nav.CartIconCounter.Text;
                 Console.WriteLine(NumInCart);
@@ -102,12 +109,12 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.MixedProductAc
                 nav.CheckoutButton.Click();
 
 
-                CartPageObjects carp = new CartPageObjects();
+                CartPageObjects carp = new CartPageObjects(Driver);
 
                 carp.PayInInstallments.Click();
 
-                NavigationActions.NavigateOurProductsCapsulesClick();
-                CapsulesPageObjects caps = new CapsulesPageObjects();
+                navac.NavigateOurProductsCapsulesClick();
+                CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
                 try
                 {
                     Assert.IsFalse(Driver.WebDriver.PageSource.Contains("£"));
@@ -120,7 +127,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.MixedProductAc
                 }
 
                 caps.ClickVegetablesAndFruitCapsuleShopNow();
-                CapsulesOrderPageObjects cpo = new CapsulesOrderPageObjects();
+                CapsulesOrderPageObjects cpo = new CapsulesOrderPageObjects(Driver);
                 try
                 {
                     Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Fruit & Vegetable Blend Capsules"));

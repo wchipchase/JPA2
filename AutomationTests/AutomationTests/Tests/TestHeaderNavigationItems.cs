@@ -9,32 +9,45 @@ using System.Threading.Tasks;
 
 namespace AutomationTests
 {
+    [TestFixture]
     class TestHeaderNavigationItems
     {
-        NavigationActions nav = new NavigationActions();
+        [ThreadStatic]
+        static Driver Driver;
+        [ThreadStatic]
+        static NavigationActions nav;
+
+        [SetUp]
+        public void SetUpTest()
+        {
+            Driver = new Driver(Driver.BrowserType.Chrome);
+            nav = new NavigationActions(Driver);
+        }
+
 
         [Test]
         public void TestAllHeaderNavigation()
         {
-            NavigationActions.NavigateLiveBetterOverviewClick();
-            NavigationActions.NavigateLiveBetterHealthyFamilyClick();
-            NavigationActions.NavigateLiveBetterActiveLifestyleClick();
-            NavigationActions.NavigateLiveBetterFeelGoodLookGoodClick();
-            NavigationActions.NavigateLiveBetterOneSimpleChangeClick();
-            NavigationActions.NavigateOurProductsOverViewClick();
-            NavigationActions.NavigateOurProductsCapsulesClick();
-            NavigationActions.NavigateOurProductsChewablesClick();
-            NavigationActions.NavigateOurProductsOmegaClick();
-            NavigationActions.NavigateOurProductsCompleteClick();
-            NavigationActions.NavigateOurProductsUpliftClick();
-            NavigationActions.NavigateOurProductsWhatIsJuicePlusClick();
-            NavigationActions.NavigateOurCommunityOverviewClick();
-            NavigationActions.NavigateOurCommunityBlogClick();
-            NavigationActions.NavigateOurCommunityGivingBackClick();
+            
+            nav.NavigateLiveBetterOverviewClick();
+            nav.NavigateLiveBetterHealthyFamilyClick();
+            nav.NavigateLiveBetterActiveLifestyleClick();
+            nav.NavigateLiveBetterFeelGoodLookGoodClick();
+            nav.NavigateLiveBetterOneSimpleChangeClick();
+            nav.NavigateOurProductsOverViewClick();
+            nav.NavigateOurProductsCapsulesClick();
+            nav.NavigateOurProductsChewablesClick();
+            nav.NavigateOurProductsOmegaClick();
+            nav.NavigateOurProductsCompleteClick();
+            nav.NavigateOurProductsUpliftClick();
+            nav.NavigateOurProductsWhatIsJuicePlusClick();
+            nav.NavigateOurCommunityOverviewClick();
+            nav.NavigateOurCommunityBlogClick();
+            nav.NavigateOurCommunityGivingBackClick();
             //NavigationActions.NavigateOurCommunityGoBeyondClick();
-            NavigationActions.NavigateJoinUsClick();
-            NavigationActions.NavCartIconClick();
-            NavigationActions.NavLoginButtonClick();
+            nav.NavigateJoinUsClick();
+            nav.NavCartIconClick();
+            nav.NavLoginButtonClick();
         }
 
         [TearDown]

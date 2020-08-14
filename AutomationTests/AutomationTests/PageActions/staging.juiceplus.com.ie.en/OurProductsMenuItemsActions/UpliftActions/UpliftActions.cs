@@ -19,19 +19,37 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 {
     class UpliftActions
     {
-        public static void AddUpliftToCart()
+        [ThreadStatic]
+        static Driver Driver;
+        [ThreadStatic]
+        UpliftOrderPageObjects uopo;
+        [ThreadStatic]
+        UpliftPageObjects upo;
+        [ThreadStatic]
+        LandingPageObjects lan;
+        [ThreadStatic]
+        NavigationActions nav;
+
+        public UpliftActions(Driver driver)
+        {
+            Driver = driver;
+            nav = new NavigationActions(Driver);
+            uopo = new UpliftOrderPageObjects(Driver);
+            upo = new UpliftPageObjects(Driver);
+            lan = new LandingPageObjects(Driver);
+            nav = new NavigationActions(Driver);
+        }
+        public void AddUpliftToCart()
 
         {
 
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-            NavigationActions.NavigateOurProductsOmegaClick();
-            UpliftOrderPageObjects uopo = new UpliftOrderPageObjects();
-            UpliftPageObjects upo = new UpliftPageObjects();
-            LandingPageObjects lan = new LandingPageObjects();
+            
 
+            //nav.NavigateOurProductsOmegaClick();
             try
             {
-                NavigationActions.NavigateOurProductsOmegaClick();
+                nav.NavigateOurProductsOmegaClick();
                 
                 try
                 {
@@ -87,9 +105,9 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                 }
 
                 uopo.AddToCartOrder.Click();
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects npo = new NavigationHeaderPageObjects(Driver);
                 Thread.Sleep(1000);
-                var NumInCart = nav.CartIconCounter.Text;
+                var NumInCart = npo.CartIconCounter.Text;
                 Console.WriteLine(NumInCart);
                 try
                 {
@@ -101,9 +119,9 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                     Console.WriteLine(e);
                 }
 
-                nav.CartIconCounter.Click();
+                npo.CartIconCounter.Click();
                 waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-icon-badge__counter")));
-                nav.CheckoutButton.Click();
+                npo.CheckoutButton.Click();
                 upo.NavigateToProceedToCheckoutAndClick();
 
             }
@@ -114,13 +132,13 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 
         }
 
-        public static void AddSOROUpliftToCart()
+        public void AddSOROUpliftToCart()
         {
             try
             {
                 WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-                NavigationActions.NavigateOurProductsOmegaClick();
-                UpliftPageObjects upo = new UpliftPageObjects();
+                nav.NavigateOurProductsOmegaClick();
+                UpliftPageObjects upo = new UpliftPageObjects(Driver);
                 try
                 {
                     Assert.IsFalse(Driver.WebDriver.PageSource.Contains("£"));
@@ -132,11 +150,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                     Console.WriteLine(e);
                 }
 
-                LandingPageObjects lan = new LandingPageObjects();
+                LandingPageObjects lan = new LandingPageObjects(Driver);
                 lan.CookieAlertAcceptButton.Click();
                 Task.Delay(500).Wait(1500);
                 upo.ScrollViewport();
-                UpliftOrderPageObjects uopo = new UpliftOrderPageObjects();
+                UpliftOrderPageObjects uopo = new UpliftOrderPageObjects(Driver);
                 var NumOfProducts = uopo.NumOfProductOrder.GetAttribute("value");
                 try
                 {
@@ -175,9 +193,9 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                 }
 
                 uopo.AddToCartOrder.Click();
-                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
+                NavigationHeaderPageObjects npo = new NavigationHeaderPageObjects(Driver);
                 Thread.Sleep(1000);
-                var NumInCart = nav.CartIconCounter.Text;
+                var NumInCart = npo.CartIconCounter.Text;
                 Console.WriteLine(NumInCart);
                 try
                 {
@@ -189,7 +207,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                     Console.WriteLine(e);
                 }
 
-                nav.CartIconCounter.Click();
+                npo.CartIconCounter.Click();
 
             }
             catch (ArgumentException e)

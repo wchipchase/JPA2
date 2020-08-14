@@ -11,8 +11,10 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.OurProductsMen
 {
     class UpliftOrderPageObjects
     {
-        public UpliftOrderPageObjects()
+        Driver Driver;
+        public UpliftOrderPageObjects(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 

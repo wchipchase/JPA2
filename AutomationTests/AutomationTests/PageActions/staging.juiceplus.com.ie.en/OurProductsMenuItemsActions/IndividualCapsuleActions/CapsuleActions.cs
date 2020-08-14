@@ -18,19 +18,32 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 {
     class CapsuleActions
     {
+        Driver Driver;
+        CartPageObjects carp;
+        NavigationHeaderPageObjects nav;
+        CapsulesPageObjects caps;
+        LandingPageObjects lan;
+        CapsulesOrderPageObjects cpo;
+        NavigationActions navac;
+        public CapsuleActions(Driver driver)
+        {
+            Driver = driver;
+            nav = new NavigationHeaderPageObjects(Driver);
+            caps = new CapsulesPageObjects(Driver);
+            lan = new LandingPageObjects(Driver);
+            cpo = new CapsulesOrderPageObjects(Driver);
+            carp = new CartPageObjects(Driver);
+            navac = new NavigationActions(Driver);
+        }
 
-        public static void AddPremiumCapsuleToCart()
+        public void AddPremiumCapsuleToCart()
         {
 
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-            CapsulesPageObjects caps = new CapsulesPageObjects();
-            LandingPageObjects lan = new LandingPageObjects();
-            CapsulesOrderPageObjects cpo = new CapsulesOrderPageObjects();
-            CartPageObjects carp = new CartPageObjects();
+
 
             try {
-                NavigationActions.NavigateOurProductsCapsulesClick();
+                navac.NavigateOurProductsCapsulesClick();
                 try
                 {
                     Assert.IsFalse(Driver.WebDriver.PageSource.Contains("£"));
@@ -135,18 +148,18 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 
         }
 
-        public static void AddFruitsAndVegetablesCapsuleToCart()
+        public void AddFruitsAndVegetablesCapsuleToCart()
         {
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-            CapsulesPageObjects caps = new CapsulesPageObjects();
-            LandingPageObjects lan = new LandingPageObjects();
-            CapsulesOrderPageObjects cpo = new CapsulesOrderPageObjects();
-            CartPageObjects carp = new CartPageObjects();
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
+            LandingPageObjects lan = new LandingPageObjects(Driver);
+            CapsulesOrderPageObjects cpo = new CapsulesOrderPageObjects(Driver);
+            CartPageObjects carp = new CartPageObjects(Driver);
 
             try
             {
-                NavigationActions.NavigateOurProductsCapsulesClick();
+                navac.NavigateOurProductsCapsulesClick();
 
                 try
                 {
@@ -238,17 +251,17 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 
         }
 
-        public static void AddBerryCapsuleToCart()
+        public void AddBerryCapsuleToCart()
         {
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-            CapsulesPageObjects caps = new CapsulesPageObjects();
-            LandingPageObjects lan = new LandingPageObjects();
-            CapsulesOrderPageObjects cpo = new CapsulesOrderPageObjects();
-            CartPageObjects carp = new CartPageObjects();
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
+            LandingPageObjects lan = new LandingPageObjects(Driver);
+            CapsulesOrderPageObjects cpo = new CapsulesOrderPageObjects(Driver);
+            CartPageObjects carp = new CartPageObjects(Driver);
             try
             {
-                NavigationActions.NavigateOurProductsCapsulesClick();
+                navac.NavigateOurProductsCapsulesClick();
 
                 try
                 {
@@ -339,11 +352,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
             }
         }
 
-        public static void ClickViewRangeButtonOmegaBlend()
+        public void ClickViewRangeButtonOmegaBlend()
         {
             try
             {
-                CapsulesPageObjects caps = new CapsulesPageObjects();
+                CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
                 caps.OmegaViewRangeCapsules.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Omega Blend"));
             }
@@ -354,11 +367,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
             }
         }
 
-        public static void ClickLearnMoreHealthyLifestyle()
+        public void ClickLearnMoreHealthyLifestyle()
             {
             try
             {
-                CapsulesPageObjects caps = new CapsulesPageObjects();
+                CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
                 caps.HealthyLifestyleCapsules.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Feel Good, Look Your Best"));
             }
@@ -369,11 +382,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 
          }
 
-        public static void ClickLearnMoreLookYourBest()
+        public void ClickLearnMoreLookYourBest()
         {
             try
             {
-                CapsulesPageObjects caps = new CapsulesPageObjects();
+                CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
                 caps.LookingYourBestCapsules.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("One Simple Change"));
             }
@@ -384,11 +397,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
             }
         }
 
-        public static void ClickLearnMoreHealthyFamily()
+        public void ClickLearnMoreHealthyFamily()
         {
             try
             {
-                CapsulesPageObjects caps = new CapsulesPageObjects();
+                CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
                 caps.HealthyFamilyCapsules.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Healthy Family"));
             }
@@ -398,11 +411,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
             }
         }
 
-        public static void ClickLearnMoreActiveLifestyle()
+        public void ClickLearnMoreActiveLifestyle()
         {
             try
             {
-                CapsulesPageObjects caps = new CapsulesPageObjects();
+                CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
                 caps.ActiveLifestyleCapsules.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Active Lifestyle"));
             }

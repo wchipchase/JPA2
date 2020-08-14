@@ -1,4 +1,5 @@
-﻿using AutomationTests.PageObjects.PartnerPortal;
+﻿using AutomationTests.ConfigElements;
+using AutomationTests.PageObjects.PartnerPortal;
 using AutomationTests.PageObjects.staging.juiceplus.com.ie.en;
 using System;
 using System.Collections.Generic;
@@ -11,22 +12,27 @@ namespace AutomationTests.PageActions.PartnerPortal
 {
     class TeamActions
     {
-        public static void NavigateToTeams()
+        Driver Driver;
+        public TeamActions(Driver driver)
         {
-            Login lpo = new Login();
+            Driver = driver;
+        }
+        public void NavigateToTeams()
+        {
+            Login lpo = new Login(Driver);
             Thread.Sleep(1000);
             lpo.TeamNavTab.Click();
         }
 
-        public static void ClickFilterButton()
+        public void ClickFilterButton()
         {
-            Team tpo = new Team();
+            Team tpo = new Team(Driver);
             tpo.FilterControl.Click();
         }
 
-        public static void AddAndApplyFilters()
+        public void AddAndApplyFilters()
         {
-            Team tpo = new Team();
+            Team tpo = new Team(Driver);
             tpo.FilterControlP.Click();
             Thread.Sleep(1000);
             tpo.FilterControlSC.Click();
@@ -36,34 +42,34 @@ namespace AutomationTests.PageActions.PartnerPortal
             tpo.ApplyFilterButton.Click();
         }
 
-        public static void ValidateNameFilter()
+        public void ValidateNameFilter()
         {
-            Team tpo = new Team();
+            Team tpo = new Team(Driver);
             tpo.FirstNameFilter.Click();
             tpo.LastNameFilterSelection.Click();
             tpo.LastNameFilter.Click();
             tpo.FirstNameFilterSelection.Click();
         }
 
-        public static void ClickDownloadAndSelectCSV()
+        public void ClickDownloadAndSelectCSV()
         {
-            Team tpo = new Team();
+            Team tpo = new Team(Driver);
             tpo.DownloadFilter.Click();
             Thread.Sleep(1000);
             tpo.DownloadCSVSelection.Click();
             Thread.Sleep(2000);
         }
 
-        public static void ClickOnAddMemberAndCopyLink()
+        public void ClickOnAddMemberAndCopyLink()
         {
-            Team tpo = new Team();
+            Team tpo = new Team(Driver);
             tpo.AddMemberButton.Click();
             tpo.CopyNewPartnerRegistrationLink.Click();
         }
 
-        public static void ClickOnAddMemberAndFillOutPersonalForm()
+        public void ClickOnAddMemberAndFillOutPersonalForm()
         {
-            Team tpo = new Team();
+            Team tpo = new Team(Driver);
             Thread.Sleep(2000);
             tpo.AddMemberButton.Click();
             tpo.FillOutFormButton.Click();
@@ -78,9 +84,9 @@ namespace AutomationTests.PageActions.PartnerPortal
             tpo.PersonalStuffNextButton.Click();
         }
 
-        public static void FillOutContactFormAndSubmitApplication()
+        public void FillOutContactFormAndSubmitApplication()
         {
-            Team tpo = new Team();
+            Team tpo = new Team(Driver);
             tpo.ContactEmail.SendKeys("tester" + new Random().Next(100000, 999999) + "@juiceplus.com");
             tpo.ContactPhoneNumber.SendKeys(Config.AddressInfo.ShippingAddress.PrimaryPhoneShipping.PrimaryPhone);
             tpo.ContactStreeAddr1.SendKeys(Config.AddressInfo.ShippingAddress.StreetAddShipping.StreetAdd);
@@ -93,9 +99,9 @@ namespace AutomationTests.PageActions.PartnerPortal
             tpo.ToTeamListButton.Click();
         }
 
-        public static void FillOutContactFormAndSubmitApplicationOtherSponsor()
+        public void FillOutContactFormAndSubmitApplicationOtherSponsor()
         {
-            Team tpo = new Team();
+            Team tpo = new Team(Driver);
             tpo.ContactEmail.SendKeys("tester" + new Random().Next(100000, 999999) + "@juiceplus.com");
             tpo.ContactPhoneNumber.SendKeys(Config.AddressInfo.ShippingAddress.PrimaryPhoneShipping.PrimaryPhone);
             tpo.ContactStreeAddr1.SendKeys(Config.AddressInfo.ShippingAddress.StreetAddShipping.StreetAdd);
@@ -108,9 +114,9 @@ namespace AutomationTests.PageActions.PartnerPortal
             tpo.ToTeamListButton.Click();
         }
 
-        public static void ClickFillOutForm()
+        public void ClickFillOutForm()
         {
-            Team tpo = new Team();
+            Team tpo = new Team(Driver);
         }
     }
 

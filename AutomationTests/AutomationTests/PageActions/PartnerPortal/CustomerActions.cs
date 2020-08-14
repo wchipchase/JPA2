@@ -12,23 +12,28 @@ namespace AutomationTests.PageActions.PartnerPortal
 {
     class CustomerActions
     {
-        public static void NavigateToCustomers()
+        Driver Driver;
+        public CustomerActions(Driver driver)
         {
-            Login lpo = new Login();
+            Driver = driver;
+        }
+        public void NavigateToCustomers()
+        {
+            Login lpo = new Login(Driver);
             lpo.CustomersNavTab.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Customer"));
         }
 
-        public static void ClickFilterButton()
+        public void ClickFilterButton()
         {
-            Customers cpo = new Customers();
+            Customers cpo = new Customers(Driver);
             cpo.FilterCustomers.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Filter customers"));
         }
 
-        public static void AddAndApplyFilters()
+        public void AddAndApplyFilters()
         {
-            Customers cpo = new Customers();
+            Customers cpo = new Customers(Driver);
             cpo.FilterSelectCountryUSA.Click();
             Thread.Sleep(1000);
             cpo.FilterSelectCountryUK.Click();
@@ -39,9 +44,9 @@ namespace AutomationTests.PageActions.PartnerPortal
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Reset"));
         }
 
-        public static void ValidateNameFilter()
+        public void ValidateNameFilter()
         {
-            Team tpo = new Team();
+            Team tpo = new Team(Driver);
             tpo.FirstNameFilter.Click();
             tpo.LastNameFilterSelection.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Reset"));
@@ -50,23 +55,23 @@ namespace AutomationTests.PageActions.PartnerPortal
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Reset"));
         }
 
-        public static void SelectFirstCustomer()
+        public void SelectFirstCustomer()
         {
-            Customers cpo = new Customers();
+            Customers cpo = new Customers(Driver);
             cpo.FirstCustomer.Click();
             //Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Active orders"));
         }
 
-        public static void SelectFirstCustomerDetails()
+        public void SelectFirstCustomerDetails()
         {
-            Customers cpo = new Customers();
+            Customers cpo = new Customers(Driver);
             cpo.DetailsTab.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Customer information"));
         }
 
-        public static void SelectFirstCustomerOrders()
+        public void SelectFirstCustomerOrders()
         {
-            Customers cpo = new Customers();
+            Customers cpo = new Customers(Driver);
             cpo.OrdersTab.Click();
             //Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Active orders"));
         }

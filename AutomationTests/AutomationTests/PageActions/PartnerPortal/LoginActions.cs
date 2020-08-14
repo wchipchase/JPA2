@@ -17,7 +17,13 @@ namespace AutomationTests.PageActions.PartnerPortal
     class LoginActions
  
     {
-        public static IWebElement WaitUntilElementVisible(By elementLocator, int timeout = 10)
+        Driver Driver;
+
+        public LoginActions(Driver driver)
+        {
+            Driver = driver;
+        }
+        public IWebElement WaitUntilElementVisible(By elementLocator, int timeout = 10)
         {
             try
             {
@@ -31,13 +37,13 @@ namespace AutomationTests.PageActions.PartnerPortal
             }
         }
 
-        public static void LoginAsPartner()
+        public void LoginAsPartner()
         {
             try
             {
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-                Login lpo = new Login();
+                Login lpo = new Login(Driver);
                 waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[.='Sign In']")));
                 lpo.LoginButton.Click();
                 //js.ExecuteScript("arguments[0].click();", lpo.PartnerLoginSlider);

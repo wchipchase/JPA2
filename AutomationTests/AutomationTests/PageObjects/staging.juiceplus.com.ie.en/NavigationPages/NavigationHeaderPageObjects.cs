@@ -10,10 +10,13 @@ using System.Threading.Tasks;
 
 namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en
 {
+    
     class NavigationHeaderPageObjects
     {
-        public NavigationHeaderPageObjects()
+        Driver Driver;
+        public NavigationHeaderPageObjects(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[contains(.,'Our Products')]")]

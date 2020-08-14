@@ -19,19 +19,37 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 {
     class ChewableActions
     {
-        public static void AddPremiumChewablesToCart()
+        Driver Driver;
+        NavigationHeaderPageObjects nav;
+        CapsulesPageObjects caps;
+        LandingPageObjects lan;
+        ChewablesPageObjects cpo;
+        ChewablesOrderPageObjects copo;
+        CartPageObjects carp;
+        NavigationActions navac;
+        public ChewableActions(Driver driver)
+        {
+            Driver = driver;
+            nav = new NavigationHeaderPageObjects(Driver);
+            caps = new CapsulesPageObjects(Driver);
+            lan = new LandingPageObjects(Driver);
+            cpo = new ChewablesPageObjects(Driver);
+            copo = new ChewablesOrderPageObjects(Driver);
+            carp = new CartPageObjects(Driver);
+        }
+        public void AddPremiumChewablesToCart()
         {
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-            CapsulesPageObjects caps = new CapsulesPageObjects();
-            LandingPageObjects lan = new LandingPageObjects();
-            ChewablesPageObjects cpo = new ChewablesPageObjects();
-            ChewablesOrderPageObjects copo = new ChewablesOrderPageObjects();
-            CartPageObjects carp = new CartPageObjects();
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
+            LandingPageObjects lan = new LandingPageObjects(Driver);
+            ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
+            ChewablesOrderPageObjects copo = new ChewablesOrderPageObjects(Driver);
+            CartPageObjects carp = new CartPageObjects(Driver);
             try
             {
 
-                NavigationActions.NavigateOurProductsChewablesClick();
+                navac.NavigateOurProductsChewablesClick();
                 
                 try
                 {
@@ -124,19 +142,19 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
             carp.NavigateToProceedToCheckoutAndClick();
         }
 
-        public static void AddFruitsAndVegetablesChewablesToCart()
+        public void AddFruitsAndVegetablesChewablesToCart()
         {
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-            CapsulesPageObjects caps = new CapsulesPageObjects();
-            LandingPageObjects lan = new LandingPageObjects();
-            ChewablesPageObjects cpo = new ChewablesPageObjects();
-            ChewablesOrderPageObjects copo = new ChewablesOrderPageObjects();
-            CartPageObjects carp = new CartPageObjects();
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
+            LandingPageObjects lan = new LandingPageObjects(Driver);
+            ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
+            ChewablesOrderPageObjects copo = new ChewablesOrderPageObjects(Driver);
+            CartPageObjects carp = new CartPageObjects(Driver);
 
             try
             {
-                NavigationActions.NavigateOurProductsChewablesClick();
+                navac.NavigateOurProductsChewablesClick();
                 try
                 {
                     Assert.IsFalse(Driver.WebDriver.PageSource.Contains("£"));
@@ -228,19 +246,19 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 
         }
 
-        public static void AddBerryChewablesToCart()
+        public void AddBerryChewablesToCart()
         {
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-            CapsulesPageObjects caps = new CapsulesPageObjects();
-            LandingPageObjects lan = new LandingPageObjects();
-            ChewablesPageObjects cpo = new ChewablesPageObjects();
-            ChewablesOrderPageObjects copo = new ChewablesOrderPageObjects();
-            CartPageObjects carp = new CartPageObjects();
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
+            LandingPageObjects lan = new LandingPageObjects(Driver);
+            ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
+            ChewablesOrderPageObjects copo = new ChewablesOrderPageObjects(Driver);
+            CartPageObjects carp = new CartPageObjects(Driver);
 
             try
             {
-                NavigationActions.NavigateOurProductsChewablesClick();
+                navac.NavigateOurProductsChewablesClick();
 
                 try
                 {
@@ -336,11 +354,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
             carp.NavigateToProceedToCheckoutAndClick();
         }
 
-        public static void ClickViewRangeButtonOmegaBlend()
+        public void ClickViewRangeButtonOmegaBlend()
         {
             try
             {
-                CapsulesPageObjects caps = new CapsulesPageObjects();
+                CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
                 caps.OmegaViewRangeCapsules.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Omega Blend"));
                 Assert.IsFalse(Driver.WebDriver.PageSource.Contains("£"));
@@ -353,11 +371,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
             }
         }
 
-        public static void ClickLearnMoreHealthyLifestyle()
+        public void ClickLearnMoreHealthyLifestyle()
         {
             try
             {
-                CapsulesPageObjects caps = new CapsulesPageObjects();
+                CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
                 caps.HealthyLifestyleCapsules.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Feel Good, Look Your Best"));
             }
@@ -368,11 +386,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 
         }
 
-        public static void ClickLearnMoreLookYourBest()
+        public void ClickLearnMoreLookYourBest()
         {
             try
             {
-                CapsulesPageObjects caps = new CapsulesPageObjects();
+                CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
                 caps.LookingYourBestCapsules.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("One Simple Change"));
             }
@@ -383,11 +401,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
             }
         }
 
-        public static void ClickLearnMoreHealthyFamily()
+        public void ClickLearnMoreHealthyFamily()
         {
             try
             {
-                CapsulesPageObjects caps = new CapsulesPageObjects();
+                CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
                 caps.HealthyFamilyCapsules.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Healthy Family"));
             }
@@ -397,11 +415,11 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
             }
         }
 
-        public static void ClickLearnMoreActiveLifestyle()
+        public void ClickLearnMoreActiveLifestyle()
         {
             try
             {
-                CapsulesPageObjects caps = new CapsulesPageObjects();
+                CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
                 caps.ActiveLifestyleCapsules.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Active Lifestyle"));
             }

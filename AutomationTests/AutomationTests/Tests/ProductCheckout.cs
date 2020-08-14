@@ -18,14 +18,44 @@ namespace AutomationTests
     [TestFixture]
     class ProductCheckout
     {
+        [ThreadStatic]
+        static Driver Driver;
+        [ThreadStatic]
+        static CapsuleActions caps;
+        [ThreadStatic]
+        static CartActions cart;
+        [ThreadStatic]
+        static ChewableActions chew;
+        [ThreadStatic]
+        static OmegaActions omega;
+        [ThreadStatic]
+        static UpliftActions upla;
+        [ThreadStatic]
+        static CompleteActions comp;
+        [ThreadStatic]
+        static MixedProductActions mpa;
+
+
+        [SetUp]
+        public void SetUpTest()
+        {
+            Driver = new Driver(Driver.BrowserType.Chrome);
+            caps = new CapsuleActions(Driver);
+            cart = new CartActions(Driver);
+            chew = new ChewableActions(Driver);
+            omega = new OmegaActions(Driver);
+            upla = new UpliftActions(Driver);
+            comp = new CompleteActions(Driver);
+            mpa = new MixedProductActions(Driver);
+        }
 
         [Test]
         [Category("productcheckout")]
         [Category("alltest")]
         public void CheckoutPremiumCapsulesVisa()
         {
-            CapsuleActions.AddPremiumCapsuleToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            caps.AddPremiumCapsuleToCart();
+            cart.CheckoutWithCartItemsVisa();
             
             
         }
@@ -35,8 +65,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutFruitsAndVegetablesCapsulesVisa()
         {
-            CapsuleActions.AddFruitsAndVegetablesCapsuleToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            caps.AddFruitsAndVegetablesCapsuleToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -44,8 +74,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutBerryCapsulesVisa()
         {
-            CapsuleActions.AddBerryCapsuleToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            caps.AddBerryCapsuleToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -53,8 +83,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutPremiumChewablesVisa()
         {
-            ChewableActions.AddPremiumChewablesToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            chew.AddPremiumChewablesToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -62,8 +92,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutFruitsAndVegetableChewablesVisa()
         {
-            ChewableActions.AddFruitsAndVegetablesChewablesToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            chew.AddFruitsAndVegetablesChewablesToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -71,8 +101,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutBerryChewablesVisa()
         {
-            ChewableActions.AddBerryChewablesToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            chew.AddBerryChewablesToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -80,8 +110,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutOmegaBlendVisa()
         {
-            OmegaActions.AddOmegaBlendToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            omega.AddOmegaBlendToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -89,8 +119,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutUpliftVisa()
         {
-            UpliftActions.AddUpliftToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            upla.AddUpliftToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -98,8 +128,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutCompleteShakesVisa()
         {
-            CompleteActions.AddCompleteJuicePlusShakesToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            comp.AddCompleteJuicePlusShakesToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -107,8 +137,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutCompleteJuiceBarsVisa()
         {
-            CompleteActions.AddCompleteJuicePlusBarsToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            comp.AddCompleteJuicePlusBarsToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -116,8 +146,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutCompleteVegetableSoupVisa()
         {
-            CompleteActions.AddCompleteVegetableSoupToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            comp.AddCompleteVegetableSoupToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -125,8 +155,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutCompleteCombiBoxVisa()
         {
-            CompleteActions.AddCompleteCombiBoxToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            comp.AddCompleteCombiBoxToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -134,8 +164,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutCompleteBoosterVisa()
         {
-            CompleteActions.AddCompleteBoosterToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            comp.AddCompleteBoosterToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -143,8 +173,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutPremiumCapsulesMC()
         {
-            CapsuleActions.AddPremiumCapsuleToCart();
-            CartActions.CheckoutWithCartItemsMC();
+            caps.AddPremiumCapsuleToCart();
+            cart.CheckoutWithCartItemsMC();
 
 
         }
@@ -154,8 +184,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutFruitsAndVegetablesCapsulesMC()
         {
-            CapsuleActions.AddFruitsAndVegetablesCapsuleToCart();
-            CartActions.CheckoutWithCartItemsMC();
+            caps.AddFruitsAndVegetablesCapsuleToCart();
+            cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -163,8 +193,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutBerryCapsulesMC()
         {
-            CapsuleActions.AddBerryCapsuleToCart();
-            CartActions.CheckoutWithCartItemsMC();
+            caps.AddBerryCapsuleToCart();
+            cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -172,8 +202,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutPremiumChewablesMC()
         {
-            ChewableActions.AddPremiumChewablesToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            chew.AddPremiumChewablesToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -181,8 +211,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutFruitsAndVegetableChewablesMC()
         {
-            ChewableActions.AddFruitsAndVegetablesChewablesToCart();
-            CartActions.CheckoutWithCartItemsMC();
+            chew.AddFruitsAndVegetablesChewablesToCart();
+            cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -190,8 +220,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutBerryChewablesMC()
         {
-            ChewableActions.AddBerryChewablesToCart();
-            CartActions.CheckoutWithCartItemsMC();
+            chew.AddBerryChewablesToCart();
+            cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -199,8 +229,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutOmegaBlendMC()
         {
-            OmegaActions.AddOmegaBlendToCart();
-            CartActions.CheckoutWithCartItemsMC();
+            omega.AddOmegaBlendToCart();
+            cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -208,8 +238,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutUpliftMC()
         {
-            UpliftActions.AddUpliftToCart();
-            CartActions.CheckoutWithCartItemsMC();
+            upla.AddUpliftToCart();
+            cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -217,8 +247,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutCompleteShakesMC()
         {
-            CompleteActions.AddCompleteJuicePlusShakesToCart();
-            CartActions.CheckoutWithCartItemsMC();
+            comp.AddCompleteJuicePlusShakesToCart();
+            cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -226,8 +256,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutCompleteJuiceBarsMC()
         {
-            CompleteActions.AddCompleteJuicePlusBarsToCart();
-            CartActions.CheckoutWithCartItemsMC();
+            comp.AddCompleteJuicePlusBarsToCart();
+            cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -235,8 +265,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutCompleteVegetableSoupMC()
         {
-            CompleteActions.AddCompleteVegetableSoupToCart();
-            CartActions.CheckoutWithCartItemsMC();
+            comp.AddCompleteVegetableSoupToCart();
+            cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -244,8 +274,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutCompleteCombiBoxMC()
         {
-            CompleteActions.AddCompleteCombiBoxToCart();
-            CartActions.CheckoutWithCartItemsMC();
+            comp.AddCompleteCombiBoxToCart();
+            cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -253,8 +283,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutCompleteBoosterMC()
         {
-            CompleteActions.AddCompleteBoosterToCart();
-            CartActions.CheckoutWithCartItemsMC();
+            comp.AddCompleteBoosterToCart();
+            cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -262,8 +292,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutMixedProductUplifSinglePayRecurringOrderCapsulesSingleOrderInstallmentsVisa()
         {
-            MixedProductActions.AddUpliftInstallmentPayCapsulePayInFullRecurringToCart();
-            CartActions.CheckoutWithCartItemsVisa();
+            mpa.AddUpliftInstallmentPayCapsulePayInFullRecurringToCart();
+            cart.CheckoutWithCartItemsVisa();
         }
 
 
@@ -272,8 +302,8 @@ namespace AutomationTests
         [Category("alltest")]
         public void CheckoutMixedProductUplifSinglePayRecurringOrderCapsulesSingleOrderInstallmentsMC()
         {
-            MixedProductActions.AddUpliftInstallmentPayCapsulePayInFullRecurringToCart();
-            CartActions.CheckoutWithCartItemsMC();
+            mpa.AddUpliftInstallmentPayCapsulePayInFullRecurringToCart();
+            cart.CheckoutWithCartItemsMC();
         }
 
         [TearDown]

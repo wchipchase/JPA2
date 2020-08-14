@@ -11,8 +11,10 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.OurProductsMen
 {
     class CompleteOrderPageObjects
     {
-        public CompleteOrderPageObjects()
+        Driver Driver;
+        public CompleteOrderPageObjects(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 

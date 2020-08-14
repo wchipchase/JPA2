@@ -13,14 +13,16 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.UpliftPage
 {
     class UpliftPageObjects
     {
-        public UpliftPageObjects()
+        Driver Driver;
+        public UpliftPageObjects(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 
         public void NavigateToProceedToCheckoutAndClick()
         {
-            CartPageObjects cpo = new CartPageObjects();
+            CartPageObjects cpo = new CartPageObjects(Driver);
             IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
             js.ExecuteScript("arguments[0].click();", cpo.ProceedToCheckoutButton);
         }

@@ -12,9 +12,10 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CheckoutPage
 {
     class CheckoutPageObjects
     {
-
-        public CheckoutPageObjects()
+        Driver Driver;
+        public CheckoutPageObjects(Driver driver)
         {
+            Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 
