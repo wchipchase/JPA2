@@ -40,6 +40,10 @@ namespace AutomationTests
         public void SetUpTest()
         {
             Driver = new Driver(Driver.BrowserType.Chrome);
+            Driver.WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            Driver.WebDriver.Manage().Window.Maximize();
+            Driver.WebDriver.Navigate().GoToUrl("https://www.staging.juiceplus.com/ie/en/");
+            Driver = new Driver(Driver.BrowserType.Chrome);
             caps = new CapsuleActions(Driver);
             cart = new CartActions(Driver);
             chew = new ChewableActions(Driver);

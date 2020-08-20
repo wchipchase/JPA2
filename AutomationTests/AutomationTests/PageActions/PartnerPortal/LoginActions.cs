@@ -45,6 +45,7 @@ namespace AutomationTests.PageActions.PartnerPortal
                 WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
                 Login lpo = new Login(Driver);
                 waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[.='Sign In']")));
+                lpo.CookieAlertAcceptButton.Click();
                 lpo.LoginButton.Click();
                 //js.ExecuteScript("arguments[0].click();", lpo.PartnerLoginSlider);
                 //waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Id("username")));

@@ -113,6 +113,11 @@
     <Compile Include="Config\CreditCardInfo.cs" />
     <Compile Include="Config\UserInfo.cs" />
     <Compile Include="PageActions\ContactUsActions.cs" />
+    <Compile Include="PageActions\PartnerPortalUS\CustomerActionsUS.cs" />
+    <Compile Include="PageActions\PartnerPortalUS\DashboardActionsUS.cs" />
+    <Compile Include="PageActions\PartnerPortalUS\LoginActionsUS.cs" />
+    <Compile Include="PageActions\PartnerPortalUS\ShopActionsUS.cs" />
+    <Compile Include="PageActions\PartnerPortalUS\TeamActionsUS.cs" />
     <Compile Include="PageActions\PartnerPortal\CustomerActions.cs" />
     <Compile Include="PageActions\PartnerPortal\DashboardActions.cs" />
     <Compile Include="PageActions\PartnerPortal\LoginActions.cs" />
@@ -136,6 +141,11 @@
     <Compile Include="PageObjects\canada.rccq.juiceplus.com.jp\OrchardandGardenBlendscs.cs" />
     <Compile Include="PageObjects\ContactUsPageObjects.cs" />
     <Compile Include="EntryPoint.cs" />
+    <Compile Include="PageObjects\PartnerPortalUS\CustomerUSPageObjects.cs" />
+    <Compile Include="PageObjects\PartnerPortalUS\DashboardUSPageObjects.cs" />
+    <Compile Include="PageObjects\PartnerPortalUS\LoginUSPageObjects.cs" />
+    <Compile Include="PageObjects\PartnerPortalUS\ShopUSPageObjects.cs" />
+    <Compile Include="PageObjects\PartnerPortalUS\TeamUSPageObjects.cs" />
     <Compile Include="PageObjects\PartnerPortal\Customers.cs" />
     <Compile Include="PageObjects\PartnerPortal\Dashboard.cs" />
     <Compile Include="PageObjects\PartnerPortal\Login.cs" />
@@ -160,6 +170,8 @@
     <Compile Include="PageObjects\staging.juiceplus.com.ie.en\OurProductsMenuItems\WhatIsJuicePlusPage\WhatIsJuicePlusPageObjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\PartnerPortal.cs" />
+    <Compile Include="Tests\PartnerPortalMex.cs" />
+    <Compile Include="Tests\PartnerPortalUS.cs" />
     <Compile Include="Tests\ReadFromExcel.cs" />
     <Compile Include="Tests\Scratch.cs" />
     <Compile Include="Tests\ProductCheckout.cs" />
@@ -184,7 +196,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="PageActions\PartnerPortalMex\" />
     <Folder Include="PageActions\staging.juiceplus.com.ie.en\LandingPageActions\" />
+    <Folder Include="PageObjects\PartnerPortalMex\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -35,8 +35,8 @@ namespace AutomationTests.PageActions.PartnerPortal
             Team tpo = new Team(Driver);
             tpo.FilterControlP.Click();
             Thread.Sleep(1000);
-            tpo.FilterControlSC.Click();
-            Thread.Sleep(1000);
+            //tpo.FilterControlSC.Click();
+            //Thread.Sleep(1000);
             tpo.FilterControlSP.Click();
             Thread.Sleep(1000);
             tpo.ApplyFilterButton.Click();
@@ -73,8 +73,8 @@ namespace AutomationTests.PageActions.PartnerPortal
             Thread.Sleep(2000);
             tpo.AddMemberButton.Click();
             tpo.FillOutFormButton.Click();
-            tpo.FirstNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.FirstNameShipping.FirstName);
-            tpo.LastNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.LastNameShipping.LastName);
+            tpo.FirstNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.FirstNameShipping.FirstName1);
+            tpo.LastNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.LastNameShipping.LastName1);
             tpo.GenderDropdown.Click();
             tpo.MaleGenderSelection.Click();
             tpo.BirthdayTextBox.SendKeys(Config.UserInfo.Birthday.Birthday1);
@@ -88,10 +88,10 @@ namespace AutomationTests.PageActions.PartnerPortal
         {
             Team tpo = new Team(Driver);
             tpo.ContactEmail.SendKeys("tester" + new Random().Next(100000, 999999) + "@juiceplus.com");
-            tpo.ContactPhoneNumber.SendKeys(Config.AddressInfo.ShippingAddress.PrimaryPhoneShipping.PrimaryPhone);
-            tpo.ContactStreeAddr1.SendKeys(Config.AddressInfo.ShippingAddress.StreetAddShipping.StreetAdd);
+            tpo.ContactPhoneNumber.SendKeys(Config.AddressInfo.ShippingAddress.PrimaryPhoneShipping.PrimaryPhone1);
+            tpo.ContactStreeAddr1.SendKeys(Config.AddressInfo.ShippingAddress.StreetAddShipping.StreetAdd1);
             tpo.ScrollViewport();
-            tpo.ContactCity.SendKeys(Config.AddressInfo.ShippingAddress.CityShipping.City);
+            tpo.ContactCity.SendKeys(Config.AddressInfo.ShippingAddress.CityShipping.City1);
             tpo.ContactCounty.SendKeys(Config.AddressInfo.ShippingAddress.CountyShipping.County);
             tpo.ContactNextButton.Click();
             tpo.IAmTheirSponsorButton.Click();
@@ -103,10 +103,10 @@ namespace AutomationTests.PageActions.PartnerPortal
         {
             Team tpo = new Team(Driver);
             tpo.ContactEmail.SendKeys("tester" + new Random().Next(100000, 999999) + "@juiceplus.com");
-            tpo.ContactPhoneNumber.SendKeys(Config.AddressInfo.ShippingAddress.PrimaryPhoneShipping.PrimaryPhone);
-            tpo.ContactStreeAddr1.SendKeys(Config.AddressInfo.ShippingAddress.StreetAddShipping.StreetAdd);
+            tpo.ContactPhoneNumber.SendKeys(Config.AddressInfo.ShippingAddress.PrimaryPhoneShipping.PrimaryPhone1);
+            tpo.ContactStreeAddr1.SendKeys(Config.AddressInfo.ShippingAddress.StreetAddShipping.StreetAdd1);
             tpo.ScrollViewport();
-            tpo.ContactCity.SendKeys(Config.AddressInfo.ShippingAddress.CityShipping.City);
+            tpo.ContactCity.SendKeys(Config.AddressInfo.ShippingAddress.CityShipping.City1);
             tpo.ContactCounty.SendKeys(Config.AddressInfo.ShippingAddress.CountyShipping.County);
             tpo.ContactNextButton.Click();
             tpo.IAmNotTheirSponsorRadioButton.Click();

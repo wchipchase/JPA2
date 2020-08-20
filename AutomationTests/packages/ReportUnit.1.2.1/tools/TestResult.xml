@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="0" runstate="Runnable" testcasecount="40" result="Failed" total="40" passed="31" failed="9" inconclusive="0" skipped="0" asserts="343" engine-version="3.11.1.0" clr-version="4.0.30319.42000" start-time="2020-07-20 17:37:07Z" end-time="2020-07-20 17:58:02Z" duration="1254.141040">
-  <command-line><![CDATA["C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\packages\NUnit.ConsoleRunner.3.11.1\tools\nunit3-console.exe" C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\bin\Debug\AutomationTests.exe]]></command-line>
-  <test-suite type="Assembly" id="0-1047" name="AutomationTests.exe" fullname="C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\bin\Debug\AutomationTests.exe" runstate="Runnable" testcasecount="40" result="Failed" site="Child" start-time="2020-07-20 17:37:08Z" end-time="2020-07-20 17:58:02Z" duration="1253.738738" total="40" passed="31" failed="9" warnings="0" inconclusive="0" skipped="0" asserts="343">
-    <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18363.0" platform="Win32NT" cwd="C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\packages\NUnit.ConsoleRunner.3.11.1\tools" machine-name="LT-IS-WCHIPCHAS" user="wchipchase" user-domain="NSANET" culture="en-US" uiculture="en-US" os-architecture="x86" />
+<test-run id="0" runstate="Runnable" testcasecount="44" result="Failed" total="14" passed="11" failed="3" inconclusive="0" skipped="0" asserts="46" engine-version="3.11.1.0" clr-version="4.0.30319.42000" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:32:00Z" duration="83.210222">
+  <command-line><![CDATA["C:\Users\wchipchase\Source\repos\jpa3\AutomationTests\packages\NUnit.ConsoleRunner.3.11.1\tools\nunit3-console.exe" C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\bin\Debug\AutomationTests.exe --where "cat == 'smoketest'"]]></command-line>
+  <filter>
+    <cat>smoketest</cat>
+  </filter>
+  <test-suite type="Assembly" id="0-1049" name="AutomationTests.exe" fullname="C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\bin\Debug\AutomationTests.exe" runstate="Runnable" testcasecount="44" result="Failed" site="Child" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:32:00Z" duration="82.822661" total="14" passed="11" failed="3" warnings="0" inconclusive="0" skipped="0" asserts="46">
+    <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18363.0" platform="Win32NT" cwd="C:\Users\wchipchase\Source\repos\jpa3\AutomationTests\packages\NUnit.ConsoleRunner.3.11.1\tools" machine-name="LT-IS-WCHIPCHAS" user="wchipchase" user-domain="NSANET" culture="en-US" uiculture="en-US" os-architecture="x86" />
     <settings>
       <setting name="DisposeRunners" value="True" />
-      <setting name="WorkDirectory" value="C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\packages\NUnit.ConsoleRunner.3.11.1\tools" />
+      <setting name="WorkDirectory" value="C:\Users\wchipchase\Source\repos\jpa3\AutomationTests\packages\NUnit.ConsoleRunner.3.11.1\tools" />
       <setting name="ImageRuntimeVersion" value="4.0.30319" />
       <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.5.2" />
       <setting name="ImageRequiresX86" value="True" />
@@ -15,272 +18,67 @@
       <setting name="NumberOfTestWorkers" value="12" />
     </settings>
     <properties>
-      <property name="_PID" value="20220" />
+      <property name="_PID" value="28364" />
       <property name="_APPDOMAIN" value="domain-" />
     </properties>
     <failure>
       <message><![CDATA[One or more child tests had errors]]></message>
     </failure>
-    <test-suite type="TestSuite" id="0-1048" name="AutomationTests" fullname="AutomationTests" runstate="Runnable" testcasecount="40" result="Failed" site="Child" start-time="2020-07-20 17:37:08Z" end-time="2020-07-20 17:58:02Z" duration="1253.728904" total="40" passed="31" failed="9" warnings="0" inconclusive="0" skipped="0" asserts="343">
+    <test-suite type="TestSuite" id="0-1050" name="AutomationTests" fullname="AutomationTests" runstate="Runnable" testcasecount="44" result="Failed" site="Child" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:32:00Z" duration="82.812716" total="14" passed="11" failed="3" warnings="0" inconclusive="0" skipped="0" asserts="46">
+      <properties />
       <failure>
         <message><![CDATA[One or more child tests had errors]]></message>
       </failure>
-      <test-suite type="TestFixture" id="0-1000" name="PartnerPortal" fullname="AutomationTests.PartnerPortal" classname="AutomationTests.PartnerPortal" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2020-07-20 17:37:08Z" end-time="2020-07-20 17:38:35Z" duration="87.311873" total="6" passed="4" failed="2" warnings="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestFixture" id="0-1000" name="PartnerPortal" fullname="AutomationTests.PartnerPortal" classname="AutomationTests.PartnerPortal" runstate="Runnable" testcasecount="14" result="Failed" site="Child" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:32:00Z" duration="82.807532" total="14" passed="11" failed="3" warnings="0" inconclusive="0" skipped="0" asserts="46">
+        <properties>
+          <property name="ParallelScope" value="All" />
+        </properties>
         <failure>
           <message><![CDATA[One or more child tests had errors]]></message>
         </failure>
-        <test-case id="0-1006" name="AddAMemberPartnerPortal" fullname="AutomationTests.PartnerPortal.AddAMemberPartnerPortal" methodname="AddAMemberPartnerPortal" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1427664285" result="Failed" label="Error" start-time="2020-07-20 17:37:08Z" end-time="2020-07-20 17:37:30Z" duration="21.829939" asserts="0">
+        <test-case id="0-1011" name="ValdiateContactForm" fullname="AutomationTests.PartnerPortal.ValdiateContactForm" methodname="ValdiateContactForm" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1687154669" result="Passed" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:31:07Z" duration="29.932034" asserts="1">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+        </test-case>
+        <test-case id="0-1014" name="SharedCartJuicePlusOrder" fullname="AutomationTests.PartnerPortal.SharedCartJuicePlusOrder" methodname="SharedCartJuicePlusOrder" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="831976360" result="Failed" label="Error" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:31:15Z" duration="37.988660" asserts="1">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
           <failure>
-            <message><![CDATA[OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //span[.='To Team List']]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
-   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
-   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
-   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
-   at OpenQA.Selenium.IWebElement.Click()
-   at AutomationTests.PageActions.PartnerPortal.TeamActions.FillOutContactFormAndSubmitApplication() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\PartnerPortal\TeamActions.cs:line 92
-   at AutomationTests.PartnerPortal.AddAMemberPartnerPortal() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 75]]></stack-trace>
-          </failure>
-          <output><![CDATA[CF Cookie is null. Obtaining JWT.
-magicCookie: 
-]]></output>
-        </test-case>
-        <test-case id="0-1005" name="CustomerFilterValidation" fullname="AutomationTests.PartnerPortal.CustomerFilterValidation" methodname="CustomerFilterValidation" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1448363198" result="Passed" start-time="2020-07-20 17:37:30Z" end-time="2020-07-20 17:37:43Z" duration="13.578569" asserts="0">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-]]></output>
-        </test-case>
-        <test-case id="0-1002" name="TeamFilter" fullname="AutomationTests.PartnerPortal.TeamFilter" methodname="TeamFilter" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="503270602" result="Passed" start-time="2020-07-20 17:37:43Z" end-time="2020-07-20 17:37:57Z" duration="14.035872" asserts="0">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-]]></output>
-        </test-case>
-        <test-case id="0-1001" name="ValidateDashboardCards" fullname="AutomationTests.PartnerPortal.ValidateDashboardCards" methodname="ValidateDashboardCards" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1813432309" result="Failed" label="Error" start-time="2020-07-20 17:37:57Z" end-time="2020-07-20 17:38:11Z" duration="13.571320" asserts="0">
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //h2[contains(.,'Performance Bonus (PB)')]]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
-   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
-   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
-   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
-   at OpenQA.Selenium.IWebElement.Click()
-   at AutomationTests.PageActions.PartnerPortal.DashboardActions.ValidatePerformanceBonusCard() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\PartnerPortal\DashboardActions.cs:line 40
-   at AutomationTests.PartnerPortal.ValidateDashboardCards() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 28]]></stack-trace>
-          </failure>
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-]]></output>
-        </test-case>
-        <test-case id="0-1004" name="ValidateDownloadCSV" fullname="AutomationTests.PartnerPortal.ValidateDownloadCSV" methodname="ValidateDownloadCSV" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1313284676" result="Passed" start-time="2020-07-20 17:38:11Z" end-time="2020-07-20 17:38:24Z" duration="13.432113" asserts="0">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-]]></output>
-        </test-case>
-        <test-case id="0-1003" name="ValidatingFirstAndLastNameFilters" fullname="AutomationTests.PartnerPortal.ValidatingFirstAndLastNameFilters" methodname="ValidatingFirstAndLastNameFilters" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="17187121" result="Passed" start-time="2020-07-20 17:38:24Z" end-time="2020-07-20 17:38:35Z" duration="10.857874" asserts="0">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-]]></output>
-        </test-case>
-      </test-suite>
-      <test-suite type="TestFixture" id="0-1007" name="ProductCheckout" fullname="AutomationTests.ProductCheckout" classname="AutomationTests.ProductCheckout" runstate="Runnable" testcasecount="28" result="Failed" site="Child" start-time="2020-07-20 17:38:35Z" end-time="2020-07-20 17:56:07Z" duration="1051.501595" total="28" passed="25" failed="3" warnings="0" inconclusive="0" skipped="0" asserts="319">
-        <failure>
-          <message><![CDATA[One or more child tests had errors]]></message>
-        </failure>
-        <test-case id="0-1023" name="CheckoutBerryCapsulesMC" fullname="AutomationTests.ProductCheckout.CheckoutBerryCapsulesMC" methodname="CheckoutBerryCapsulesMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1465593158" result="Passed" start-time="2020-07-20 17:38:35Z" end-time="2020-07-20 17:39:15Z" duration="39.672473" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1010" name="CheckoutBerryCapsulesVisa" fullname="AutomationTests.ProductCheckout.CheckoutBerryCapsulesVisa" methodname="CheckoutBerryCapsulesVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1810241004" result="Passed" start-time="2020-07-20 17:39:15Z" end-time="2020-07-20 17:39:53Z" duration="37.739383" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1026" name="CheckoutBerryChewablesMC" fullname="AutomationTests.ProductCheckout.CheckoutBerryChewablesMC" methodname="CheckoutBerryChewablesMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1329081088" result="Passed" start-time="2020-07-20 17:39:53Z" end-time="2020-07-20 17:40:33Z" duration="40.867171" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1013" name="CheckoutBerryChewablesVisa" fullname="AutomationTests.ProductCheckout.CheckoutBerryChewablesVisa" methodname="CheckoutBerryChewablesVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1620124451" result="Passed" start-time="2020-07-20 17:40:33Z" end-time="2020-07-20 17:41:08Z" duration="34.467609" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1033" name="CheckoutCompleteBoosterMC" fullname="AutomationTests.ProductCheckout.CheckoutCompleteBoosterMC" methodname="CheckoutCompleteBoosterMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="918260653" result="Failed" label="Error" start-time="2020-07-20 17:41:08Z" end-time="2020-07-20 17:41:56Z" duration="47.814342" asserts="10">
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverTimeoutException : Timed out after 30 seconds]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
-   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
-   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutActions.CartActions.CheckoutWithCartItemsMC() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\CartCheckoutActions\CartActions.cs:line 158
-   at AutomationTests.ProductCheckout.CheckoutCompleteBoosterMC() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\ProductCheckout.cs:line 205]]></stack-trace>
-          </failure>
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1020" name="CheckoutCompleteBoosterVisa" fullname="AutomationTests.ProductCheckout.CheckoutCompleteBoosterVisa" methodname="CheckoutCompleteBoosterVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1619673716" result="Passed" start-time="2020-07-20 17:41:56Z" end-time="2020-07-20 17:42:33Z" duration="36.869394" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1032" name="CheckoutCompleteCombiBoxMC" fullname="AutomationTests.ProductCheckout.CheckoutCompleteCombiBoxMC" methodname="CheckoutCompleteCombiBoxMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1671538127" result="Passed" start-time="2020-07-20 17:42:33Z" end-time="2020-07-20 17:43:08Z" duration="35.429767" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1019" name="CheckoutCompleteCombiBoxVisa" fullname="AutomationTests.ProductCheckout.CheckoutCompleteCombiBoxVisa" methodname="CheckoutCompleteCombiBoxVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1193290228" result="Passed" start-time="2020-07-20 17:43:08Z" end-time="2020-07-20 17:43:43Z" duration="34.876071" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1030" name="CheckoutCompleteJuiceBarsMC" fullname="AutomationTests.ProductCheckout.CheckoutCompleteJuiceBarsMC" methodname="CheckoutCompleteJuiceBarsMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1933152941" result="Passed" start-time="2020-07-20 17:43:43Z" end-time="2020-07-20 17:44:18Z" duration="35.502725" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1017" name="CheckoutCompleteJuiceBarsVisa" fullname="AutomationTests.ProductCheckout.CheckoutCompleteJuiceBarsVisa" methodname="CheckoutCompleteJuiceBarsVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1659293914" result="Passed" start-time="2020-07-20 17:44:18Z" end-time="2020-07-20 17:44:53Z" duration="34.407181" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1029" name="CheckoutCompleteShakesMC" fullname="AutomationTests.ProductCheckout.CheckoutCompleteShakesMC" methodname="CheckoutCompleteShakesMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1147121910" result="Passed" start-time="2020-07-20 17:44:53Z" end-time="2020-07-20 17:45:34Z" duration="41.366291" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1016" name="CheckoutCompleteShakesVisa" fullname="AutomationTests.ProductCheckout.CheckoutCompleteShakesVisa" methodname="CheckoutCompleteShakesVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="15302153" result="Passed" start-time="2020-07-20 17:45:34Z" end-time="2020-07-20 17:46:09Z" duration="35.195986" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1031" name="CheckoutCompleteVegetableSoupMC" fullname="AutomationTests.ProductCheckout.CheckoutCompleteVegetableSoupMC" methodname="CheckoutCompleteVegetableSoupMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1099023570" result="Passed" start-time="2020-07-20 17:46:09Z" end-time="2020-07-20 17:46:47Z" duration="38.060274" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1018" name="CheckoutCompleteVegetableSoupVisa" fullname="AutomationTests.ProductCheckout.CheckoutCompleteVegetableSoupVisa" methodname="CheckoutCompleteVegetableSoupVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="36679651" result="Passed" start-time="2020-07-20 17:46:47Z" end-time="2020-07-20 17:47:22Z" duration="34.800070" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1025" name="CheckoutFruitsAndVegetableChewablesMC" fullname="AutomationTests.ProductCheckout.CheckoutFruitsAndVegetableChewablesMC" methodname="CheckoutFruitsAndVegetableChewablesMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1165977846" result="Failed" label="Error" start-time="2020-07-20 17:47:22Z" end-time="2020-07-20 17:48:09Z" duration="47.092229" asserts="10">
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverTimeoutException : Timed out after 30 seconds]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
-   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
-   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutActions.CartActions.CheckoutWithCartItemsMC() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\CartCheckoutActions\CartActions.cs:line 158
-   at AutomationTests.ProductCheckout.CheckoutFruitsAndVegetableChewablesMC() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\ProductCheckout.cs:line 149]]></stack-trace>
-          </failure>
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1012" name="CheckoutFruitsAndVegetableChewablesVisa" fullname="AutomationTests.ProductCheckout.CheckoutFruitsAndVegetableChewablesVisa" methodname="CheckoutFruitsAndVegetableChewablesVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1581025810" result="Passed" start-time="2020-07-20 17:48:09Z" end-time="2020-07-20 17:48:58Z" duration="48.265587" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1022" name="CheckoutFruitsAndVegetablesCapsulesMC" fullname="AutomationTests.ProductCheckout.CheckoutFruitsAndVegetablesCapsulesMC" methodname="CheckoutFruitsAndVegetablesCapsulesMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="141804007" result="Passed" start-time="2020-07-20 17:48:58Z" end-time="2020-07-20 17:49:32Z" duration="34.890296" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1009" name="CheckoutFruitsAndVegetablesCapsulesVisa" fullname="AutomationTests.ProductCheckout.CheckoutFruitsAndVegetablesCapsulesVisa" methodname="CheckoutFruitsAndVegetablesCapsulesVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="579769901" result="Passed" start-time="2020-07-20 17:49:32Z" end-time="2020-07-20 17:50:12Z" duration="39.852998" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1035" name="CheckoutMixedProductUplifSinglePayRecurringOrderCapsulesSingleOrderInstallmentsMC" fullname="AutomationTests.ProductCheckout.CheckoutMixedProductUplifSinglePayRecurringOrderCapsulesSingleOrderInstallmentsMC" methodname="CheckoutMixedProductUplifSinglePayRecurringOrderCapsulesSingleOrderInstallmentsMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="2001038817" result="Passed" start-time="2020-07-20 17:50:12Z" end-time="2020-07-20 17:50:54Z" duration="41.665417" asserts="18">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1034" name="CheckoutMixedProductUplifSinglePayRecurringOrderCapsulesSingleOrderInstallmentsVisa" fullname="AutomationTests.ProductCheckout.CheckoutMixedProductUplifSinglePayRecurringOrderCapsulesSingleOrderInstallmentsVisa" methodname="CheckoutMixedProductUplifSinglePayRecurringOrderCapsulesSingleOrderInstallmentsVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="321116675" result="Passed" start-time="2020-07-20 17:50:54Z" end-time="2020-07-20 17:51:32Z" duration="38.101555" asserts="18">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1027" name="CheckoutOmegaBlendMC" fullname="AutomationTests.ProductCheckout.CheckoutOmegaBlendMC" methodname="CheckoutOmegaBlendMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="627114248" result="Passed" start-time="2020-07-20 17:51:32Z" end-time="2020-07-20 17:52:05Z" duration="32.735451" asserts="10">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1014" name="CheckoutOmegaBlendVisa" fullname="AutomationTests.ProductCheckout.CheckoutOmegaBlendVisa" methodname="CheckoutOmegaBlendVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="118482188" result="Passed" start-time="2020-07-20 17:52:05Z" end-time="2020-07-20 17:52:37Z" duration="32.151799" asserts="10">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1021" name="CheckoutPremiumCapsulesMC" fullname="AutomationTests.ProductCheckout.CheckoutPremiumCapsulesMC" methodname="CheckoutPremiumCapsulesMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="883690254" result="Passed" start-time="2020-07-20 17:52:37Z" end-time="2020-07-20 17:53:12Z" duration="34.953967" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1008" name="CheckoutPremiumCapsulesVisa" fullname="AutomationTests.ProductCheckout.CheckoutPremiumCapsulesVisa" methodname="CheckoutPremiumCapsulesVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1948347842" result="Passed" start-time="2020-07-20 17:53:12Z" end-time="2020-07-20 17:53:47Z" duration="34.801093" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1024" name="CheckoutPremiumChewablesMC" fullname="AutomationTests.ProductCheckout.CheckoutPremiumChewablesMC" methodname="CheckoutPremiumChewablesMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="579212578" result="Passed" start-time="2020-07-20 17:53:47Z" end-time="2020-07-20 17:54:22Z" duration="35.084220" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1011" name="CheckoutPremiumChewablesVisa" fullname="AutomationTests.ProductCheckout.CheckoutPremiumChewablesVisa" methodname="CheckoutPremiumChewablesVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="20465347" result="Passed" start-time="2020-07-20 17:54:22Z" end-time="2020-07-20 17:54:57Z" duration="35.192373" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1028" name="CheckoutUpliftMC" fullname="AutomationTests.ProductCheckout.CheckoutUpliftMC" methodname="CheckoutUpliftMC" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="1387560056" result="Passed" start-time="2020-07-20 17:54:57Z" end-time="2020-07-20 17:55:33Z" duration="35.646170" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=83.0.4103.116)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
-   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
-   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+            <message><![CDATA[System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
+  ----> OpenQA.Selenium.StaleElementReferenceException : stale element reference: element is not attached to the page document
+  (Session info: chrome=84.0.4147.125)]]></message>
+            <stack-trace><![CDATA[   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
    at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
    at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
    at OpenQA.Selenium.Support.PageObjects.WebDriverObjectProxy.InvokeMethod(IMethodCallMessage msg, Object representedValue)
    at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
    at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
    at OpenQA.Selenium.IWebElement.Click()
-   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsActions.NavigationActions.NavigateOurProductsOmegaClick() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\NavigationsActions\NavigationActions.cs:line 85
-1
-]]></output>
-        </test-case>
-        <test-case id="0-1015" name="CheckoutUpliftVisa" fullname="AutomationTests.ProductCheckout.CheckoutUpliftVisa" methodname="CheckoutUpliftVisa" classname="AutomationTests.ProductCheckout" runstate="Runnable" seed="552785807" result="Failed" start-time="2020-07-20 17:55:33Z" end-time="2020-07-20 17:56:07Z" duration="33.998535" asserts="12">
-          <failure>
-            <message><![CDATA[  Expected: True
-  But was:  False
-]]></message>
-            <stack-trace><![CDATA[   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMenuItemsActions.UpliftActions.UpliftActions.AddUpliftToCart() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\OurProductsMenuItemsActions\UpliftActions\UpliftActions.cs:line 39
-   at AutomationTests.ProductCheckout.CheckoutUpliftVisa() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\ProductCheckout.cs:line 76
-]]></stack-trace>
+   at AutomationTests.PageActions.PartnerPortal.ShopActions.NavigateToShop() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\PageActions\PartnerPortal\ShopActions.cs:line 33
+   at AutomationTests.PartnerPortal.SharedCartJuicePlusOrder() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 204
+--StaleElementReferenceException
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()]]></stack-trace>
           </failure>
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-NUnit.Framework.AssertionException:   Expected: True
-  But was:  False
-
-   at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
-   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 382
-   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.That.cs:line 240
-   at NUnit.Framework.Assert.IsTrue(Boolean condition) in D:\a\1\s\src\NUnitFramework\framework\Assert.Conditions.cs:line 119
-   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMenuItemsActions.UpliftActions.UpliftActions.AddUpliftToCart() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\OurProductsMenuItemsActions\UpliftActions\UpliftActions.cs:line 39
-1
-]]></output>
-          <assertions>
-            <assertion result="Failed">
-              <message><![CDATA[  Expected: True
-  But was:  False
-]]></message>
-              <stack-trace><![CDATA[   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMenuItemsActions.UpliftActions.UpliftActions.AddUpliftToCart() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\OurProductsMenuItemsActions\UpliftActions\UpliftActions.cs:line 39
-   at AutomationTests.ProductCheckout.CheckoutUpliftVisa() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\ProductCheckout.cs:line 76
-]]></stack-trace>
-            </assertion>
-          </assertions>
         </test-case>
-      </test-suite>
-      <test-suite type="TestFixture" id="0-1036" name="TestFooterNavigationItems" fullname="AutomationTests.TestFooterNavigationItems" classname="AutomationTests.TestFooterNavigationItems" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-07-20 17:56:07Z" end-time="2020-07-20 17:57:02Z" duration="55.491569" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="11">
-        <test-case id="0-1037" name="TestAllFooterNavigation" fullname="AutomationTests.TestFooterNavigationItems.TestAllFooterNavigation" methodname="TestAllFooterNavigation" classname="AutomationTests.TestFooterNavigationItems" runstate="Runnable" seed="1739247623" result="Passed" start-time="2020-07-20 17:56:07Z" end-time="2020-07-20 17:57:02Z" duration="55.491326" asserts="11">
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-OpenQA.Selenium.NoSuchElementException: Could not find element by: By.XPath: //*[@id='app']/div/footer/div/div[2]/div/div/div[2]/nav/div/div/ul/li[1]/a
+        <test-case id="0-1001" name="ValidateDashboardCards" fullname="AutomationTests.PartnerPortal.ValidateDashboardCards" methodname="ValidateDashboardCards" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="544799562" result="Passed" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:31:17Z" duration="39.940018" asserts="4">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+        </test-case>
+        <test-case id="0-1012" name="SwitchCountryInCart" fullname="AutomationTests.PartnerPortal.SwitchCountryInCart" methodname="SwitchCountryInCart" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1782245612" result="Passed" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:31:19Z" duration="42.398254" asserts="3">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <output><![CDATA[OpenQA.Selenium.NoSuchElementException: Could not find element by: By.XPath: //a[@href='/gb/en']
    at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
    at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
    at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
@@ -290,225 +88,109 @@ OpenQA.Selenium.NoSuchElementException: Could not find element by: By.XPath: //*
    at OpenQA.Selenium.Remote.RemoteWebDriver.ConvertArgumentsToJavaScriptObjects(Object[] args)
    at OpenQA.Selenium.Remote.RemoteWebDriver.ExecuteScriptCommand(String script, String commandName, Object[] args)
    at OpenQA.Selenium.Remote.RemoteWebDriver.ExecuteScript(String script, Object[] args)
-   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsActions.NavigationActions.NavigateCompany_ContactUs() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\NavigationsActions\NavigationActions.cs:line 476
-OpenQA.Selenium.NoSuchElementException: Could not find element by: By.XPath: //a[@href='/ie/en/live-better/healthy-family/healthy-starts-for-families']
-   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
-   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
-   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
-   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
-   at OpenQA.Selenium.Internal.IWrapsElement.get_WrappedElement()
-   at OpenQA.Selenium.Remote.RemoteWebDriver.ConvertObjectToJavaScriptObject(Object arg)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.ConvertArgumentsToJavaScriptObjects(Object[] args)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.ExecuteScriptCommand(String script, String commandName, Object[] args)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.ExecuteScript(String script, Object[] args)
-   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsActions.NavigationActions.NavigateResources_HealthyStartforFamilies() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\NavigationsActions\NavigationActions.cs:line 556
+   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsActions.NavigationActions.NavigateCountryClick() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\NavigationsActions\NavigationActions.cs:line 418
 ]]></output>
         </test-case>
-      </test-suite>
-      <test-suite type="TestFixture" id="0-1038" name="TestHeaderNavigationItems" fullname="AutomationTests.TestHeaderNavigationItems" classname="AutomationTests.TestHeaderNavigationItems" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2020-07-20 17:57:02Z" end-time="2020-07-20 17:57:30Z" duration="27.685522" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="13">
-        <failure>
-          <message><![CDATA[One or more child tests had errors]]></message>
-        </failure>
-        <test-case id="0-1039" name="TestAllHeaderNavigation" fullname="AutomationTests.TestHeaderNavigationItems.TestAllHeaderNavigation" methodname="TestAllHeaderNavigation" classname="AutomationTests.TestHeaderNavigationItems" runstate="Runnable" seed="1628452725" result="Failed" start-time="2020-07-20 17:57:02Z" end-time="2020-07-20 17:57:30Z" duration="27.685322" asserts="13">
+        <test-case id="0-1005" name="CustomerFilterValidation" fullname="AutomationTests.PartnerPortal.CustomerFilterValidation" methodname="CustomerFilterValidation" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="298669999" result="Passed" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:31:21Z" duration="44.462946" asserts="4">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+        </test-case>
+        <test-case id="0-1013" name="SharedCartPortalOrders" fullname="AutomationTests.PartnerPortal.SharedCartPortalOrders" methodname="SharedCartPortalOrders" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="395890543" result="Passed" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:31:23Z" duration="46.433647" asserts="3">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+        </test-case>
+        <test-case id="0-1002" name="TeamFilterValidation" fullname="AutomationTests.PartnerPortal.TeamFilterValidation" methodname="TeamFilterValidation" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1829135981" result="Passed" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:31:31Z" duration="53.876923" asserts="1">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+        </test-case>
+        <test-case id="0-1010" name="AddAMemberPartnerPortalDifferentSponsor" fullname="AutomationTests.PartnerPortal.AddAMemberPartnerPortalDifferentSponsor" methodname="AddAMemberPartnerPortalDifferentSponsor" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1281940656" result="Failed" label="Error" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:31:38Z" duration="60.739552" asserts="1">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
           <failure>
-            <message><![CDATA[Multiple failures or warnings in test:
-  1)   Expected: True
-  But was:  False
-
-  2)   Expected: True
-  But was:  False
-
-]]></message>
-          </failure>
-          <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=83.0.4103.116)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
-   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
-   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+            <message><![CDATA[System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
+  ----> OpenQA.Selenium.ElementNotInteractableException : element not interactable
+  (Session info: chrome=84.0.4147.125)]]></message>
+            <stack-trace><![CDATA[   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
    at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
    at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
    at OpenQA.Selenium.Support.PageObjects.WebDriverObjectProxy.InvokeMethod(IMethodCallMessage msg, Object representedValue)
    at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
    at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
    at OpenQA.Selenium.IWebElement.Click()
-   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsActions.NavigationActions.NavigateLiveBetterHealthyFamilyClick() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\NavigationsActions\NavigationActions.cs:line 177
-NUnit.Framework.AssertionException:   Expected: True
-  But was:  False
-
-   at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
-   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 382
-   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.That.cs:line 240
-   at NUnit.Framework.Assert.IsTrue(Boolean condition) in D:\a\1\s\src\NUnitFramework\framework\Assert.Conditions.cs:line 119
-   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsActions.NavigationActions.NavigateLiveBetterFeelGoodLookGoodClick() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\NavigationsActions\NavigationActions.cs:line 217
-OpenQA.Selenium.NoSuchElementException: Could not find element by: By.XPath:  //div[@class='m-flyout__content js-m-flyout__content m-flyout__content--attached m-flyout__content--tooltip']//a[contains(.,'Overview')]
-   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
-   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
-   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
-   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
-   at OpenQA.Selenium.IWebElement.Click()
-   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsActions.NavigationActions.NavigateOurProductsOverViewClick() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\NavigationsActions\NavigationActions.cs:line 50
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=83.0.4103.116)
+   at AutomationTests.PageActions.PartnerPortal.TeamActions.FillOutContactFormAndSubmitApplicationOtherSponsor() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\PageActions\PartnerPortal\TeamActions.cs:line 112
+   at AutomationTests.PartnerPortal.AddAMemberPartnerPortalDifferentSponsor() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 163
+--ElementNotInteractableException
    at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
-   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="0-1006" name="PurchaseProductsWithInvalidCC" fullname="AutomationTests.PartnerPortal.PurchaseProductsWithInvalidCC" methodname="PurchaseProductsWithInvalidCC" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1017986044" result="Passed" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:31:41Z" duration="63.805060" asserts="8">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+        </test-case>
+        <test-case id="0-1004" name="ValidateDownloadCSV" fullname="AutomationTests.PartnerPortal.ValidateDownloadCSV" methodname="ValidateDownloadCSV" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1601011426" result="Passed" start-time="2020-08-18 18:31:07Z" end-time="2020-08-18 18:31:42Z" duration="35.057945" asserts="1">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+        </test-case>
+        <test-case id="0-1003" name="ValidatingFirstAndLastNameFilters" fullname="AutomationTests.PartnerPortal.ValidatingFirstAndLastNameFilters" methodname="ValidatingFirstAndLastNameFilters" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="791615008" result="Passed" start-time="2020-08-18 18:31:15Z" end-time="2020-08-18 18:31:44Z" duration="28.875532" asserts="1">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+        </test-case>
+        <test-case id="0-1007" name="AddAMemberPartnerPortal" fullname="AutomationTests.PartnerPortal.AddAMemberPartnerPortal" methodname="AddAMemberPartnerPortal" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1621428707" result="Passed" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:31:44Z" duration="67.221579" asserts="1">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+        </test-case>
+        <test-case id="0-1009" name="GuestCheckoutPremiumCapsulesVisa" fullname="AutomationTests.PartnerPortal.GuestCheckoutPremiumCapsulesVisa" methodname="GuestCheckoutPremiumCapsulesVisa" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1179232994" result="Failed" label="Error" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:31:46Z" duration="69.296032" asserts="9">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+          <failure>
+            <message><![CDATA[System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
+  ----> OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <span class="a-button__inner">...</span> is not clickable at point (1626, 92). Other element would receive the click: <nav class="o-checkout__stepper-nav js-o-checkout__stepper-nav m-stepper__nav o-checkout__stepper-nav--is-sticky">...</nav>
+  (Session info: chrome=84.0.4147.125)]]></message>
+            <stack-trace><![CDATA[   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
    at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
    at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
    at OpenQA.Selenium.Support.PageObjects.WebDriverObjectProxy.InvokeMethod(IMethodCallMessage msg, Object representedValue)
    at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
    at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
    at OpenQA.Selenium.IWebElement.Click()
-   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsActions.NavigationActions.NavigateOurProductsCapsulesClick() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\NavigationsActions\NavigationActions.cs:line 29
-NUnit.Framework.AssertionException: Multiple failures or warnings in test:
-  1)   Expected: True
-  But was:  False
-
-  2)   Expected: True
-  But was:  False
-
-
-   at NUnit.Framework.Assert.ReportFailure(String message) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 394
-   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.cs:line 382
-   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args) in D:\a\1\s\src\NUnitFramework\framework\Assert.That.cs:line 240
-   at NUnit.Framework.Assert.IsTrue(Boolean condition) in D:\a\1\s\src\NUnitFramework\framework\Assert.Conditions.cs:line 119
-   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsActions.NavigationActions.NavigateOurCommunityOverviewClick() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\NavigationsActions\NavigationActions.cs:line 253
-]]></output>
-          <assertions>
-            <assertion result="Failed">
-              <message><![CDATA[  Expected: True
-  But was:  False
-]]></message>
-              <stack-trace><![CDATA[   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsActions.NavigationActions.NavigateLiveBetterFeelGoodLookGoodClick() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\NavigationsActions\NavigationActions.cs:line 217
-   at AutomationTests.TestHeaderNavigationItems.TestAllHeaderNavigation() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\TestHeaderNavigationItems.cs:line 22
-]]></stack-trace>
-            </assertion>
-            <assertion result="Failed">
-              <message><![CDATA[  Expected: True
-  But was:  False
-]]></message>
-              <stack-trace><![CDATA[   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsActions.NavigationActions.NavigateOurCommunityOverviewClick() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\NavigationsActions\NavigationActions.cs:line 253
-   at AutomationTests.TestHeaderNavigationItems.TestAllHeaderNavigation() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\TestHeaderNavigationItems.cs:line 31
-]]></stack-trace>
-            </assertion>
-          </assertions>
-        </test-case>
-      </test-suite>
-      <test-suite type="TestSuite" id="0-1049" name="Tests" fullname="AutomationTests.Tests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2020-07-20 17:37:08Z" end-time="2020-07-20 17:58:02Z" duration="1253.728696" total="4" passed="1" failed="3" warnings="0" inconclusive="0" skipped="0" asserts="0">
-        <failure>
-          <message><![CDATA[One or more child tests had errors]]></message>
-        </failure>
-        <test-suite type="TestFixture" id="0-1040" name="EntryPoint" fullname="AutomationTests.Tests.EntryPoint" classname="AutomationTests.Tests.EntryPoint" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2020-07-20 17:57:30Z" end-time="2020-07-20 17:57:53Z" duration="23.682094" total="2" passed="0" failed="2" warnings="0" inconclusive="0" skipped="0" asserts="0">
-          <failure>
-            <message><![CDATA[One or more child tests had errors]]></message>
-          </failure>
-          <test-case id="0-1041" name="AddNewMessage" fullname="AutomationTests.Tests.EntryPoint.AddNewMessage" methodname="AddNewMessage" classname="AutomationTests.Tests.EntryPoint" runstate="Runnable" seed="652139165" result="Failed" label="Error" start-time="2020-07-20 17:57:30Z" end-time="2020-07-20 17:57:41Z" duration="11.653644" asserts="0">
-            <properties>
-              <property name="Order" value="1" />
-            </properties>
-            <failure>
-              <message><![CDATA[OpenQA.Selenium.NoSuchElementException : Could not find element by: By.Name: firstName]]></message>
-              <stack-trace><![CDATA[   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
-   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
-   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
-   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
-   at OpenQA.Selenium.IWebElement.SendKeys(String text)
-   at AutomationTests.PageActions.ContactUsActions.AddNewValidMessage(String firstName, String lastName, String email, String phone, String address1, String address2, String city, String state, String zipcode, String message) in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\ContactUsActions.cs:line 20
-   at AutomationTests.Tests.EntryPoint.AddNewMessage() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\EntryPoint.cs:line 39]]></stack-trace>
-            </failure>
-            <output><![CDATA[CF Cookie is NOT null. Utilizing existing CF JWT Cookie.
-]]></output>
-          </test-case>
-          <test-case id="0-1042" name="TestMessageErrorResponse" fullname="AutomationTests.Tests.EntryPoint.TestMessageErrorResponse" methodname="TestMessageErrorResponse" classname="AutomationTests.Tests.EntryPoint" runstate="Runnable" seed="2012998657" result="Failed" label="Error" start-time="2020-07-20 17:57:41Z" end-time="2020-07-20 17:57:53Z" duration="12.027708" asserts="0">
-            <properties>
-              <property name="Order" value="2" />
-            </properties>
-            <failure>
-              <message><![CDATA[OpenQA.Selenium.WebDriverException : Unexpected error. System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:54328
-   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
-   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
-   --- End of inner exception stack trace ---
-   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
-   at System.Net.HttpWebRequest.GetRequestStream()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)]]></message>
-              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByName(String name)
-   at OpenQA.Selenium.By.<>c__DisplayClass18_0.<Name>b__0(ISearchContext context)
-   at OpenQA.Selenium.By.FindElement(ISearchContext context)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
-   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)
-   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()
-   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
-   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
-   at OpenQA.Selenium.IWebElement.SendKeys(String text)
-   at AutomationTests.PageActions.ContactUsActions.AddNewInvalidMessage(String firstName) in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\ContactUsActions.cs:line 39
-   at AutomationTests.Tests.EntryPoint.TestMessageErrorResponse() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\EntryPoint.cs:line 45]]></stack-trace>
-            </failure>
-          </test-case>
-        </test-suite>
-        <test-suite type="TestFixture" id="0-1043" name="ReadFromExcel" fullname="AutomationTests.Tests.ReadFromExcel" classname="AutomationTests.Tests.ReadFromExcel" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-07-20 17:57:53Z" end-time="2020-07-20 17:57:54Z" duration="0.044005" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
-          <test-case id="0-1044" name="ReadingDataFromExcelTestMethod" fullname="AutomationTests.Tests.ReadFromExcel.ReadingDataFromExcelTestMethod" methodname="ReadingDataFromExcelTestMethod" classname="AutomationTests.Tests.ReadFromExcel" runstate="Runnable" seed="554277643" result="Passed" start-time="2020-07-20 17:57:53Z" end-time="2020-07-20 17:57:54Z" duration="0.043908" asserts="0">
-            <output><![CDATA[Could not find a part of the path 'C:\Users\wchip\source\repos\JPAutomation\JPAutomation\AutomationTests\AutomationTests\Config\Messages.xlsx'.
-]]></output>
-          </test-case>
-        </test-suite>
-        <test-suite type="TestFixture" id="0-1045" name="Scratch" fullname="AutomationTests.Tests.Scratch" classname="AutomationTests.Tests.Scratch" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2020-07-20 17:57:54Z" end-time="2020-07-20 17:58:02Z" duration="8.009173" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
-          <failure>
-            <message><![CDATA[One or more child tests had errors]]></message>
-          </failure>
-          <test-case id="0-1046" name="ScratchTest" fullname="AutomationTests.Tests.Scratch.ScratchTest" methodname="ScratchTest" classname="AutomationTests.Tests.Scratch" runstate="Runnable" seed="1092035763" result="Failed" label="Error" start-time="2020-07-20 17:57:54Z" end-time="2020-07-20 17:58:02Z" duration="8.009093" asserts="0">
-            <failure>
-              <message><![CDATA[OpenQA.Selenium.WebDriverException : Unexpected error. System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:54328
-   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
-   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
-   --- End of inner exception stack trace ---
-   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
-   at System.Net.HttpWebRequest.GetRequestStream()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)]]></message>
-              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.set_Url(String value)
-   at OpenQA.Selenium.Remote.RemoteNavigator.GoToUrl(String url)
-   at AutomationTests.PageActions.PartnerPortal.PPCartActions.NavigateToJuicePlusWebsite() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\PartnerPortal\PPCartActions.cs:line 31
-   at AutomationTests.Tests.Scratch.ScratchTest() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\Scratch.cs:line 37]]></stack-trace>
-            </failure>
-            <output><![CDATA[OpenQA.Selenium.WebDriverException: Unexpected error. System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:54328
-   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
-   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
-   --- End of inner exception stack trace ---
-   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
-   at System.Net.HttpWebRequest.GetRequestStream()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutActions.CartActions.CheckoutWithCartItemsVisa() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\CartCheckoutActions\CartActions.cs:line 97
+   at AutomationTests.PartnerPortal.GuestCheckoutPremiumCapsulesVisa() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 152
+--ElementClickInterceptedException
    at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
-   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
-   at OpenQA.Selenium.By.FindElement(ISearchContext context)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
-   at OpenQA.Selenium.Support.UI.ExpectedConditions.<>c__DisplayClass7_0.<ElementIsVisible>b__0(IWebDriver driver)
-   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
-   at AutomationTests.PageActions.PartnerPortal.LoginActions.LoginAsPartner() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\PartnerPortal\LoginActions.cs:line 40
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()]]></stack-trace>
+          </failure>
+          <output><![CDATA[1
 ]]></output>
-          </test-case>
-        </test-suite>
+        </test-case>
+        <test-case id="0-1008" name="PurchaseProductsASLoggedInAssociate" fullname="AutomationTests.PartnerPortal.PurchaseProductsASLoggedInAssociate" methodname="PurchaseProductsASLoggedInAssociate" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="235524491" result="Passed" start-time="2020-08-18 18:30:37Z" end-time="2020-08-18 18:32:00Z" duration="82.799744" asserts="8">
+          <properties>
+            <property name="Category" value="smoketest" />
+            <property name="Category" value="alltest" />
+          </properties>
+        </test-case>
       </test-suite>
     </test-suite>
   </test-suite>

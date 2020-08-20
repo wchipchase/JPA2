@@ -8,18 +8,16 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AutomationTests.PageObjects.PartnerPortal
+namespace AutomationTests.PageObjects.PartnerPortalUS
 {
-    class Dashboard
-
+    class DashboardUSPageObjects
     {
         Driver Driver;
-        public Dashboard(Driver driver)
+        public DashboardUSPageObjects(Driver driver)
         {
             Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
         }
-
         public void ScrollViewport()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
@@ -27,13 +25,10 @@ namespace AutomationTests.PageObjects.PartnerPortal
             Thread.Sleep(500);
         }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='#purchaseVolume']/h2[@class='m-dashboard-performance-tabs__title']")]
-        public IWebElement ComissionsCard { get; set; }
-
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='#performanceBonus']/h2[@class='m-dashboard-performance-tabs__title']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='#performanceBonus']")]
         public IWebElement PerformanceBonusCard { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='#promoteOutBonus']/h2[@class='m-dashboard-performance-tabs__title']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='#promoteOutBonus']")]
         public IWebElement PromoteOutBonusCard { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//div[@id='purchaseVolume']//div[@class='l-grid__column l-grid__column--tablet-portrait--12 l-grid__column--phone--12 l-grid__column--default--6']")]
@@ -64,6 +59,6 @@ namespace AutomationTests.PageObjects.PartnerPortal
         public IWebElement ArrowToAnniversaries { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//div[@class='m-dashboard-customers-overview-box']//span[@class='h-icon m-action-tile__icon h-icon--arrow-right']")]
-        public IWebElement ArrowToANewOrders{ get; set; }
+        public IWebElement ArrowToANewOrders { get; set; }
     }
 }

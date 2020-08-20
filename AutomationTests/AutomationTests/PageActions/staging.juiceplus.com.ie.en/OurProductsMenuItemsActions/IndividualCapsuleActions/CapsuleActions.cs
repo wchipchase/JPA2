@@ -274,7 +274,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                     Console.WriteLine(e); ;
                 }
                 Thread.Sleep(1000);
-                lan.CookieAlertAcceptButton.Click();
+                //lan.CookieAlertAcceptButton.Click();
                 caps.ClickBerryCapsuleShopNow();
 
                 try

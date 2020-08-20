@@ -168,10 +168,6 @@ C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTes
 C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\obj\Debug\AutomationTests.csproj.CopyComplete
 C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\obj\Debug\AutomationTests.exe
 C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\obj\Debug\AutomationTests.pdb
-C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\obj\Debug\AutomationTests.csprojAssemblyReference.cache
-C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\obj\Debug\AutomationTests.csproj.CoreCompileInputs.cache
-C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\obj\Debug\AutomationTests.exe
-C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\obj\Debug\AutomationTests.pdb
 C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\bin\Debug\NUnit3.TestAdapter.dll
 C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\bin\Debug\NUnit3.TestAdapter.pdb
 C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\bin\Debug\nunit.engine.dll
@@ -210,4 +206,8 @@ C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\bin\Debug\
 C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\bin\Debug\System.Web.Razor.xml
 C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\bin\Debug\WebDriver.xml
 C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\bin\Debug\WebDriver.Support.xml
+C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\obj\Debug\AutomationTests.csproj.CoreCompileInputs.cache
 C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\obj\Debug\AutomationTests.csproj.CopyComplete
+C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\obj\Debug\AutomationTests.exe
+C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\obj\Debug\AutomationTests.pdb
+C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\obj\Debug\AutomationTests.csprojAssemblyReference.cache

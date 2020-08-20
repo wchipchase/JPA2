@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutomationTests.Tests
+namespace AutomationTests.PageActions.PartnerPortalUS
 {
-    //class TestLandingPageElements
-    //{
-    //}
+    class ShopActionsUS
+    {
+    }
 }

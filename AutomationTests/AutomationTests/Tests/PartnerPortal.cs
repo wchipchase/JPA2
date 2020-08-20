@@ -30,6 +30,8 @@ namespace AutomationTests
         static CapsuleActions cpac;
         [ThreadStatic]
         static CartActions ctac;
+        [ThreadStatic]
+        static ShopActions spac;
 
         [SetUp]
         public void SetUpTest()
@@ -46,6 +48,7 @@ namespace AutomationTests
             nav = new NavigationActions(Driver);
             cpac = new CapsuleActions(Driver);
             ctac = new CartActions(Driver);
+            spac = new ShopActions(Driver);
         }
 
         [Test]
@@ -54,11 +57,11 @@ namespace AutomationTests
         public void ValidateDashboardCards()
         {
             lgac.LoginAsPartner();
-            dbac.ValidatePerformanceBonusCard();
-            Thread.Sleep(2000);
-            dbac.ValidatePromoteOutBonusCard();
-            Thread.Sleep(2000);
-            dbac.ValidateComissionCard();
+            //dbac.ValidatePerformanceBonusCard();
+            //Thread.Sleep(2000);
+            //dbac.ValidatePromoteOutBonusCard();
+            //Thread.Sleep(2000);
+            //dbac.ValidateComissionCard();
         }
 
         [Test]
@@ -192,7 +195,19 @@ namespace AutomationTests
             csac.SelectFirstCustomerOrders();
         }
 
-        [TearDown]
+        [Test]
+        [Category("smoketest")]
+        [Category("alltest")]
+        public void SharedCartJuicePlusOrder()
+        {
+            lgac.LoginAsPartner();
+            spac.NavigateToShop();
+            spac.FillInContactDetails();
+            spac.SelectProductsAndAddToCart();
+            spac.ShareCart();
+
+        }
+
         public void TearDown()
         {
             Driver.Teardown();

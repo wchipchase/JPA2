@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutomationTests.PageObjects.PartnerPortal
+namespace AutomationTests.PageObjects.PartnerPortalUS
 {
-    class Login
+    class LoginUSPageObjects
     {
         Driver Driver;
-        public Login(Driver driver)
+        public LoginUSPageObjects(Driver driver)
         {
             Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
@@ -21,10 +21,10 @@ namespace AutomationTests.PageObjects.PartnerPortal
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='Sign In']")]
         public IWebElement LoginButton { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[for='input-toggle-option1--145546684']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[for='input-toggle-option1-1135910086']")]
         public IWebElement LoginSlider { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[for='input-toggle-option2--145546684']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[for='input-toggle-option2-1135910086']")]
         public IWebElement PartnerLoginSlider { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "username")]
@@ -33,13 +33,10 @@ namespace AutomationTests.PageObjects.PartnerPortal
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "password")]
         public IWebElement PasswordTextBox { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[for='rememberMe']")]
-        public IWebElement PRememberMeCheckbox { get; set; }
-
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//button[@class='a-button a-button--primary a-button--small']")]
         public IWebElement CookieAlertAcceptButton { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//button[@class='a-button a-button--full-width a-button--primary js-form__submit a-button--large']/span[@class='a-button__inner']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//div[@class='container responsivegrid l-container l-container--narrow js-toggle__second-option l-container--no-offset section']//div[@class='login aem-GridColumn--default--none aem-GridColumn aem-GridColumn--offset--default--0 aem-GridColumn--default--2 aem-GridColumn--phone--1']//span[@class='a-button__inner']")]
         public IWebElement SignInBtn { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[contains(.,'Create an account')]")]
@@ -57,7 +54,8 @@ namespace AutomationTests.PageObjects.PartnerPortal
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='Shop']")]
         public IWebElement ShopNavTab { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[alt='/content/ie/juiceplus/en/portal/dashboard']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[alt='/content/us/juiceplus/en/portal/dashboard']")]
         public IWebElement JuicePlusSiteLink { get; set; }
     }
+
 }

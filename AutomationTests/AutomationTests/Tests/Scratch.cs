@@ -31,33 +31,33 @@ namespace AutomationTests.Tests
     [TestFixture]
     class Scratch
     {
-        [ThreadStatic]
-        static Driver Driver;
-        [ThreadStatic]
-        static CustomerActions cust;
-        [ThreadStatic]
-        static LoginActions lact;
+        //[ThreadStatic]
+        //static Driver Driver;
+        //[ThreadStatic]
+        //static CustomerActions cust;
+        //[ThreadStatic]
+        //static LoginActions lact;
 
-        [SetUp]
-        public void SetUpTest()
-        {
-            Driver = new Driver(Driver.BrowserType.Chrome);
-            cust = new CustomerActions(Driver);
-            lact = new LoginActions(Driver);
-        }
-        [Test]
-        public void SwitchCountryInCart()
-        {
-            lact.LoginAsPartner();
-            cust.NavigateToCustomers();
-            cust.SelectFirstCustomer();
-            cust.SelectFirstCustomerDetails();
-            cust.SelectFirstCustomerOrders();
-        }
-        public void TearDown()
-        {
-            Driver.Teardown();
-        }
+        //[SetUp]
+        //public void SetUpTest()
+        //{
+        //    Driver = new Driver(Driver.BrowserType.Chrome);
+        //    cust = new CustomerActions(Driver);
+        //    lact = new LoginActions(Driver);
+        //}
+        //[Test]
+        //public void SwitchCountryInCart()
+        //{
+        //    lact.LoginAsPartner();
+        //    cust.NavigateToCustomers();
+        //    cust.SelectFirstCustomer();
+        //    cust.SelectFirstCustomerDetails();
+        //    cust.SelectFirstCustomerOrders();
+        //}
+        //public void TearDown()
+        //{
+        //    Driver.Teardown();
+        //}
 
     }
 

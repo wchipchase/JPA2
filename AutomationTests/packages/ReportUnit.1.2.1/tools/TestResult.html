@@ -362,20 +362,20 @@
                                     }
                                 }
                             </style>
-                            <style>.feature-toggle { display: none; }</style>
+                            <!--%OPTIONALCSS%-->
                         </head>
-                        <body>    
+                        <body class='single'>    
                             <div class='header'>
                                 <nav>
                                     <ul id='slide-out' class='side-nav fixed'>
                                         <li class='logo'><a href='http://reportunit.relevantcodes.com/'><span>ReportUnit</span></a></li>
-                                        <li><a class='waves-effect' href='./Index.html'>Index</a></li><li><a class='waves-effect' href='./TestResult.html'>TestResult</a></li>
+                                        <!--%NAV%-->
                                     </ul>
                                     <a href='#' data-activates='slide-out' class='button-collapse'><i class='mdi-navigation-menu'></i></a>
                                     <div class='nav-main'>
                                         <div class='page-title'>
                                            <div class='logo'><a href='http://reportunit.relevantcodes.com/'><span>ReportUnit</span></a></div>
-                                            <span><i class='mdi-file-folder-open'></i>&nbsp;&nbsp;TestResult</span>
+                                            <span><i class='mdi-file-folder-open'></i>&nbsp;&nbsp;<!--%FILENAME%--></span>
                                             <a class='modal-trigger waves-effect waves-light run-info-icon tooltipped' data-position='left' data-tooltip='Run Info' href='#modal1'><i class='mdi-action-info-outline'></i></a>
                                             <a class='modal-trigger waves-effect waves-light console-logs-icon tooltipped' data-position='left' data-tooltip='Console Logs' href='#modal2'><i class='mdi-action-assignment'></i></a>
                                         </div>
@@ -437,7 +437,7 @@
                                             <div class='input-field col l3 m4 s12 feature-toggle'>
                                                 <select>
                                                     <option value='0' selected>Choose your option</option>
-                                                    <!--%CATEGORYLIST%-->
+                                                    <option value='1'>smoketest</option><option value='2'>alltest</option><!--%CATEGORYLIST%-->
                                                     <option value='x'>Clear Filters</option>
                                                 </select>
                                                 <label>Filter Features</label>
@@ -472,391 +472,87 @@
                                             <th>Status</th>
                                         </tr>
                                         <tr>
-                            <td class='test-name'>AddAMemberPartnerPortal</td>
-                            <td class='failed'>failed<pre>OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //span[.='To Team List'] ->    at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)   at OpenQA.Selenium.IWebElement.Click()   at AutomationTests.PageActions.PartnerPortal.TeamActions.FillOutContactFormAndSubmitApplication() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\PartnerPortal\TeamActions.cs:line 92   at AutomationTests.PartnerPortal.AddAMemberPartnerPortal() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 75</pre></td>
-                            <td class='test-features '></td>
+                            <td class='test-name'>ValdiateContactForm</td>
+                            <td class='passed'>passed</td>
+                            <td class='test-features smoketest alltest '></td>
+                        </tr>
+                        <tr>
+                            <td class='test-name'>SharedCartJuicePlusOrder</td>
+                            <td class='failed'>failed<pre>System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
+  ----> OpenQA.Selenium.StaleElementReferenceException : stale element reference: element is not attached to the page document
+  (Session info: chrome=84.0.4147.125) ->    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)   at OpenQA.Selenium.Support.PageObjects.WebDriverObjectProxy.InvokeMethod(IMethodCallMessage msg, Object representedValue)   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)   at OpenQA.Selenium.IWebElement.Click()   at AutomationTests.PageActions.PartnerPortal.ShopActions.NavigateToShop() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\PageActions\PartnerPortal\ShopActions.cs:line 33   at AutomationTests.PartnerPortal.SharedCartJuicePlusOrder() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 204--StaleElementReferenceException   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)   at OpenQA.Selenium.Remote.RemoteWebElement.Click()</pre></td>
+                            <td class='test-features smoketest alltest '></td>
+                        </tr>
+                        <tr>
+                            <td class='test-name'>ValidateDashboardCards</td>
+                            <td class='passed'>passed</td>
+                            <td class='test-features smoketest alltest '></td>
+                        </tr>
+                        <tr>
+                            <td class='test-name'>SwitchCountryInCart</td>
+                            <td class='passed'>passed</td>
+                            <td class='test-features smoketest alltest '></td>
                         </tr>
                         <tr>
                             <td class='test-name'>CustomerFilterValidation</td>
                             <td class='passed'>passed</td>
-                            <td class='test-features '></td>
+                            <td class='test-features smoketest alltest '></td>
                         </tr>
                         <tr>
-                            <td class='test-name'>TeamFilter</td>
+                            <td class='test-name'>SharedCartPortalOrders</td>
                             <td class='passed'>passed</td>
-                            <td class='test-features '></td>
+                            <td class='test-features smoketest alltest '></td>
                         </tr>
                         <tr>
-                            <td class='test-name'>ValidateDashboardCards</td>
-                            <td class='failed'>failed<pre>OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //h2[contains(.,'Performance Bonus (PB)')] ->    at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)   at OpenQA.Selenium.IWebElement.Click()   at AutomationTests.PageActions.PartnerPortal.DashboardActions.ValidatePerformanceBonusCard() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\PartnerPortal\DashboardActions.cs:line 40   at AutomationTests.PartnerPortal.ValidateDashboardCards() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 28</pre></td>
-                            <td class='test-features '></td>
+                            <td class='test-name'>TeamFilterValidation</td>
+                            <td class='passed'>passed</td>
+                            <td class='test-features smoketest alltest '></td>
+                        </tr>
+                        <tr>
+                            <td class='test-name'>AddAMemberPartnerPortalDifferentSponsor</td>
+                            <td class='failed'>failed<pre>System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
+  ----> OpenQA.Selenium.ElementNotInteractableException : element not interactable
+  (Session info: chrome=84.0.4147.125) ->    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)   at OpenQA.Selenium.Support.PageObjects.WebDriverObjectProxy.InvokeMethod(IMethodCallMessage msg, Object representedValue)   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)   at OpenQA.Selenium.IWebElement.Click()   at AutomationTests.PageActions.PartnerPortal.TeamActions.FillOutContactFormAndSubmitApplicationOtherSponsor() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\PageActions\PartnerPortal\TeamActions.cs:line 112   at AutomationTests.PartnerPortal.AddAMemberPartnerPortalDifferentSponsor() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 163--ElementNotInteractableException   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)   at OpenQA.Selenium.Remote.RemoteWebElement.Click()</pre></td>
+                            <td class='test-features smoketest alltest '></td>
+                        </tr>
+                        <tr>
+                            <td class='test-name'>PurchaseProductsWithInvalidCC</td>
+                            <td class='passed'>passed</td>
+                            <td class='test-features smoketest alltest '></td>
                         </tr>
                         <tr>
                             <td class='test-name'>ValidateDownloadCSV</td>
                             <td class='passed'>passed</td>
-                            <td class='test-features '></td>
+                            <td class='test-features smoketest alltest '></td>
                         </tr>
                         <tr>
                             <td class='test-name'>ValidatingFirstAndLastNameFilters</td>
                             <td class='passed'>passed</td>
-                            <td class='test-features '></td>
+                            <td class='test-features smoketest alltest '></td>
                         </tr>
-                        
-                                    </table>
-                                </div>
-                                <div  class='fixture-footer'>
-                                    <span  alt='Fixture started at time' title='Fixture started at time' class='startedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:37:08</span>
-                                    <span  alt='Fixture ended at time' title='Fixture ended at time' class='endedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:38:35</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col s4'>
-                            <div class='card-panel'>
-                                <div class='fixture-head'>
-                                    <span class='fixture-name'>ProductCheckout</span>
-                                    <span class='fixture-result failed'>failed</span>
-                                </div>
-                                <div class='fixture-content'>
-                                    <div class='card fixture-status-message'>
-                                        <div class='card-content'>
-                                            One or more child tests had errors
-                                        </div>
-                                    </div>
-                                    <table class='bordered'>
-                                        <tr>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        <tr>
-                            <td class='test-name'>CheckoutBerryCapsulesMC</td>
+                        <tr>
+                            <td class='test-name'>AddAMemberPartnerPortal</td>
                             <td class='passed'>passed</td>
-                            <td class='test-features '></td>
+                            <td class='test-features smoketest alltest '></td>
                         </tr>
                         <tr>
-                            <td class='test-name'>CheckoutBerryCapsulesVisa</td>
+                            <td class='test-name'>GuestCheckoutPremiumCapsulesVisa</td>
+                            <td class='failed'>failed<pre>System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
+  ----> OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <span class="a-button__inner">...</span> is not clickable at point (1626, 92). Other element would receive the click: <nav class="o-checkout__stepper-nav js-o-checkout__stepper-nav m-stepper__nav o-checkout__stepper-nav--is-sticky">...</nav>
+  (Session info: chrome=84.0.4147.125) ->    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)   at OpenQA.Selenium.Support.PageObjects.WebDriverObjectProxy.InvokeMethod(IMethodCallMessage msg, Object representedValue)   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)   at OpenQA.Selenium.IWebElement.Click()   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutActions.CartActions.CheckoutWithCartItemsVisa() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\CartCheckoutActions\CartActions.cs:line 97   at AutomationTests.PartnerPortal.GuestCheckoutPremiumCapsulesVisa() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 152--ElementClickInterceptedException   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)   at OpenQA.Selenium.Remote.RemoteWebElement.Click()</pre></td>
+                            <td class='test-features smoketest alltest '></td>
+                        </tr>
+                        <tr>
+                            <td class='test-name'>PurchaseProductsASLoggedInAssociate</td>
                             <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutBerryChewablesMC</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutBerryChewablesVisa</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutCompleteBoosterMC</td>
-                            <td class='failed'>failed<pre>OpenQA.Selenium.WebDriverTimeoutException : Timed out after 30 seconds ->    at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutActions.CartActions.CheckoutWithCartItemsMC() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\CartCheckoutActions\CartActions.cs:line 158   at AutomationTests.ProductCheckout.CheckoutCompleteBoosterMC() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\ProductCheckout.cs:line 205</pre></td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutCompleteBoosterVisa</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutCompleteCombiBoxMC</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutCompleteCombiBoxVisa</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutCompleteJuiceBarsMC</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutCompleteJuiceBarsVisa</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutCompleteShakesMC</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutCompleteShakesVisa</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutCompleteVegetableSoupMC</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutCompleteVegetableSoupVisa</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutFruitsAndVegetableChewablesMC</td>
-                            <td class='failed'>failed<pre>OpenQA.Selenium.WebDriverTimeoutException : Timed out after 30 seconds ->    at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)   at AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutActions.CartActions.CheckoutWithCartItemsMC() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\CartCheckoutActions\CartActions.cs:line 158   at AutomationTests.ProductCheckout.CheckoutFruitsAndVegetableChewablesMC() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\ProductCheckout.cs:line 149</pre></td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutFruitsAndVegetableChewablesVisa</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutFruitsAndVegetablesCapsulesMC</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutFruitsAndVegetablesCapsulesVisa</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutMixedProductUplifSinglePayRecurringOrderCapsulesSingleOrderInstallmentsMC</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutMixedProductUplifSinglePayRecurringOrderCapsulesSingleOrderInstallmentsVisa</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutOmegaBlendMC</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutOmegaBlendVisa</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutPremiumCapsulesMC</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutPremiumCapsulesVisa</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutPremiumChewablesMC</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutPremiumChewablesVisa</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutUpliftMC</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>CheckoutUpliftVisa</td>
-                            <td class='failed'>failed<pre>Expected: True
-  But was:  False ->    at AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMenuItemsActions.UpliftActions.UpliftActions.AddUpliftToCart() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\OurProductsMenuItemsActions\UpliftActions\UpliftActions.cs:line 39   at AutomationTests.ProductCheckout.CheckoutUpliftVisa() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\ProductCheckout.cs:line 76</pre></td>
-                            <td class='test-features '></td>
-                        </tr>
-                        
-                                    </table>
-                                </div>
-                                <div  class='fixture-footer'>
-                                    <span  alt='Fixture started at time' title='Fixture started at time' class='startedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:38:35</span>
-                                    <span  alt='Fixture ended at time' title='Fixture ended at time' class='endedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:56:07</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col s4'>
-                            <div class='card-panel'>
-                                <div class='fixture-head'>
-                                    <span class='fixture-name'>TestFooterNavigationItems</span>
-                                    <span class='fixture-result passed'>passed</span>
-                                </div>
-                                <div class='fixture-content'>
-                                    <div class='card fixture-status-message'>
-                                        <div class='card-content'>
-                                            One or more child tests had errors
-                                        </div>
-                                    </div>
-                                    <table class='bordered'>
-                                        <tr>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        <tr>
-                            <td class='test-name'>TestAllFooterNavigation</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        
-                                    </table>
-                                </div>
-                                <div  class='fixture-footer'>
-                                    <span  alt='Fixture started at time' title='Fixture started at time' class='startedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:56:07</span>
-                                    <span  alt='Fixture ended at time' title='Fixture ended at time' class='endedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:57:02</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col s4'>
-                            <div class='card-panel'>
-                                <div class='fixture-head'>
-                                    <span class='fixture-name'>TestHeaderNavigationItems</span>
-                                    <span class='fixture-result failed'>failed</span>
-                                </div>
-                                <div class='fixture-content'>
-                                    <div class='card fixture-status-message'>
-                                        <div class='card-content'>
-                                            One or more child tests had errors
-                                        </div>
-                                    </div>
-                                    <table class='bordered'>
-                                        <tr>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        <tr>
-                            <td class='test-name'>TestAllHeaderNavigation</td>
-                            <td class='failed'>failed<pre>Multiple failures or warnings in test:
-  1)   Expected: True
-  But was:  False
-
-  2)   Expected: True
-  But was:  False ->    at AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsActions.NavigationActions.NavigateLiveBetterFeelGoodLookGoodClick() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\staging.juiceplus.com.ie.en\NavigationsActions\NavigationActions.cs:line 217   at AutomationTests.TestHeaderNavigationItems.TestAllHeaderNavigation() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\TestHeaderNavigationItems.cs:line 22</pre></td>
-                            <td class='test-features '></td>
-                        </tr>
-                        
-                                    </table>
-                                </div>
-                                <div  class='fixture-footer'>
-                                    <span  alt='Fixture started at time' title='Fixture started at time' class='startedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:57:02</span>
-                                    <span  alt='Fixture ended at time' title='Fixture ended at time' class='endedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:57:30</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col s4'>
-                            <div class='card-panel'>
-                                <div class='fixture-head'>
-                                    <span class='fixture-name'>EntryPoint</span>
-                                    <span class='fixture-result failed'>failed</span>
-                                </div>
-                                <div class='fixture-content'>
-                                    <div class='card fixture-status-message'>
-                                        <div class='card-content'>
-                                            One or more child tests had errors
-                                        </div>
-                                    </div>
-                                    <table class='bordered'>
-                                        <tr>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        <tr>
-                            <td class='test-name'>AddNewMessage</td>
-                            <td class='failed'>failed<pre>OpenQA.Selenium.NoSuchElementException : Could not find element by: By.Name: firstName ->    at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)   at OpenQA.Selenium.IWebElement.SendKeys(String text)   at AutomationTests.PageActions.ContactUsActions.AddNewValidMessage(String firstName, String lastName, String email, String phone, String address1, String address2, String city, String state, String zipcode, String message) in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\ContactUsActions.cs:line 20   at AutomationTests.Tests.EntryPoint.AddNewMessage() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\EntryPoint.cs:line 39</pre></td>
-                            <td class='test-features '></td>
-                        </tr>
-                        <tr>
-                            <td class='test-name'>TestMessageErrorResponse</td>
-                            <td class='failed'>failed<pre>OpenQA.Selenium.WebDriverException : Unexpected error. System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:54328
-   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
-   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
-   --- End of inner exception stack trace ---
-   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
-   at System.Net.HttpWebRequest.GetRequestStream()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters) ->    at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByName(String name)   at OpenQA.Selenium.By.<>c__DisplayClass18_0.<Name>b__0(ISearchContext context)   at OpenQA.Selenium.By.FindElement(ISearchContext context)   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)   at OpenQA.Selenium.Support.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.get_Element()   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)   at OpenQA.Selenium.IWebElement.SendKeys(String text)   at AutomationTests.PageActions.ContactUsActions.AddNewInvalidMessage(String firstName) in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\ContactUsActions.cs:line 39   at AutomationTests.Tests.EntryPoint.TestMessageErrorResponse() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\EntryPoint.cs:line 45</pre></td>
-                            <td class='test-features '></td>
-                        </tr>
-                        
-                                    </table>
-                                </div>
-                                <div  class='fixture-footer'>
-                                    <span  alt='Fixture started at time' title='Fixture started at time' class='startedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:57:30</span>
-                                    <span  alt='Fixture ended at time' title='Fixture ended at time' class='endedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:57:53</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col s4'>
-                            <div class='card-panel'>
-                                <div class='fixture-head'>
-                                    <span class='fixture-name'>ReadFromExcel</span>
-                                    <span class='fixture-result passed'>passed</span>
-                                </div>
-                                <div class='fixture-content'>
-                                    <div class='card fixture-status-message'>
-                                        <div class='card-content'>
-                                            One or more child tests had errors
-                                        </div>
-                                    </div>
-                                    <table class='bordered'>
-                                        <tr>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        <tr>
-                            <td class='test-name'>ReadingDataFromExcelTestMethod</td>
-                            <td class='passed'>passed</td>
-                            <td class='test-features '></td>
-                        </tr>
-                        
-                                    </table>
-                                </div>
-                                <div  class='fixture-footer'>
-                                    <span  alt='Fixture started at time' title='Fixture started at time' class='startedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:57:53</span>
-                                    <span  alt='Fixture ended at time' title='Fixture ended at time' class='endedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:57:54</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col s4'>
-                            <div class='card-panel'>
-                                <div class='fixture-head'>
-                                    <span class='fixture-name'>Scratch</span>
-                                    <span class='fixture-result failed'>failed</span>
-                                </div>
-                                <div class='fixture-content'>
-                                    <div class='card fixture-status-message'>
-                                        <div class='card-content'>
-                                            One or more child tests had errors
-                                        </div>
-                                    </div>
-                                    <table class='bordered'>
-                                        <tr>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        <tr>
-                            <td class='test-name'>ScratchTest</td>
-                            <td class='failed'>failed<pre>OpenQA.Selenium.WebDriverException : Unexpected error. System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:54328
-   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
-   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
-   --- End of inner exception stack trace ---
-   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
-   at System.Net.HttpWebRequest.GetRequestStream()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters) ->    at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)   at OpenQA.Selenium.Remote.RemoteWebDriver.set_Url(String value)   at OpenQA.Selenium.Remote.RemoteNavigator.GoToUrl(String url)   at AutomationTests.PageActions.PartnerPortal.PPCartActions.NavigateToJuicePlusWebsite() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\PageActions\PartnerPortal\PPCartActions.cs:line 31   at AutomationTests.Tests.Scratch.ScratchTest() in C:\Users\wchipchase\Source\repos\JPA2\JPAutomation\AutomationTests\AutomationTests\Tests\Scratch.cs:line 37</pre></td>
-                            <td class='test-features '></td>
+                            <td class='test-features smoketest alltest '></td>
                         </tr>
                         <!--%INSERTTEST%-->
                                     </table>
                                 </div>
                                 <div  class='fixture-footer'>
-                                    <span  alt='Fixture started at time' title='Fixture started at time' class='startedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:57:54</span>
-                                    <span  alt='Fixture ended at time' title='Fixture ended at time' class='endedAt'><i class='mdi-device-access-time'></i>2020-07-20 17:58:02</span>
+                                    <span  alt='Fixture started at time' title='Fixture started at time' class='startedAt'><i class='mdi-device-access-time'></i>2020-08-18 18:30:37</span>
+                                    <span  alt='Fixture ended at time' title='Fixture ended at time' class='endedAt'><i class='mdi-device-access-time'></i>2020-08-18 18:32:00</span>
                                 </div>
                             </div>
                         </div>
@@ -867,15 +563,15 @@
                             </div>
                             <div id='modal1' class='modal'>
                                 <div class='modal-content'>
-                                    <h4>TestResult RunInfo</h4>
+                                    <h4><!--%FILENAME%--> RunInfo</h4>
                                     <table class='bordered'>
                                         <tr><th>Param</th><th>Value</th></tr>
                                         <tr>
                             <td>TestResult File</td><td>.\TestResult.xml</td>
                         </tr><tr>
-                            <td>Last Run</td><td>20 Jul 2020 12:58</td>
+                            <td>Last Run</td><td>18 Aug 2020 13:32</td>
                         </tr><tr>
-                            <td>Duration</td><td>1253.738738 ms</td>
+                            <td>Duration</td><td>82.822661 ms</td>
                         </tr><tr>
                             <td>User</td><td>wchipchase</td>
                         </tr><tr>
@@ -896,9 +592,9 @@
                                 <div class='modal-footer'>
                                     <a href='#!' class='modal-action modal-close waves-effect waves-green btn-flat'>Close</a>
                                 </div>
-                                <div class='hidden total-tests'>40</div>
-                                <div class='hidden total-passed'>31</div>
-                                <div class='hidden total-failed'>9</div>
+                                <div class='hidden total-tests'>14</div>
+                                <div class='hidden total-passed'>11</div>
+                                <div class='hidden total-failed'>3</div>
                                 <div class='hidden total-inconclusive'>0</div>
                                 <div class='hidden total-errors'>0</div>
                                 <div class='hidden total-skipped'>0</div>
@@ -906,7 +602,7 @@
                             <div id='modal2' class='modal'>
                                 <div class='modal-content'>
                                     <h4>Console Log</h4>
-                                    [2020.07.20 13:07:12][Info] Skipping .\Index.html. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] Skipping .\Mono.Cecil.dll. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] Skipping .\nunit-agent-x86.exe. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] Skipping .\nunit-agent-x86.exe.config. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] Skipping .\nunit-agent.exe. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] Skipping .\nunit-agent.exe.config. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] Skipping .\nunit.console.nuget.addins. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] Skipping .\nunit.engine.api.dll. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] Skipping .\nunit.engine.api.xml. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] Skipping .\nunit.engine.core.dll. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] Skipping .\nunit.engine.dll. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] Skipping .\nunit3-console.exe. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] Skipping .\nunit3-console.exe.config. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] Skipping .\ReportUnit.exe. It is not of a known test runner type.<br />[2020.07.20 13:07:12][Info] The file .\TestResult.xml contains NUnit test results<br />[2020.07.20 13:07:12][Info] Number of tests: 40<br />[2020.07.20 13:07:12][Info] Processing root and test-suite elements...<br />[2020.07.20 13:07:12][Info] Building fixture blocks...<br />
+                                    <!--%CONSOLELOGS%-->
                                 </div>
                                 <div class='modal-footer'>
                                     <a href='#!' class='modal-action modal-close waves-effect waves-green btn-flat'>Close</a>

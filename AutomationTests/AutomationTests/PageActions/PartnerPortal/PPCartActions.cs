@@ -7,6 +7,7 @@ using AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CapsulesPage;
 using AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CartPage;
 using AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CheckoutPage;
 using AutomationTests.PageObjects.staging.juiceplus.com.ie.en.ChewablesPage;
+using AutomationTests.PageObjects.staging.juiceplus.com.ie.en.OurProductsMenuItems.CapsulesPage;
 using AutomationTests.PageObjects.staging.juiceplus.com.ie.en.OurProductsMenuItems.ChewablesPage;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -54,17 +55,17 @@ namespace AutomationTests.PageActions.PartnerPortal
 
         public void AddProductsToCart()
         {
-            ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
+            CapsulesPageObjects cpo = new CapsulesPageObjects(Driver);
             
-            ChewablesOrderPageObjects copo = new ChewablesOrderPageObjects(Driver);
-            navac.NavigateOurProductsChewablesClick();
+            CapsulesOrderPageObjects copo = new CapsulesOrderPageObjects(Driver);
+            navac.NavigateOurProductsCapsulesClick();
             Task.Delay(500).Wait(1500);
             
             cpo.ScrollViewport();
-            cpo.ShopNowPremiumChewables.Click();
+            cpo.ShopNowPremiumCapsules.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Premium Soft Chewables"));
             cpo.ScrollViewport();
-            copo.AddToCartOrder.Click();
+            copo.AddToCartOrderCapsules.Click();
             Thread.Sleep(1000);
         }
 
@@ -108,8 +109,8 @@ namespace AutomationTests.PageActions.PartnerPortal
             CheckoutPageObjects cpo = new CheckoutPageObjects(Driver);
             Thread.Sleep(1000);
             cpo.ScrollViewport();
-            cpo.DeliveryAddress1.SendKeys(Config.AddressInfo.ShippingAddress.StreetAddShipping.StreetAdd);
-            cpo.DeliveryCity.SendKeys(Config.AddressInfo.ShippingAddress.CityShipping.City);
+            cpo.DeliveryAddress1.SendKeys(Config.AddressInfo.ShippingAddress.StreetAddShipping.StreetAdd1);
+            cpo.DeliveryCity.SendKeys(Config.AddressInfo.ShippingAddress.CityShipping.City1);
             cpo.DeliveryCounty.SendKeys(Config.AddressInfo.ShippingAddress.CountyShipping.County);
             cpo.ProceedToCheckoutButton.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Secure Payment"));

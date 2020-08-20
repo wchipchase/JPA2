@@ -20,6 +20,7 @@ namespace AutomationTests.PageActions.PartnerPortal
         public void NavigateToCustomers()
         {
             Login lpo = new Login(Driver);
+            Thread.Sleep(500);
             lpo.CustomersNavTab.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Customer"));
         }

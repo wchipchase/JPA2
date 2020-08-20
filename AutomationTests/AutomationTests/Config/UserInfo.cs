@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AventStack.ExtentReports.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,15 @@ namespace AutomationTests.Config
 {
     class UserInfo
     {
+        public static class FirstName
+        {
+            public static string FirstName1 = "Test";
+        }
+
+        public static class LastName
+        {
+            public static string LastName1 = "Tester";
+        }
         public static class UserName
         {
             public static string UserName1 = "wddot";
@@ -15,7 +25,7 @@ namespace AutomationTests.Config
 
         public static class UserEmail
         {
-            public static string UserEmail1 = "place@holder.com";
+            public static string UserEmail1 = "test.tester@juiceplus.com";
         }
 
         public static class UserPassword

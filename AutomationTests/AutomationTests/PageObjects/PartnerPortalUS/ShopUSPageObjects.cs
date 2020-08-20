@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutomationTests.PageObjects.PartnerPortal
+namespace AutomationTests.PageObjects.PartnerPortalUS
 {
-    class Shop
+    class ShopUSPageObjects
     {
         Driver Driver;
-        public Shop(Driver driver)
+        public ShopUSPageObjects(Driver driver)
         {
             Driver = driver;
             PageFactory.InitElements(Driver.WebDriver, this);
@@ -22,7 +22,7 @@ namespace AutomationTests.PageObjects.PartnerPortal
         public IWebElement ShopButton { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[placeholder='Type to find a customer']")]
-        public IWebElement FindACustomerTypeAhead{ get; set; }
+        public IWebElement FindACustomerTypeAhead { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.contact.firstName")]
         public IWebElement ContactFirstNameTextBox { get; set; }
@@ -58,7 +58,7 @@ namespace AutomationTests.PageObjects.PartnerPortal
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//label[contains(.,'Someone else is their sponsor')]")]
 
-        public IWebElement SomeoneElseSPonsorRadioButton{ get; set; }
+        public IWebElement SomeoneElseSPonsorRadioButton { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='Next']")]
 
@@ -110,11 +110,11 @@ namespace AutomationTests.PageObjects.PartnerPortal
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[@class='h-icon h-icon--link']")]
 
-        public IWebElement ShareCartLinkIcon{ get; set; }
+        public IWebElement ShareCartLinkIcon { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[@class='h-icon h-icon--envelope-outline']")]
 
-        public IWebElement EmailShareCartIcon{ get; set; }
+        public IWebElement EmailShareCartIcon { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[@class='h-icon h-icon--chat']")]
 
