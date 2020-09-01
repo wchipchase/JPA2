@@ -32,13 +32,7 @@ namespace AutomationTests.PageActions.PartnerPortal
             Driver = driver;
             navac = new NavigationActions(Driver);
         }
-        //WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-        //NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects();
-        //CapsulesPageObjects caps = new CapsulesPageObjects();
-        //LandingPageObjects lan = new LandingPageObjects();
-        //ChewablesPageObjects cpo = new ChewablesPageObjects();
-        //ChewablesOrderPageObjects copo = new ChewablesOrderPageObjects();
-        //CartPageObjects carp = new CartPageObjects();
+
         public void NavigateToJuicePlusWebsite()
         {
             LandingPageObjects lan = new LandingPageObjects(Driver);
@@ -46,11 +40,15 @@ namespace AutomationTests.PageActions.PartnerPortal
             Driver.WebDriver.Navigate().GoToUrl("https://sculpt.staging.juiceplus.com/ie/en");
             lan.CookieAlertAcceptButton.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Healthy Living Made Easier"));
+        }
 
-            //WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
-            //Login lpo = new Login();
-            //waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("[alt='/content/ie/juiceplus/en/portal/dashboard']")));
-            //lpo.JuicePlusSiteLink.Click();
+        public void USNavigateToJuicePlusWebsite()
+        {
+            LandingPageObjects lan = new LandingPageObjects(Driver);
+            CheckoutPageObjects cpo = new CheckoutPageObjects(Driver);
+            Driver.WebDriver.Navigate().GoToUrl("https://sculpt.staging.juiceplus.com/us/en");
+            lan.CookieAlertAcceptButton.Click();
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Healthy Living Made Easier"));
         }
 
         public void AddProductsToCart()
@@ -61,10 +59,26 @@ namespace AutomationTests.PageActions.PartnerPortal
             navac.NavigateOurProductsCapsulesClick();
             Task.Delay(500).Wait(1500);
             
-            cpo.ScrollViewport();
+            cpo.ScrollViewport("500");
             cpo.ShopNowPremiumCapsules.Click();
-            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Premium Soft Chewables"));
-            cpo.ScrollViewport();
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Juice Plus+"));
+            cpo.ScrollViewport("1200");
+            copo.AddToCartOrderCapsules.Click();
+            Thread.Sleep(1000);
+        }
+
+        public void MXAddProductsToCart()
+        {
+            CapsulesPageObjects cpo = new CapsulesPageObjects(Driver);
+
+            CapsulesOrderPageObjects copo = new CapsulesOrderPageObjects(Driver);
+            navac.NavigateOurProductsCapsulesClick();
+            Task.Delay(500).Wait(1500);
+
+            cpo.ScrollViewport("500");
+            cpo.MXShopNowFruitVegBerryCapsules.Click();
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Fruit, Vegetable & Berry Capsules"));
+            cpo.ScrollViewport("1500");
             copo.AddToCartOrderCapsules.Click();
             Thread.Sleep(1000);
         }
@@ -116,6 +130,28 @@ namespace AutomationTests.PageActions.PartnerPortal
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Secure Payment"));
         }
 
+        public void MXFillInDeliveryAddressAndProceed()
+        {
+            CheckoutPageObjects cpo = new CheckoutPageObjects(Driver);
+            Thread.Sleep(1000);
+            cpo.GenderDropdown.Click();
+            cpo.MaleSelection.Click();
+            cpo.DaytimePhoneNumberShippingTextbox.Clear();
+            cpo.DaytimePhoneNumberShippingTextbox.SendKeys(AddressInfo.ShippingAddress.PrimaryPhoneShipping.PrimaryPhoneMex1);
+            cpo.AlternatePhoneNumberShippingTextbox.Clear();
+            cpo.AlternatePhoneNumberShippingTextbox.SendKeys(AddressInfo.ShippingAddress.AlternatePhoneShipping.AlternatePhoneMex1);
+            cpo.EmailShippingTextbox.Clear();
+            cpo.EmailShippingTextbox.SendKeys(UserInfo.UserEmail.UserEmailMex1);
+            cpo.ScrollViewport();
+            cpo.DeliveryAddress1.SendKeys(Config.AddressInfo.ShippingAddress.StreetAddShipping.StreetAddMex1);
+            cpo.DeliveryCity.SendKeys(Config.AddressInfo.ShippingAddress.CityShipping.CityMex1);
+            cpo.MXDeliveryNeighborhood.SendKeys(AddressInfo.ShippingAddress.NeighborhoodorColony.NeighborhoodMex1);
+            cpo.StateDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.StateShipping.StateMex1);
+            cpo.PostalCodeTextbox.SendKeys(AddressInfo.ShippingAddress.ZipCode.ZipCodeMex1);
+            cpo.ProceedToCheckoutButton.Click();
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Secure Payment"));
+        }
+
         public void EnterPaymentInfoAndConfirmOrder()
         {
             IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
@@ -127,6 +163,23 @@ namespace AutomationTests.PageActions.PartnerPortal
             cpo.PaymentCCNumberTextbox.SendKeys(CreditCardInfo.CreditCardNumber.VisaCCNum.ccnumberValid);
             cpo.PaymentCCExpirationDateTextbox.SendKeys(CreditCardInfo.CCExpDate.VisaCCExpDate.VisaCCExpDateValid);
             cpo.PaymentCVVTextbox.SendKeys(CreditCardInfo.CreditCardCCV.VisaCCV.VisaCCVValid);
+            js.ExecuteScript("arguments[0].click();", cpo.TOSAcceptCheckbox);
+            js.ExecuteScript("arguments[0].click();", cpo.ConfirmOrderButton);
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-checkout-confirmation__title")));
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Thank you! Your order is confirmed."));
+        }
+
+        public void MXEnterPaymentInfoAndConfirmOrder()
+        {
+            IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+            WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
+            CheckoutPageObjects cpo = new CheckoutPageObjects(Driver);
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Secure Payment"));
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Name("payment.cardNumber")));
+            Thread.Sleep(500);
+            cpo.PaymentCCNumberTextbox.SendKeys(CreditCardInfo.CreditCardNumber.VisaCCNum.VisaCCNumberValidMex1);
+            cpo.PaymentCCExpirationDateTextbox.SendKeys(CreditCardInfo.CCExpDate.VisaCCExpDate.VisaCCExpDateValidMex1);
+            cpo.PaymentCVVTextbox.SendKeys(CreditCardInfo.CreditCardCCV.VisaCCV.VisaCCValidMex1);
             js.ExecuteScript("arguments[0].click();", cpo.TOSAcceptCheckbox);
             js.ExecuteScript("arguments[0].click();", cpo.ConfirmOrderButton);
             waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-checkout-confirmation__title")));
@@ -150,50 +203,10 @@ namespace AutomationTests.PageActions.PartnerPortal
         }
         
 
-        public void CartIcon1()
-        {
-            //CartPageObjects cpo = new CartPageObjects();
-            //var cartCount = cpo.ShoppingCartIcon.GetCssValue("value");
-            //try
-            //{
-            //    Assert.That(cartCount, Is.EqualTo("1"));
-            //}
-            //catch (Exception e)
-            //{
 
-            //    throw;
-            //}
-        }
         public void ChangeCountry()
         {
-            CartPageObjects cpo = new CartPageObjects(Driver);
-            //Driver.WebDriver.Navigate().GoToUrl("https://sculpt.staging.juiceplus.com/ie/en");
             navac.NavigateCountryClick();
-            //var cartCount = cpo.ShoppingCartIcon.GetAttribute("value");
-            //try
-            //{
-            //    Assert.That(cartCount, Is.EqualTo("1"));
-            //}
-            //catch (Exception e)
-            //{
-
-            //    throw;
-            //}
-        }
-
-        public void CartIcon0()
-        {
-            //CartPageObjects cpo = new CartPageObjects();
-            //var cartCount = cpo.ShoppingCartIcon.GetAttribute("value");
-            //try
-            //{
-            //    Assert.That(cartCount, Is.EqualTo("0"));
-            //}
-            //catch (Exception e)
-            //{
-
-            //    throw;
-            //}
         }
     }
 }

@@ -69,7 +69,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                     Console.WriteLine(e);
                 }
 
-                cpo.ScrollViewport();
+                cpo.ScrollViewport("500");
                 var NumOfProducts = copo.NumOfProductOrder.GetAttribute("value");
                 try
                 {
@@ -168,7 +168,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                     Console.WriteLine(e);
                 }
 
-                cpo.ScrollViewport();
+                cpo.ScrollViewport("500");
                 var NumOfProducts = copo.NumOfProductOrder.GetAttribute("value");
                 try
                 {
@@ -271,7 +271,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                     Console.WriteLine(e);
                 }
 
-                cpo.ScrollViewport();
+                cpo.ScrollViewport("500");
                 var NumOfProducts = copo.NumOfProductOrder.GetAttribute("value");
                 try
                 {
@@ -376,7 +376,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                     Console.WriteLine(e);
                 }
 
-                cpo.ScrollViewport();
+                cpo.ScrollViewport("500");
                 var NumOfProducts = copo.NumOfProductOrder.GetAttribute("value");
                 try
                 {
@@ -480,7 +480,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                     Console.WriteLine(e);
                 }
 
-                cpo.ScrollViewport();
+                cpo.ScrollViewport("500");
                 var NumOfProducts = copo.NumOfProductOrder.GetAttribute("value");
                 try
                 {

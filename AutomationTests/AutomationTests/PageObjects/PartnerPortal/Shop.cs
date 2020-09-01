@@ -48,6 +48,18 @@ namespace AutomationTests.PageObjects.PartnerPortal
 
         public IWebElement CityTextBox { get; set; }
 
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.address.state")]
+
+        public IWebElement StateDropdown { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.address.postalCode")]
+
+        public IWebElement PostalCodeTextBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "form.countryOfResidence")]
+
+        public IWebElement CountryOfResidenceDropDown { get; set; }
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = ".m-input-checkbox__label")]
 
         public IWebElement BillingAddressCheckMark { get; set; }

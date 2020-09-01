@@ -70,7 +70,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                     Console.WriteLine(e);
                 }
                 
-                caps.ScrollViewport();
+                caps.ScrollViewport("1500");
                 var NumOfProducts = cpo.NumOfProductOrderCapsules.GetAttribute("value");
                 try
                 {
@@ -186,7 +186,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                     Console.WriteLine(e);
                 }
                 
-                caps.ScrollViewport();
+                caps.ScrollViewport("1500");
                 var NumOfProducts = cpo.NumOfProductOrderCapsules.GetAttribute("value");
                 try
                 {
@@ -251,6 +251,233 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
 
         }
 
+
+        public void USAddFruitsAndVegetablesCapsuleToCart()
+        {
+            WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
+            LandingPageObjects lan = new LandingPageObjects(Driver);
+            CapsulesOrderPageObjects cpo = new CapsulesOrderPageObjects(Driver);
+            CartPageObjects carp = new CartPageObjects(Driver);
+
+            try
+            {
+                navac.NavigateOurProductsCapsulesClick();
+
+                try
+                {
+                    Assert.IsFalse(Driver.WebDriver.PageSource.Contains("£"));
+                    //                    Assert.IsTrue(Driver.WebDriver.PageSource.Contains("€"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+                Thread.Sleep(1000);
+                lan.CookieAlertAcceptButton.Click();
+                Task.Delay(1000).Wait(1500);
+                caps.USClickVegetablesAndFruitCapsuleShopNow();
+
+                try
+                {
+                    Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Fruit & Vegetable Capsules"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e);
+                }
+
+                caps.ScrollViewport("1500");
+                var NumOfProducts = cpo.NumOfProductOrderCapsules.GetAttribute("value");
+                try
+                {
+                    Assert.That(NumOfProducts, Is.EqualTo("1"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+
+                cpo.IncrementArrowOrderCapsules.Click();
+                var incrProductCount = cpo.NumOfProductOrderCapsules.GetAttribute("value");
+                Thread.Sleep(500);
+                try
+                {
+                    Assert.That(incrProductCount, Is.EqualTo("2"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+
+                cpo.DecrementArrowOrderCapsules.Click();
+                var decrProductCount = cpo.NumOfProductOrderCapsules.GetAttribute("value");
+                try
+                {
+                    Assert.That(decrProductCount, Is.EqualTo("1"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+
+                cpo.AddToCartOrderCapsules.Click();
+
+                Thread.Sleep(1000);
+                var NumInCart = nav.CartIconCounter.Text;
+                Console.WriteLine(NumInCart);
+                try
+                {
+                    Assert.That(NumInCart, Is.EqualTo("1"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e);
+                }
+
+                nav.CartIconCounter.Click();
+
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-icon-badge__counter")));
+                try
+                {
+                    IWebElement click1 = nav.CheckoutButton;
+                    click1.Click();
+                }
+                catch (Exception e)
+                {
+                    nav.CartIconCounter.Click();
+                    IWebElement click2 = nav.CheckoutButton;
+                    click2.Click();
+                }
+                carp.NavigateToProceedToCheckoutAndClick();
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e);
+            }
+
+        }
+
+        public void MXAddFruitsAndVegetablesCapsuleToCart()
+        {
+            WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            CapsulesPageObjects caps = new CapsulesPageObjects(Driver);
+            LandingPageObjects lan = new LandingPageObjects(Driver);
+            CapsulesOrderPageObjects cpo = new CapsulesOrderPageObjects(Driver);
+            CartPageObjects carp = new CartPageObjects(Driver);
+
+            try
+            {
+                navac.NavigateOurProductsCapsulesClick();
+
+                try
+                {
+                    Assert.IsFalse(Driver.WebDriver.PageSource.Contains("£"));
+                    //                    Assert.IsTrue(Driver.WebDriver.PageSource.Contains("€"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+                Thread.Sleep(1000);
+                lan.CookieAlertAcceptButton.Click();
+                Task.Delay(1000).Wait(1500);
+                caps.MXShopNowFruitVegCapsules.Click();
+
+                try
+                {
+                    Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Fruit & Vegetable Capsules"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e);
+                }
+
+                caps.ScrollViewport("1500");
+                var NumOfProducts = cpo.NumOfProductOrderCapsules.GetAttribute("value");
+                try
+                {
+                    Assert.That(NumOfProducts, Is.EqualTo("1"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+
+                cpo.IncrementArrowOrderCapsules.Click();
+                var incrProductCount = cpo.NumOfProductOrderCapsules.GetAttribute("value");
+                Thread.Sleep(500);
+                try
+                {
+                    Assert.That(incrProductCount, Is.EqualTo("2"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+
+                cpo.DecrementArrowOrderCapsules.Click();
+                var decrProductCount = cpo.NumOfProductOrderCapsules.GetAttribute("value");
+                try
+                {
+                    Assert.That(decrProductCount, Is.EqualTo("1"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+
+                cpo.AddToCartOrderCapsules.Click();
+
+                Thread.Sleep(1000);
+                var NumInCart = nav.CartIconCounter.Text;
+                Console.WriteLine(NumInCart);
+                try
+                {
+                    Assert.That(NumInCart, Is.EqualTo("1"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e);
+                }
+
+                nav.CartIconCounter.Click();
+
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-icon-badge__counter")));
+                try
+                {
+                    IWebElement click1 = nav.CheckoutButton;
+                    click1.Click();
+                }
+                catch (Exception e)
+                {
+                    nav.CartIconCounter.Click();
+                    IWebElement click2 = nav.CheckoutButton;
+                    click2.Click();
+                }
+                carp.NavigateToProceedToCheckoutAndClick();
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e);
+            }
+
+        }
+
         public void AddBerryCapsuleToCart()
         {
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
@@ -287,7 +514,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.OurProductsMen
                     Console.WriteLine(e); ;
                 }
                 
-                caps.ScrollViewport();
+                caps.ScrollViewport("1500");
                 var NumOfProducts = cpo.NumOfProductOrderCapsules.GetAttribute("value");
                 try
                 {

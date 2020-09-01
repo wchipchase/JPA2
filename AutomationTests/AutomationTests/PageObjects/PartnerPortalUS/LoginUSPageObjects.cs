@@ -24,14 +24,23 @@ namespace AutomationTests.PageObjects.PartnerPortalUS
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[for='input-toggle-option1-1135910086']")]
         public IWebElement LoginSlider { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[for='input-toggle-option2-1135910086']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//label[contains(.,'Partner Login')]")]
         public IWebElement PartnerLoginSlider { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "username")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[for='input-toggle-option2-1108069971']")]
+        public IWebElement MXPartnerLoginSlider { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "login-email-635282930")]
         public IWebElement UsernameTextBox { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "password")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "login-email-1000883519")]
+        public IWebElement MXUsernameTextBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "login-password-635282930")]
         public IWebElement PasswordTextBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "login-password-1000883519")]
+        public IWebElement MXPasswordTextBox { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//button[@class='a-button a-button--primary a-button--small']")]
         public IWebElement CookieAlertAcceptButton { get; set; }

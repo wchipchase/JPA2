@@ -63,5 +63,84 @@ namespace AutomationTests.PageActions.PartnerPortal
             }
         }
 
+        public void LoginAsCustomer()
+        {
+            try
+            {
+                IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+                WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
+                Login lpo = new Login(Driver);
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[.='Sign In']")));
+                //lpo.CookieAlertAcceptButton.Click();
+                //lpo.LoginButton.Click();
+
+                
+                //js.ExecuteScript("arguments[0].click();", lpo.PartnerLoginSlider);
+                //waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Id("username")));
+                //Thread.Sleep(3000);
+                //Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Customer Login"));
+                //Driver.WebDriver.SwitchTo().Frame(0);
+                Thread.Sleep(3000);
+                //lpo.PartnerLoginSlider.Click();
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Name("username")));
+                try
+                {
+                    lpo.UsernameTextBox.SendKeys(UserInfo.CustomerEmailIE.CustEmail);
+                    lpo.PasswordTextBox.SendKeys(UserInfo.CustomerPWIE.CustPW);
+                    lpo.PLoginButton.Click();
+                }
+
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+
+        public void LoginAsPartner2()
+        {
+            try
+            {
+                IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+                WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
+                Login lpo = new Login(Driver);
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[.='Sign In']")));
+                //lpo.CookieAlertAcceptButton.Click();
+                //lpo.LoginButton.Click();
+
+
+                //js.ExecuteScript("arguments[0].click();", lpo.PartnerLoginSlider);
+                //waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Id("username")));
+                //Thread.Sleep(3000);
+                //Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Customer Login"));
+                //Driver.WebDriver.SwitchTo().Frame(0);
+                Thread.Sleep(3000);
+                lpo.PartnerLoginSlider.Click();
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Name("username")));
+                try
+                {
+                    lpo.UsernameTextBox.SendKeys(UserInfo.CustomerEmailIE.CustEmail);
+                    lpo.PasswordTextBox.SendKeys(UserInfo.CustomerPWIE.CustPW);
+                    lpo.PLoginButton.Click();
+                }
+
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
     }
 }

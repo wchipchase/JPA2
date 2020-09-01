@@ -415,7 +415,41 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.NavigationsAct
                 NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
                 IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
                 js.ExecuteScript("arguments[0].click();", nav.IrelandFooter);
-                js.ExecuteScript("arguments[0].click();", nav.CountrySelectionUnitedKingdom);
+                js.ExecuteScript("arguments[0].click();", nav.CountrySelectionMexico);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
+        }
+
+        public void USNavigateCountryClick()
+        {
+            try
+            {
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
+                IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+                js.ExecuteScript("arguments[0].click();", nav.USFooter);
+                js.ExecuteScript("arguments[0].click();", nav.CountrySelectionCanada);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
+        }
+
+        public void MXNavigateCountryClick()
+        {
+            try
+            {
+                NavigationFooterPageObjects nav = new NavigationFooterPageObjects(Driver);
+                IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+                js.ExecuteScript("arguments[0].click();", nav.MXFooter);
+                js.ExecuteScript("arguments[0].click();", nav.CountrySelectionCanada);
 
             }
             catch (Exception e)

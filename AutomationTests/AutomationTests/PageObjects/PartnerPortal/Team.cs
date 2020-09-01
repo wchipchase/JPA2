@@ -28,7 +28,7 @@ namespace AutomationTests.PageObjects.PartnerPortal
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='SP']")]
         public IWebElement FilterControlSP { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='P']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//div[@id='position']//div[@class='m-input-checkbox__input-container']//div[.='P']")]
         public IWebElement FilterControlP { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='SDD']")]
@@ -48,7 +48,7 @@ namespace AutomationTests.PageObjects.PartnerPortal
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='First Name']")]
         public IWebElement FirstNameFilter { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='Last Name']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='Last Name(s)']")]
         public IWebElement LastNameFilter { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[@class='m-flyout__content js-m-flyout__content m-flyout__content--attached m-flyout__content--select m-flyout__content--dropdown']//a[contains(.,'Last Name')]")]
@@ -105,6 +105,9 @@ namespace AutomationTests.PageObjects.PartnerPortal
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "registration.contact.email")]
         public IWebElement ContactEmail { get; set; }
 
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "registration.business.taxId")]
+        public IWebElement RFCTaxID { get; set; }
+        
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "registration.contact.phoneNumber")]
         public IWebElement ContactPhoneNumber { get; set; }
 
@@ -116,6 +119,9 @@ namespace AutomationTests.PageObjects.PartnerPortal
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "registration.contact.county")]
         public IWebElement ContactCounty { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "registration.contact.zip")]
+        public IWebElement ContactPostalCode { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//form[@class='m-form']/div[@class='m-stepper__content']/section[@class='l-section l-section--transparent m-partner-registration-step']//span[.='Next']")]
         public IWebElement ContactNextButton{ get; set; }
@@ -131,6 +137,45 @@ namespace AutomationTests.PageObjects.PartnerPortal
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='To Team List']")]
         public IWebElement ToTeamListButton { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "day")]
+        public IWebElement USBirthdayTextBoxDay { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "month")]
+        public IWebElement USBirthdayTextBoxMonth { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "year")]
+        public IWebElement USBirthdayTextBoxYear { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[placeholder='Day']")]
+        public IWebElement MXBirthdayTextBoxDay { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = ".js-m-input-month__input")]
+        public IWebElement MXBirthdayTextBoxMonth { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[placeholder='Year']")]
+        public IWebElement MXBirthdayTextBoxYear { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[placeholder='Day']")]
+        public IWebElement IRBirthdayTextBoxDay { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = ".js-m-input-month__input")]
+        public IWebElement IRBirthdayTextBoxMonth { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[placeholder='Year']")]
+        public IWebElement IRBirthdayTextBoxYear { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "registration.member.socialSecurityNumber")]
+        public IWebElement USBirthdayTextBoxSSN { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "registration.contact.state")]
+        public IWebElement USStateTextBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "registration.contact.zip")]
+        public IWebElement USZipCodeTextBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "registration.contact.street3")]
+        public IWebElement MXNeighborhoodTextBox { get; set; }
 
         public void ScrollViewport()
         {

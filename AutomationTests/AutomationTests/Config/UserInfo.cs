@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +13,16 @@ namespace AutomationTests.Config
         public static class FirstName
         {
             public static string FirstName1 = "Test";
+        }
+
+        public static class CustomerEmailIE
+        {
+            public static string CustEmail = "ANYADORN@GMAIL.COM";
+        }
+
+        public static class CustomerPWIE
+        {
+            public static string CustPW= "Abcd1234";
         }
 
         public static class LastName
@@ -25,6 +36,7 @@ namespace AutomationTests.Config
 
         public static class UserEmail
         {
+            public static string UserEmailMex1 = "test_user_3424410@testuser.com";
             public static string UserEmail1 = "test.tester@juiceplus.com";
         }
 
@@ -42,6 +54,19 @@ namespace AutomationTests.Config
         public static class Birthday
         {
             public static string Birthday1 = "1978-10-10";
+            public static string USBirthdayDay1 = "10";
+            public static string USBirthdayMon1 = "October";
+            public static string USBirthdayYear1 = "1978";
+        }
+
+        public static class SSN
+        {
+            public static string SSN1 = "111-11-1111";
+            public static string CURP1 = "SIST781010HASMMM08";
+            public static string PPS = "W1234567";
+            public static string RFC1 = "SIST781010FU5";
+
+
         }
     }
 }

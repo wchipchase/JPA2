@@ -20,7 +20,7 @@ namespace AutomationTests.PageActions.PartnerPortal
         public void NavigateToCustomers()
         {
             Login lpo = new Login(Driver);
-            Thread.Sleep(500);
+            Thread.Sleep(2000);
             lpo.CustomersNavTab.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Customer"));
         }
@@ -28,7 +28,9 @@ namespace AutomationTests.PageActions.PartnerPortal
         public void ClickFilterButton()
         {
             Customers cpo = new Customers(Driver);
+            Thread.Sleep(3000);
             cpo.FilterCustomers.Click();
+            Thread.Sleep(3000);
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Filter customers"));
         }
 
@@ -42,6 +44,7 @@ namespace AutomationTests.PageActions.PartnerPortal
             cpo.FilterSelectCountryEIR.Click();
             Thread.Sleep(1000);
             cpo.FilterSelectApply.Click();
+            Thread.Sleep(1000);
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Reset"));
         }
 
@@ -54,6 +57,7 @@ namespace AutomationTests.PageActions.PartnerPortal
             tpo.LastNameFilter.Click();
             tpo.FirstNameFilterSelection.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Reset"));
+            Thread.Sleep(1000);
         }
 
         public void SelectFirstCustomer()

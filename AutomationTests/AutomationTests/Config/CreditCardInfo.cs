@@ -48,6 +48,7 @@ namespace AutomationTests.Config
             public static class MasterCardCCV
             {
                 public static string MasterCardCCVValid = "366";
+                public static string MXMasterCardCCVValid = "123";
             }
 
             public static class AmexCCV

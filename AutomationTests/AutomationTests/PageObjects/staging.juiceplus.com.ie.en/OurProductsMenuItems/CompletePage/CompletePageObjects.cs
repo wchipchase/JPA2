@@ -38,7 +38,7 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CompletePage
         public void ClickCompleteVegetableSoupShopNow()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
-            js.ExecuteScript("window.scrollBy(0,1000)");
+            js.ExecuteScript("window.scrollBy(0,1250)");
             Thread.Sleep(500);
             VegetableSoupShopNowComplete.Click();
         }
@@ -113,10 +113,10 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CompletePage
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//div[@class='aem-Grid aem-Grid--default--4 aem-Grid--tablet-landscape--2 aem-Grid--tablet-portrait--2 aem-Grid--phone--1   tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal']//a[@href='https://www.staging.juiceplus.com/ie/en/live-better/look-and-feel-your-best']//div[@class='a-button a-button--outline-secondary a-button--large']")]
         public IWebElement LookAndFeelLearnMoreComplete { get; set; }
 
-        public void ScrollViewport()
+        public void ScrollViewport(string scrollDist)
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
-            js.ExecuteScript("window.scrollBy(0,1000)");
+            js.ExecuteScript("window.scrollBy(0,"+ scrollDist +")");
             Thread.Sleep(500);
         }
 

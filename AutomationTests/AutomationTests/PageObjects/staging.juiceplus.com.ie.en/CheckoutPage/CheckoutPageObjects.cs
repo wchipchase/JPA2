@@ -29,6 +29,15 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CheckoutPage
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//h2[contains(.,'New to Juice Plus+?')]")]
         public IWebElement CheckoutPageLabel { get; set; }
 
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.contact.gender")]
+        public IWebElement GenderDropdown { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//option[contains(.,'Female')]")]
+        public IWebElement FemaleSelection { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//option[contains(.,'Male')]")]
+        public IWebElement MaleSelection { get; set; }
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[contains(.,'Sign in')]")]
         public IWebElement SignInPath { get; set; }
 
@@ -101,6 +110,9 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CheckoutPage
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.address.state")]
         public IWebElement StateDeliveryTextbox { get; set; }
 
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.address.postalCode")]
+        public IWebElement PostalCodeTextbox { get; set; }
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.address.county")]
         public IWebElement CountyDeliveryTextbox { get; set; }
 
@@ -137,6 +149,9 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CheckoutPage
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//input[@value='mc']")]
         public IWebElement MCPaymentMethodButton { get; set; }
 
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//input[@value='amx']")]
+        public IWebElement AMEXPaymentMethodButton { get; set; }
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "payment.cardNumber")]
         public IWebElement PaymentCCNumberTextbox { get; set; }
 
@@ -169,5 +184,8 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CheckoutPage
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.address.county")]
         public IWebElement DeliveryCounty { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.address.street3")]
+        public IWebElement MXDeliveryNeighborhood { get; set; }
     }
 }

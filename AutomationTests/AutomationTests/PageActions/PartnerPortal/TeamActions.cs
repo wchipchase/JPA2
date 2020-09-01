@@ -27,6 +27,7 @@ namespace AutomationTests.PageActions.PartnerPortal
         public void ClickFilterButton()
         {
             Team tpo = new Team(Driver);
+            Thread.Sleep(2000);
             tpo.FilterControl.Click();
         }
 
@@ -45,6 +46,7 @@ namespace AutomationTests.PageActions.PartnerPortal
         public void ValidateNameFilter()
         {
             Team tpo = new Team(Driver);
+            Thread.Sleep(3000);
             tpo.FirstNameFilter.Click();
             tpo.LastNameFilterSelection.Click();
             tpo.LastNameFilter.Click();
@@ -53,6 +55,7 @@ namespace AutomationTests.PageActions.PartnerPortal
 
         public void ClickDownloadAndSelectCSV()
         {
+            Thread.Sleep(3000);
             Team tpo = new Team(Driver);
             tpo.DownloadFilter.Click();
             Thread.Sleep(1000);
@@ -70,14 +73,16 @@ namespace AutomationTests.PageActions.PartnerPortal
         public void ClickOnAddMemberAndFillOutPersonalForm()
         {
             Team tpo = new Team(Driver);
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
             tpo.AddMemberButton.Click();
             tpo.FillOutFormButton.Click();
             tpo.FirstNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.FirstNameShipping.FirstName1);
             tpo.LastNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.LastNameShipping.LastName1);
             tpo.GenderDropdown.Click();
             tpo.MaleGenderSelection.Click();
-            tpo.BirthdayTextBox.SendKeys(Config.UserInfo.Birthday.Birthday1);
+            tpo.IRBirthdayTextBoxDay.SendKeys(Config.UserInfo.Birthday.USBirthdayDay1);
+            tpo.IRBirthdayTextBoxMonth.SendKeys(Config.UserInfo.Birthday.USBirthdayMon1);
+            tpo.IRBirthdayTextBoxYear.SendKeys(Config.UserInfo.Birthday.USBirthdayYear1);
             tpo.PPSNTextBox.SendKeys(Config.UserInfo.PPSN.PPSN1);
             tpo.ScrollViewport();
             Thread.Sleep(1000);

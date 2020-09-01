@@ -87,5 +87,20 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.Navigation
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/gb/en']")]
         public IWebElement CountrySelectionUnitedKingdom { get; set; }
 
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/ca/en']")]
+        public IWebElement CountrySelectionCanada { get; set; }
+        
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[contains(.,'United States')]")]
+        public IWebElement USFooter { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[contains(.,'Mexico')]")]
+        public IWebElement MXFooter { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/mx/en/products/capsules/fruit-vegetable-and-berry-capsules']")]
+        public IWebElement CountrySelectionMexico { get; set; }
+
+        //li[14]//div[@class='m-language-navigation__country-name']
+
     }
 }

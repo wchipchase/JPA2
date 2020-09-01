@@ -9,7 +9,9 @@ using System.Threading;
 
 namespace AutomationTests
 {
-    [TestFixture, Parallelizable(ParallelScope.All)]
+    [TestFixture]
+
+    //add to TestFixture to run parallel ", Parallelizable(ParallelScope.All)"
     class PartnerPortal
     {
         [ThreadStatic]
@@ -52,20 +54,20 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void ValidateDashboardCards()
         {
             lgac.LoginAsPartner();
-            //dbac.ValidatePerformanceBonusCard();
-            //Thread.Sleep(2000);
-            //dbac.ValidatePromoteOutBonusCard();
-            //Thread.Sleep(2000);
-            //dbac.ValidateComissionCard();
+            dbac.ValidatePerformanceBonusCard();
+            Thread.Sleep(2000);
+            dbac.ValidatePromoteOutBonusCard();
+            Thread.Sleep(2000);
+            dbac.ValidateComissionCard();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void TeamFilterValidation()
         {
@@ -76,7 +78,7 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void ValidatingFirstAndLastNameFilters()
         {
@@ -86,7 +88,7 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void ValidateDownloadCSV()
         {
@@ -96,7 +98,7 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void CustomerFilterValidation()
         {
@@ -107,7 +109,7 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void PurchaseProductsWithInvalidCC()
         {
@@ -120,7 +122,7 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void AddAMemberPartnerPortal()
         {
@@ -131,7 +133,7 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void PurchaseProductsASLoggedInAssociate()
         {
@@ -144,7 +146,7 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void GuestCheckoutPremiumCapsulesVisa()
         {
@@ -153,7 +155,7 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void AddAMemberPartnerPortalDifferentSponsor()
         {
@@ -164,7 +166,7 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void ValdiateContactForm()
         {
@@ -172,19 +174,17 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void SwitchCountryInCart()
         {
             ppac.NavigateToJuicePlusWebsite();
             ppac.AddProductsToCart();
-            ppac.CartIcon1();
             ppac.ChangeCountry();
-            ppac.CartIcon0();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void SharedCartPortalOrders()
         {
@@ -196,7 +196,7 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ireland")]
         [Category("alltest")]
         public void SharedCartJuicePlusOrder()
         {

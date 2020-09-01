@@ -116,14 +116,18 @@
     <Compile Include="PageActions\PartnerPortalUS\CustomerActionsUS.cs" />
     <Compile Include="PageActions\PartnerPortalUS\DashboardActionsUS.cs" />
     <Compile Include="PageActions\PartnerPortalUS\LoginActionsUS.cs" />
+    <Compile Include="PageActions\PartnerPortalUS\PPCartUSActions.cs" />
     <Compile Include="PageActions\PartnerPortalUS\ShopActionsUS.cs" />
     <Compile Include="PageActions\PartnerPortalUS\TeamActionsUS.cs" />
+    <Compile Include="PageActions\PartnerPortalUS\TeamActionsMX.cs" />
     <Compile Include="PageActions\PartnerPortal\CustomerActions.cs" />
     <Compile Include="PageActions\PartnerPortal\DashboardActions.cs" />
     <Compile Include="PageActions\PartnerPortal\LoginActions.cs" />
     <Compile Include="PageActions\PartnerPortal\PPCartActions.cs" />
     <Compile Include="PageActions\PartnerPortal\ShopActions.cs" />
     <Compile Include="PageActions\PartnerPortal\TeamActions.cs" />
+    <Compile Include="PageActions\PartnerPortal\USCapsuleActions.cs" />
+    <Compile Include="PageActions\PartnerPortal\WebsiteOrderingActions.cs" />
     <Compile Include="PageActions\staging.juiceplus.com.ie.en\CartCheckoutActions\CartActions.cs" />
     <Compile Include="PageActions\staging.juiceplus.com.ie.en\MixedProductActions\MixedProductActions.cs" />
     <Compile Include="PageActions\staging.juiceplus.com.ie.en\NavigationsActions\NavigationActions.cs" />
@@ -172,12 +176,14 @@
     <Compile Include="Tests\PartnerPortal.cs" />
     <Compile Include="Tests\PartnerPortalMex.cs" />
     <Compile Include="Tests\PartnerPortalUS.cs" />
+    <Compile Include="Tests\PPv2Ireland.cs" />
     <Compile Include="Tests\ReadFromExcel.cs" />
     <Compile Include="Tests\Scratch.cs" />
     <Compile Include="Tests\ProductCheckout.cs" />
     <Compile Include="Tests\TestFooterNavigationItems.cs" />
     <Compile Include="Tests\TestHeaderNavigationItems.cs" />
     <Compile Include="Tests\TestLandingPageElements.cs" />
+    <Compile Include="Tests\WebsiteOrderingIE.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

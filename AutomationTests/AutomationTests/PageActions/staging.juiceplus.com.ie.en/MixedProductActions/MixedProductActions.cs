@@ -138,7 +138,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.MixedProductAc
                     Console.WriteLine(e);
                 }
 
-                caps.ScrollViewport();
+                caps.ScrollViewport("1500");
                 try
                 {
                     Assert.That(NumOfProducts, Is.EqualTo("1"));

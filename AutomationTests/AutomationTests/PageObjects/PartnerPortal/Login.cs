@@ -36,10 +36,13 @@ namespace AutomationTests.PageObjects.PartnerPortal
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[for='rememberMe']")]
         public IWebElement PRememberMeCheckbox { get; set; }
 
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "login-submit-2117444080")]
+        public IWebElement PLoginButton { get; set; }
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//button[@class='a-button a-button--primary a-button--small']")]
         public IWebElement CookieAlertAcceptButton { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//button[@class='a-button a-button--full-width a-button--primary js-form__submit a-button--large']/span[@class='a-button__inner']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "submit")]
         public IWebElement SignInBtn { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[contains(.,'Create an account')]")]
