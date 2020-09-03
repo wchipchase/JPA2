@@ -49,6 +49,7 @@ namespace AutomationTests.PageActions.PartnerPortal
             Thread.Sleep(3000);
             tpo.FirstNameFilter.Click();
             tpo.LastNameFilterSelection.Click();
+            Thread.Sleep(1000);
             tpo.LastNameFilter.Click();
             tpo.FirstNameFilterSelection.Click();
         }

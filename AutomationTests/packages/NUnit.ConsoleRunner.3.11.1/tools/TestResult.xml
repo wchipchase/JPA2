@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="0" runstate="Runnable" testcasecount="62" result="Failed" total="14" passed="1" failed="13" inconclusive="0" skipped="0" asserts="2" engine-version="3.11.1.0" clr-version="4.0.30319.42000" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="61.005906">
-  <command-line><![CDATA["C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\packages\NUnit.ConsoleRunner.3.11.1\tools\nunit3-console.exe" C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\bin\Debug\AutomationTests.exe --where "cat == 'smoketest-ireland'"]]></command-line>
+<test-run id="0" runstate="Runnable" testcasecount="103" result="Failed" total="14" passed="0" failed="14" inconclusive="0" skipped="0" asserts="0" engine-version="3.11.1.0" clr-version="4.0.30319.42000" start-time="2020-09-01 18:55:09Z" end-time="2020-09-01 18:55:24Z" duration="14.969850">
+  <command-line><![CDATA["C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\packages\NUnit.ConsoleRunner.3.11.1\tools\nunit3-console.exe" C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\bin\Debug\AutomationTests.exe --where "cat == 'smoketest-mex'"]]></command-line>
   <filter>
-    <cat>smoketest-ireland</cat>
+    <cat>smoketest-mex</cat>
   </filter>
-  <test-suite type="Assembly" id="0-1069" name="AutomationTests.exe" fullname="C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\bin\Debug\AutomationTests.exe" runstate="Runnable" testcasecount="62" result="Failed" site="Child" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.616215" total="14" passed="1" failed="13" warnings="0" inconclusive="0" skipped="0" asserts="2">
+  <test-suite type="Assembly" id="0-1112" name="AutomationTests.exe" fullname="C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\bin\Debug\AutomationTests.exe" runstate="Runnable" testcasecount="103" result="Failed" site="Child" start-time="2020-09-01 18:55:09Z" end-time="2020-09-01 18:55:24Z" duration="14.573319" total="14" passed="0" failed="14" warnings="0" inconclusive="0" skipped="0" asserts="0">
     <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18363.0" platform="Win32NT" cwd="C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\packages\NUnit.ConsoleRunner.3.11.1\tools" machine-name="LT-IS-WCHIPCHAS" user="wchipchase" user-domain="NSANET" culture="en-US" uiculture="en-US" os-architecture="x86" />
     <settings>
       <setting name="DisposeRunners" value="True" />
@@ -18,327 +18,308 @@
       <setting name="NumberOfTestWorkers" value="12" />
     </settings>
     <properties>
-      <property name="_PID" value="8252" />
+      <property name="_PID" value="19604" />
       <property name="_APPDOMAIN" value="domain-" />
     </properties>
     <failure>
       <message><![CDATA[One or more child tests had errors]]></message>
     </failure>
-    <test-suite type="TestSuite" id="0-1070" name="AutomationTests" fullname="AutomationTests" runstate="Runnable" testcasecount="62" result="Failed" site="Child" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.606177" total="14" passed="1" failed="13" warnings="0" inconclusive="0" skipped="0" asserts="2">
+    <test-suite type="TestSuite" id="0-1113" name="AutomationTests" fullname="AutomationTests" runstate="Runnable" testcasecount="103" result="Failed" site="Child" start-time="2020-09-01 18:55:09Z" end-time="2020-09-01 18:55:24Z" duration="14.563176" total="14" passed="0" failed="14" warnings="0" inconclusive="0" skipped="0" asserts="0">
       <properties />
       <failure>
         <message><![CDATA[One or more child tests had errors]]></message>
       </failure>
-      <test-suite type="TestFixture" id="0-1000" name="PartnerPortal" fullname="AutomationTests.PartnerPortal" classname="AutomationTests.PartnerPortal" runstate="Runnable" testcasecount="14" result="Failed" site="Child" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.602180" total="14" passed="1" failed="13" warnings="0" inconclusive="0" skipped="0" asserts="2">
-        <properties>
-          <property name="ParallelScope" value="All" />
-        </properties>
+      <test-suite type="TestSuite" id="0-1114" name="Tests" fullname="AutomationTests.Tests" runstate="Runnable" testcasecount="59" result="Failed" site="Child" start-time="2020-09-01 18:55:09Z" end-time="2020-09-01 18:55:24Z" duration="14.562952" total="14" passed="0" failed="14" warnings="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
         <failure>
           <message><![CDATA[One or more child tests had errors]]></message>
         </failure>
-        <test-case id="0-1013" name="SharedCartPortalOrders" fullname="AutomationTests.PartnerPortal.SharedCartPortalOrders" methodname="SharedCartPortalOrders" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="434039843" result="Failed" label="Error" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:38:12Z" duration="5.278634" asserts="0">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
+        <test-suite type="TestFixture" id="0-1048" name="PartnerPortalMex" fullname="AutomationTests.Tests.PartnerPortalMex" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" testcasecount="14" result="Failed" site="Child" start-time="2020-09-01 18:55:09Z" end-time="2020-09-01 18:55:24Z" duration="14.561175" total="14" passed="0" failed="14" warnings="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
           <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverException : unknown error: Chrome failed to start: exited normally.
-  (unknown error: DevToolsActivePort file doesn't exist)
-  (The process started from chrome location C:\Program Files (x86)\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-case id="0-1055" name="AddAMemberPartnerPortal" fullname="AutomationTests.Tests.PartnerPortalMex.AddAMemberPartnerPortal" methodname="AddAMemberPartnerPortal" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="1434454273" result="Failed" label="Error" start-time="2020-09-01 18:55:09Z" end-time="2020-09-01 18:55:10Z" duration="0.977964" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
    at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
-   at AutomationTests.PartnerPortal.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 39]]></stack-trace>
-          </failure>
-        </test-case>
-        <test-case id="0-1004" name="ValidateDownloadCSV" fullname="AutomationTests.PartnerPortal.ValidateDownloadCSV" methodname="ValidateDownloadCSV" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1548110641" result="Passed" start-time="2020-08-25 17:38:12Z" end-time="2020-08-25 17:38:36Z" duration="24.647846" asserts="1">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
-        </test-case>
-        <test-case id="0-1003" name="ValidatingFirstAndLastNameFilters" fullname="AutomationTests.PartnerPortal.ValidatingFirstAndLastNameFilters" methodname="ValidatingFirstAndLastNameFilters" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="2141355755" result="Failed" label="Error" start-time="2020-08-25 17:38:36Z" end-time="2020-08-25 17:38:49Z" duration="12.682660" asserts="1">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
-          <failure>
-            <message><![CDATA[System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
-  ----> OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <span class="a-button__inner">...</span> is not clickable at point (941, 321). Other element would receive the click: <div class="m-loading-overlay m-loading-overlay--active m-loading-overlay--top-aligned">...</div>
-  (Session info: chrome=84.0.4147.135)]]></message>
-            <stack-trace><![CDATA[   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
-   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at OpenQA.Selenium.Support.PageObjects.WebDriverObjectProxy.InvokeMethod(IMethodCallMessage msg, Object representedValue)
-   at OpenQA.Selenium.Support.PageObjects.WebElementProxy.Invoke(IMessage msg)
-   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
-   at OpenQA.Selenium.IWebElement.Click()
-   at AutomationTests.PageActions.PartnerPortal.TeamActions.ValidateNameFilter() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\PageActions\PartnerPortal\TeamActions.cs:line 48
-   at AutomationTests.PartnerPortal.ValidatingFirstAndLastNameFilters() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 85
---ElementClickInterceptedException
-   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
-   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
-   at OpenQA.Selenium.Remote.RemoteWebElement.Click()]]></stack-trace>
-          </failure>
-        </test-case>
-        <test-case id="0-1011" name="ValdiateContactForm" fullname="AutomationTests.PartnerPortal.ValdiateContactForm" methodname="ValdiateContactForm" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1732028270" result="Failed" label="Error" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.596924" asserts="0">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:58342/session timed out after 60 seconds.
-  ----> System.Net.WebException : The request was aborted: The operation has timed out.]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1058" name="AddAMemberPartnerPortalDifferentSponsor" fullname="AutomationTests.Tests.PartnerPortalMex.AddAMemberPartnerPortalDifferentSponsor" methodname="AddAMemberPartnerPortalDifferentSponsor" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="778522994" result="Failed" label="Error" start-time="2020-09-01 18:55:10Z" end-time="2020-09-01 18:55:11Z" duration="1.048927" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
    at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
-   at AutomationTests.PartnerPortal.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 39
---WebException
-   at System.Net.HttpWebRequest.GetResponse()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)]]></stack-trace>
-          </failure>
-        </test-case>
-        <test-case id="0-1012" name="SwitchCountryInCart" fullname="AutomationTests.PartnerPortal.SwitchCountryInCart" methodname="SwitchCountryInCart" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1788557419" result="Failed" label="Error" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.597458" asserts="0">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:58340/session timed out after 60 seconds.
-  ----> System.Net.WebException : The request was aborted: The operation has timed out.]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1053" name="CustomerFilterValidation" fullname="AutomationTests.Tests.PartnerPortalMex.CustomerFilterValidation" methodname="CustomerFilterValidation" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="1400240151" result="Failed" label="Error" start-time="2020-09-01 18:55:11Z" end-time="2020-09-01 18:55:12Z" duration="1.060843" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
    at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
-   at AutomationTests.PartnerPortal.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 39
---WebException
-   at System.Net.HttpWebRequest.GetResponse()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)]]></stack-trace>
-          </failure>
-        </test-case>
-        <test-case id="0-1009" name="GuestCheckoutPremiumCapsulesVisa" fullname="AutomationTests.PartnerPortal.GuestCheckoutPremiumCapsulesVisa" methodname="GuestCheckoutPremiumCapsulesVisa" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="147442087" result="Failed" label="Error" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.597988" asserts="0">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:58338/session timed out after 60 seconds.
-  ----> System.Net.WebException : The request was aborted: The operation has timed out.]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1057" name="GuestCheckoutPremiumCapsulesVisa" fullname="AutomationTests.Tests.PartnerPortalMex.GuestCheckoutPremiumCapsulesVisa" methodname="GuestCheckoutPremiumCapsulesVisa" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="1208313310" result="Failed" label="Error" start-time="2020-09-01 18:55:12Z" end-time="2020-09-01 18:55:14Z" duration="1.046539" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
    at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
-   at AutomationTests.PartnerPortal.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 39
---WebException
-   at System.Net.HttpWebRequest.GetResponse()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)]]></stack-trace>
-          </failure>
-        </test-case>
-        <test-case id="0-1001" name="ValidateDashboardCards" fullname="AutomationTests.PartnerPortal.ValidateDashboardCards" methodname="ValidateDashboardCards" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1392137238" result="Failed" label="Error" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.597579" asserts="0">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:58339/session timed out after 60 seconds.
-  ----> System.Net.WebException : The request was aborted: The operation has timed out.]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1056" name="PurchaseProductsASLoggedInAssociate" fullname="AutomationTests.Tests.PartnerPortalMex.PurchaseProductsASLoggedInAssociate" methodname="PurchaseProductsASLoggedInAssociate" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="1841934090" result="Failed" label="Error" start-time="2020-09-01 18:55:14Z" end-time="2020-09-01 18:55:15Z" duration="1.043281" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
    at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
-   at AutomationTests.PartnerPortal.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 39
---WebException
-   at System.Net.HttpWebRequest.GetResponse()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)]]></stack-trace>
-          </failure>
-        </test-case>
-        <test-case id="0-1010" name="AddAMemberPartnerPortalDifferentSponsor" fullname="AutomationTests.PartnerPortal.AddAMemberPartnerPortalDifferentSponsor" methodname="AddAMemberPartnerPortalDifferentSponsor" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="627284331" result="Failed" label="Error" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.598361" asserts="0">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:58337/session timed out after 60 seconds.
-  ----> System.Net.WebException : The request was aborted: The operation has timed out.]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1054" name="PurchaseProductsWithInvalidCC" fullname="AutomationTests.Tests.PartnerPortalMex.PurchaseProductsWithInvalidCC" methodname="PurchaseProductsWithInvalidCC" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="530414730" result="Failed" label="Error" start-time="2020-09-01 18:55:15Z" end-time="2020-09-01 18:55:16Z" duration="1.039206" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
    at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
-   at AutomationTests.PartnerPortal.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 39
---WebException
-   at System.Net.HttpWebRequest.GetResponse()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)]]></stack-trace>
-          </failure>
-        </test-case>
-        <test-case id="0-1005" name="CustomerFilterValidation" fullname="AutomationTests.PartnerPortal.CustomerFilterValidation" methodname="CustomerFilterValidation" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1905272602" result="Failed" label="Error" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.598444" asserts="0">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:58334/session timed out after 60 seconds.
-  ----> System.Net.WebException : The request was aborted: The operation has timed out.]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1061" name="SharedCartJuicePlusOrder" fullname="AutomationTests.Tests.PartnerPortalMex.SharedCartJuicePlusOrder" methodname="SharedCartJuicePlusOrder" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="119150453" result="Failed" label="Error" start-time="2020-09-01 18:55:16Z" end-time="2020-09-01 18:55:17Z" duration="1.037047" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
    at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
-   at AutomationTests.PartnerPortal.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 39
---WebException
-   at System.Net.HttpWebRequest.GetResponse()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)]]></stack-trace>
-          </failure>
-        </test-case>
-        <test-case id="0-1002" name="TeamFilterValidation" fullname="AutomationTests.PartnerPortal.TeamFilterValidation" methodname="TeamFilterValidation" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="621154980" result="Failed" label="Error" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.597887" asserts="0">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:58335/session timed out after 60 seconds.
-  ----> System.Net.WebException : The request was aborted: The operation has timed out.]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1060" name="SharedCartPortalOrders" fullname="AutomationTests.Tests.PartnerPortalMex.SharedCartPortalOrders" methodname="SharedCartPortalOrders" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="99058856" result="Failed" label="Error" start-time="2020-09-01 18:55:17Z" end-time="2020-09-01 18:55:18Z" duration="1.047918" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
    at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
-   at AutomationTests.PartnerPortal.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 39
---WebException
-   at System.Net.HttpWebRequest.GetResponse()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)]]></stack-trace>
-          </failure>
-        </test-case>
-        <test-case id="0-1014" name="SharedCartJuicePlusOrder" fullname="AutomationTests.PartnerPortal.SharedCartJuicePlusOrder" methodname="SharedCartJuicePlusOrder" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1301145372" result="Failed" label="Error" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.597941" asserts="0">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:58333/session timed out after 60 seconds.
-  ----> System.Net.WebException : The request was aborted: The operation has timed out.]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1059" name="SwitchCountryInCart" fullname="AutomationTests.Tests.PartnerPortalMex.SwitchCountryInCart" methodname="SwitchCountryInCart" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="891531455" result="Failed" label="Error" start-time="2020-09-01 18:55:18Z" end-time="2020-09-01 18:55:19Z" duration="1.049392" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
    at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
-   at AutomationTests.PartnerPortal.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 39
---WebException
-   at System.Net.HttpWebRequest.GetResponse()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)]]></stack-trace>
-          </failure>
-        </test-case>
-        <test-case id="0-1007" name="AddAMemberPartnerPortal" fullname="AutomationTests.PartnerPortal.AddAMemberPartnerPortal" methodname="AddAMemberPartnerPortal" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="1965366117" result="Failed" label="Error" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.598582" asserts="0">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:58341/session timed out after 60 seconds.
-  ----> System.Net.WebException : The request was aborted: The operation has timed out.]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1050" name="TeamFilterValidation" fullname="AutomationTests.Tests.PartnerPortalMex.TeamFilterValidation" methodname="TeamFilterValidation" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="1699207825" result="Failed" label="Error" start-time="2020-09-01 18:55:19Z" end-time="2020-09-01 18:55:20Z" duration="1.047006" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
    at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
-   at AutomationTests.PartnerPortal.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 39
---WebException
-   at System.Net.HttpWebRequest.GetResponse()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)]]></stack-trace>
-          </failure>
-        </test-case>
-        <test-case id="0-1008" name="PurchaseProductsASLoggedInAssociate" fullname="AutomationTests.PartnerPortal.PurchaseProductsASLoggedInAssociate" methodname="PurchaseProductsASLoggedInAssociate" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="595015764" result="Failed" label="Error" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.598303" asserts="0">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:58344/session timed out after 60 seconds.
-  ----> System.Net.WebException : The request was aborted: The operation has timed out.]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1062" name="ValdiateContactForm" fullname="AutomationTests.Tests.PartnerPortalMex.ValdiateContactForm" methodname="ValdiateContactForm" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="2060927773" result="Failed" label="Error" start-time="2020-09-01 18:55:20Z" end-time="2020-09-01 18:55:21Z" duration="1.045160" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
    at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
-   at AutomationTests.PartnerPortal.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 39
---WebException
-   at System.Net.HttpWebRequest.GetResponse()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)]]></stack-trace>
-          </failure>
-        </test-case>
-        <test-case id="0-1006" name="PurchaseProductsWithInvalidCC" fullname="AutomationTests.PartnerPortal.PurchaseProductsWithInvalidCC" methodname="PurchaseProductsWithInvalidCC" classname="AutomationTests.PartnerPortal" runstate="Runnable" seed="196930521" result="Failed" label="Error" start-time="2020-08-25 17:38:06Z" end-time="2020-08-25 17:39:07Z" duration="60.598003" asserts="0">
-          <properties>
-            <property name="Category" value="smoketest-ireland" />
-            <property name="Category" value="alltest" />
-          </properties>
-          <failure>
-            <message><![CDATA[OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:58343/session timed out after 60 seconds.
-  ----> System.Net.WebException : The request was aborted: The operation has timed out.]]></message>
-            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1049" name="ValidateDashboardCards" fullname="AutomationTests.Tests.PartnerPortalMex.ValidateDashboardCards" methodname="ValidateDashboardCards" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="1922158883" result="Failed" label="Error" start-time="2020-09-01 18:55:21Z" end-time="2020-09-01 18:55:22Z" duration="1.037971" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
    at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
    at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
-   at AutomationTests.PartnerPortal.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortal.cs:line 39
---WebException
-   at System.Net.HttpWebRequest.GetResponse()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)]]></stack-trace>
-          </failure>
-        </test-case>
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1052" name="ValidateDownloadCSV" fullname="AutomationTests.Tests.PartnerPortalMex.ValidateDownloadCSV" methodname="ValidateDownloadCSV" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="1763454499" result="Failed" label="Error" start-time="2020-09-01 18:55:22Z" end-time="2020-09-01 18:55:23Z" duration="1.036645" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
+   at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
+   at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1051" name="ValidatingFirstAndLastNameFilters" fullname="AutomationTests.Tests.PartnerPortalMex.ValidatingFirstAndLastNameFilters" methodname="ValidatingFirstAndLastNameFilters" classname="AutomationTests.Tests.PartnerPortalMex" runstate="Runnable" seed="2105096285" result="Failed" label="Error" start-time="2020-09-01 18:55:23Z" end-time="2020-09-01 18:55:24Z" duration="1.037785" asserts="0">
+            <properties>
+              <property name="Category" value="smoketest-mex" />
+              <property name="Category" value="alltest" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 83 (SessionNotCreated)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
+   at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)
+   at AutomationTests.ConfigElements.Driver..ctor(BrowserType browserType) in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Config\Driver.cs:line 78
+   at AutomationTests.Tests.PartnerPortalMex.SetUpTest() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 49
+--TearDown
+   at AutomationTests.Tests.PartnerPortalMex.TearDown() in C:\Users\wchipchase\Source\repos\JPA3\AutomationTests\AutomationTests\Tests\PartnerPortalMex.cs:line 225]]></stack-trace>
+            </failure>
+          </test-case>
+        </test-suite>
       </test-suite>
     </test-suite>
   </test-suite>

@@ -30,7 +30,7 @@ namespace AutomationTests.PageObjects.PartnerPortalUS
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[for='input-toggle-option2-1108069971']")]
         public IWebElement MXPartnerLoginSlider { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "login-email-635282930")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "login-email-635282930")]
         public IWebElement UsernameTextBox { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "login-email-1000883519")]

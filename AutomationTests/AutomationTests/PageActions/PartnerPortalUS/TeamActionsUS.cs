@@ -25,8 +25,9 @@ namespace AutomationTests.PageActions.PartnerPortalUS
             tpo.FillOutFormButton.Click();
             tpo.FirstNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.FirstNameShipping.FirstName1);
             tpo.LastNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.LastNameShipping.LastName1);
+            tpo.ScrollViewport();
+            tpo.GenderDropdown.SendKeys("m");
             tpo.GenderDropdown.Click();
-            tpo.MaleGenderSelection.Click();
             tpo.USBirthdayTextBoxDay.SendKeys(Config.UserInfo.Birthday.USBirthdayDay1);
             tpo.USBirthdayTextBoxMonth.SendKeys(Config.UserInfo.Birthday.USBirthdayMon1);
             tpo.USBirthdayTextBoxYear.SendKeys(Config.UserInfo.Birthday.USBirthdayYear1);
@@ -35,6 +36,7 @@ namespace AutomationTests.PageActions.PartnerPortalUS
             Thread.Sleep(1000);
             tpo.PersonalStuffNextButton.Click();
         }
+
 
         public void FillOutContactFormAndSubmitApplication()
         {

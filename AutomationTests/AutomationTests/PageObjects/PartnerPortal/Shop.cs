@@ -32,6 +32,12 @@ namespace AutomationTests.PageObjects.PartnerPortal
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.contact.email")]
         public IWebElement ContactEmailTextBox { get; set; }
 
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.contact.gender")]
+        public IWebElement ContactGenderTextBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//option[contains(.,'Male')]")]
+        public IWebElement ContactMaleGenderTextBox { get; set; }
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.contact.phoneNumber")]
         public IWebElement ContactPhoneTextBox { get; set; }
 
@@ -44,9 +50,17 @@ namespace AutomationTests.PageObjects.PartnerPortal
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.address.street2")]
         public IWebElement AptSuiteTextBox { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.address.city")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.address.street3")]
 
+        public IWebElement NeighborhoodTextBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.address.city")]
+        //label[.='I am their sponsor']
         public IWebElement CityTextBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//label[.='I am their sponsor']")]
+        
+        public IWebElement IAmTheirSponsor { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "shipping.address.state")]
 

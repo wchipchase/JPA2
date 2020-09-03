@@ -49,7 +49,7 @@ namespace AutomationTests.Tests
             Driver = new Driver(Driver.BrowserType.Chrome);
             Driver.WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             Driver.WebDriver.Manage().Window.Maximize();
-            Driver.WebDriver.Navigate().GoToUrl("https://www.staging.juiceplus.com/mx/en/");
+            Driver.WebDriver.Navigate().GoToUrl("http://prod.juiceplus.com/mx/en");
             lgac = new LoginActionsUS(Driver);
             dbac = new DashboardActions(Driver);
             tmac = new TeamActions(Driver);
@@ -65,7 +65,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mex")]
         [Category("alltest")]
 
         public void ValidateDashboardCards()
@@ -79,7 +79,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mex")]
         [Category("alltest")]
         public void TeamFilterValidation()
         {
@@ -90,7 +90,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mex")]
         [Category("alltest")]
         public void ValidatingFirstAndLastNameFilters()
         {
@@ -100,7 +100,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mex")]
         [Category("alltest")]
         public void ValidateDownloadCSV()
         {
@@ -110,7 +110,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mex")]
         [Category("alltest")]
         public void CustomerFilterValidation()
         {
@@ -120,13 +120,8 @@ namespace AutomationTests.Tests
             csac.AddAndApplyFilters();
         }
 
-        public void ValdiateContactForm()
-        {
-            nav.NavigateCompany_ContactUs();
-        }
-
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mex")]
         [Category("alltest")]
         public void PurchaseProductsWithInvalidCC()
         {
@@ -138,7 +133,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mex")]
         [Category("alltest")]
         public void AddAMemberPartnerPortal()
         {
@@ -150,29 +145,40 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mex")]
         [Category("alltest")]
         public void PurchaseProductsASLoggedInAssociate()
         {
             ppac.MXAddProductsToCart();
             ppac.CheckoutWithItems();
             ppac.CheckoutLogin();
-            ppac.MXFillInDeliveryAddressAndProceed();
-            ppac.MXEnterPaymentInfoAndConfirmOrder();
+            //ppac.MXFillInDeliveryAddressAndProceed();
+            ctac.MXLICheckoutWithCartItemsAMEX();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mex")]
         [Category("alltest")]
         public void GuestCheckoutPremiumCapsulesVisa()
         {
             ppac.MXAddProductsToCart();
             ppac.CheckoutWithItems();
-            ctac.MXCheckoutWithCartItemsAMEX();
+            //ctac.MXCheckoutWithCartItemsAMEX();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mex")]
+        [Category("alltest")]
+        public void AddAMemberPartnerPortalDifferentSponsor()
+        {
+            lgac.LoginAsPartner();
+            tmac.NavigateToTeams();
+            tmac.ClickOnAddMemberAndFillOutPersonalForm();
+            tmac.FillOutContactFormAndSubmitApplicationOtherSponsor();
+        }
+
+        [Test]
+        [Category("smoketest-mex")]
         [Category("alltest")]
         public void SwitchCountryInCart()
         {
@@ -181,7 +187,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mex")]
         [Category("alltest")]
         public void SharedCartPortalOrders()
         {
@@ -192,6 +198,26 @@ namespace AutomationTests.Tests
             csac.SelectFirstCustomerOrders();
         }
 
+        [Test]
+        [Category("smoketest-mex")]
+        [Category("alltest")]
+        public void SharedCartJuicePlusOrder()
+        {
+            lgac.LoginAsPartner();
+            spac.NavigateToShop();
+            spac.MXFillInContactDetails();
+            spac.USSelectProductsAndAddToCart();
+            spac.ShareCart();
+
+        }
+
+        [Test]
+        [Category("smoketest-mex")]
+        [Category("alltest")]
+        public void ValdiateContactForm()
+        {
+            nav.NavigateCompany_ContactUs();
+        }
 
         [TearDown]
         public void TearDown()

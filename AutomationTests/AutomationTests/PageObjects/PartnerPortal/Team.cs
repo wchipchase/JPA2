@@ -48,7 +48,7 @@ namespace AutomationTests.PageObjects.PartnerPortal
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='First Name']")]
         public IWebElement FirstNameFilter { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='Last Name(s)']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='Last Name']")]
         public IWebElement LastNameFilter { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[@class='m-flyout__content js-m-flyout__content m-flyout__content--attached m-flyout__content--select m-flyout__content--dropdown']//a[contains(.,'Last Name')]")]
@@ -180,7 +180,7 @@ namespace AutomationTests.PageObjects.PartnerPortal
         public void ScrollViewport()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
-            js.ExecuteScript("window.scrollBy(0,1000)");
+            js.ExecuteScript("window.scrollBy(0,500)");
             Thread.Sleep(500);
         }
     }

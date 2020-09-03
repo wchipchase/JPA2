@@ -191,7 +191,6 @@ namespace AutomationTests.Tests
         [Category("alltest")]
         public void SwitchCountryInCart()
         {
-            ppac.USNavigateToJuicePlusWebsite();
             ppac.AddProductsToCart();
             nav.USNavigateCountryClick();
         }

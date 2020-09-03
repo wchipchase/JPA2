@@ -51,8 +51,8 @@ namespace AutomationTests.PageActions.PartnerPortalUS
             lpo.PartnerLoginSlider.Click();
             Thread.Sleep(5000);
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Partner Login"));
-            lpo.MXUsernameTextBox.SendKeys(UserInfo.UserName.UserName1);
-            lpo.MXPasswordTextBox.SendKeys(UserInfo.UserPassword.UserPassword1);
+            lpo.UsernameTextBox.SendKeys(UserInfo.UserName.UserName1);
+            lpo.PasswordTextBox.SendKeys(UserInfo.UserPassword.UserPassword1);
             lpo.SignInBtn.Click();
         }
 

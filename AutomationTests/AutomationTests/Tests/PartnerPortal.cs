@@ -41,7 +41,7 @@ namespace AutomationTests
             Driver = new Driver(Driver.BrowserType.Chrome);
             Driver.WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             Driver.WebDriver.Manage().Window.Maximize();
-            Driver.WebDriver.Navigate().GoToUrl("https://www.staging.juiceplus.com/ie/en/");
+            Driver.WebDriver.Navigate().GoToUrl("https://www.juiceplus.com/ie/en/");
             lgac = new LoginActions(Driver);
             dbac = new DashboardActions(Driver);
             tmac = new TeamActions(Driver);
@@ -142,7 +142,7 @@ namespace AutomationTests
             ppac.CheckoutWithItems();
             ppac.CheckoutLogin();
             ppac.FillInDeliveryAddressAndProceed();
-            ppac.EnterPaymentInfoAndConfirmOrder();
+            //ppac.EnterPaymentInfoAndConfirmOrder();
         }
 
         [Test]
@@ -178,7 +178,7 @@ namespace AutomationTests
         [Category("alltest")]
         public void SwitchCountryInCart()
         {
-            ppac.NavigateToJuicePlusWebsite();
+            //ppac.NavigateToJuicePlusWebsite();
             ppac.AddProductsToCart();
             ppac.ChangeCountry();
         }
@@ -208,6 +208,7 @@ namespace AutomationTests
 
         }
 
+        [TearDown]
         public void TearDown()
         {
             Driver.Teardown();

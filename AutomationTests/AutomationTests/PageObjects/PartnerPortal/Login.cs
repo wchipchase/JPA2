@@ -42,7 +42,7 @@ namespace AutomationTests.PageObjects.PartnerPortal
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//button[@class='a-button a-button--primary a-button--small']")]
         public IWebElement CookieAlertAcceptButton { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "submit")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = ".js-form__submit")]
         public IWebElement SignInBtn { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[contains(.,'Create an account')]")]

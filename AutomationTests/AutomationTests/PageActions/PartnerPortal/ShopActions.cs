@@ -73,6 +73,38 @@ namespace AutomationTests.PageActions.PartnerPortal
             //shop.NextButton.Click();
         }
 
+        public void MXFillInContactDetails()
+        {
+            WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
+            Thread.Sleep(500);
+            shop.ContactFirstNameTextBox.SendKeys(Config.UserInfo.FirstName.FirstName1);
+            shop.ContactLastNameTextBox.SendKeys(Config.UserInfo.LastName.LastName1);
+            shop.ContactEmailTextBox.SendKeys(Config.UserInfo.UserEmail.UserEmail1);
+            shop.ContactGenderTextBox.Click();
+            shop.ContactMaleGenderTextBox.Click();
+            shop.ContactPhoneTextBox.SendKeys(Config.AddressInfo.ShippingAddress.PrimaryPhoneShipping.PrimaryPhoneUS1);
+            ScrollViewport("500");
+            shop.CountryOfResidenceDropDown.Click();
+            shop.CountryOfResidenceDropDown.SendKeys("m");
+            shop.CountryOfResidenceDropDown.Click();
+            shop.StreetAddressTextBox.SendKeys(Config.AddressInfo.ShippingAddress.StreetAddShipping.StreetAddMex1);
+            shop.NeighborhoodTextBox.SendKeys(Config.AddressInfo.ShippingAddress.NeighborhoodorColony.NeighborhoodMex1);
+            shop.CityTextBox.SendKeys(Config.AddressInfo.ShippingAddress.CityShipping.CityMex1);
+            shop.StateDropdown.SendKeys(Config.AddressInfo.ShippingAddress.StateShipping.StateMex1);
+            ScrollViewport("500");
+            //shop.StateDropdown.Click();
+            //shop.StateDropdown.SendKeys("t");
+            //shop.StateDropdown.Click();
+            shop.PostalCodeTextBox.SendKeys(Config.AddressInfo.ShippingAddress.ZipCode.ZipCodeMex1);
+            Thread.Sleep(3000);
+            shop.IAmSponsorRadioButton.Click();
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[.='Next']")));
+            IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+            js.ExecuteScript("arguments[0].click();", shop.NextButton);
+
+            //shop.NextButton.Click();
+        }
+
         public void ScrollViewport(string scrollDist)
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
@@ -106,6 +138,7 @@ namespace AutomationTests.PageActions.PartnerPortal
 
         public void ShareCart()
         {
+            ScrollViewport("500");
             shop.ShareCartButton.Click();
             shop.ShareCartLinkIcon.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Successfully copied to clipboard!"));

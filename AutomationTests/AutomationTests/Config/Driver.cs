@@ -135,7 +135,7 @@ namespace AutomationTests.ConfigElements
                 DateTime date1 = DateTime.Parse(dateString, System.Globalization.CultureInfo.InvariantCulture);
 
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                WebRequest webRequest = WebRequest.Create("https://www.staging.juiceplus.com/ie/en");
+                WebRequest webRequest = WebRequest.Create("https://prod.juiceplus.com/mx/en");
                 webRequest.Method = "GET";
                 webRequest.Headers.Add("CF-Access-Client-Id", "98a633422b00f013a1bbbbe1c184c81b.access");
                 webRequest.Headers.Add("CF-Access-Client-Secret", "352e8f81cde3597cf67c1a02c3d5b65245245d964d71baa3e4dd815b2a5fd3a0");
