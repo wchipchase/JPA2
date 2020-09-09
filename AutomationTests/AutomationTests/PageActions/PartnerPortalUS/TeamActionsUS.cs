@@ -27,10 +27,10 @@ namespace AutomationTests.PageActions.PartnerPortalUS
             tpo.LastNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.LastNameShipping.LastName1);
             tpo.ScrollViewport();
             tpo.GenderDropdown.SendKeys("m");
-            tpo.GenderDropdown.Click();
-            tpo.USBirthdayTextBoxDay.SendKeys(Config.UserInfo.Birthday.USBirthdayDay1);
-            tpo.USBirthdayTextBoxMonth.SendKeys(Config.UserInfo.Birthday.USBirthdayMon1);
-            tpo.USBirthdayTextBoxYear.SendKeys(Config.UserInfo.Birthday.USBirthdayYear1);
+            tpo.FirstNameTextBox.Click();
+            tpo.MXBirthdayTextBoxDay.SendKeys(Config.UserInfo.Birthday.USBirthdayDay1);
+            tpo.MXBirthdayTextBoxMonth.SendKeys(Config.UserInfo.Birthday.USBirthdayMon1);
+            tpo.MXBirthdayTextBoxYear.SendKeys(Config.UserInfo.Birthday.USBirthdayYear1);
             tpo.USBirthdayTextBoxSSN.SendKeys(Config.UserInfo.SSN.SSN1);
             tpo.ScrollViewport();
             Thread.Sleep(1000);

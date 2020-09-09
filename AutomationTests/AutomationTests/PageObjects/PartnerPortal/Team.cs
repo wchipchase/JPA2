@@ -123,7 +123,7 @@ namespace AutomationTests.PageObjects.PartnerPortal
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "registration.contact.zip")]
         public IWebElement ContactPostalCode { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//form[@class='m-form']/div[@class='m-stepper__content']/section[@class='l-section l-section--transparent m-partner-registration-step']//span[.='Next']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//form[@class='m-form']/div[@class='m-stepper__content']/section[@class='l-section l-section--transparent m-partner-registration-step']//a[.='Next']")]
         public IWebElement ContactNextButton{ get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//form[@class='m-form']/div[@class='m-stepper__content']/section[@class='l-section l-section--transparent m-partner-registration-step']//span[.='Next']")]

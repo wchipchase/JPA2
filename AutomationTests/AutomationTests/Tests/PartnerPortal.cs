@@ -35,6 +35,18 @@ namespace AutomationTests
         [ThreadStatic]
         static ShopActions spac;
 
+        //Add to setup when cloudflare is acting up
+        //Driver = new Driver(Driver.BrowserType.Chrome);
+        //Driver.WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+        //    Driver.WebDriver.Manage().Window.Maximize();
+        //    var dateString = "5/1/2030 8:30:52 AM";
+        //DateTime date1 = DateTime.Parse(dateString, System.Globalization.CultureInfo.InvariantCulture);
+        //OpenQA.Selenium.Cookie cfCookie = new OpenQA.Selenium.Cookie("CF_Authorization", "eyJraWQiOiJhNmFjOGFhZGZkN2JiZGY3OWU5YWFlOThkZWQwZDA3YWY1MzhhZTYzMjVlMjIxMzRjZDE2MjgxZGJhOGM2YWZjIiwiYWxnIjoiUlMyNTYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJiNzM2MWZiZTBlMWIwOGMzMjM0MWUwMzFlNzQzZTRmNDRjYTFmZTM5NjUwMGViMWYyZDI1NTY4MDU3M2UzZDhiIiwiZXhwIjoxNjAxNjg3MTA0LCJpc3MiOiJodHRwczpcL1wvanVpY2VwbHVzLmNsb3VkZmxhcmVhY2Nlc3MuY29tIiwiY29tbW9uX25hbWUiOiI5OGE2MzM0MjJiMDBmMDEzYTFiYmJiZTFjMTg0YzgxYi5hY2Nlc3MiLCJpYXQiOjE1OTkwNTkxMDQsInN1YiI6IiJ9.M-qnRFlSBclMBI2QwBaaKaZOgsSneOr8EljkHOvuhN-1ol-6bNrqga5LRY-jyOCxXb8qxyO1b5zaCFRTIkKjL_UoJ00hIIyz2VwcWdGg_xkDeeS5-MpLF3Z6LTwLhpxk0_W2mxW_WezRK0ryTgF3EEOBWazlzYMjM_3UPNjdAnEDck-EvqDZNPi8wxdFwxfc7XKoobQroyg5aUmM91EsNI7udkaXl0BgaX_XaW9UYFkgRSAzamg9FAjtLuO1wpoayg4amLVv1_yUcKdVZIvZZbO80CU57VbnaBTOi3ShTB4PckGvJUTDoQDOyNtv9WoOb2WyA6RTDOZlHpLEvT3wXg", "www.prod.juiceplus.com", "/", date1);
+        //Driver.WebDriver.Navigate().GoToUrl("https://www.prod.juiceplus.com/mx/en");
+        //Thread.Sleep(1000);
+        //    Driver.WebDriver.Manage().Cookies.AddCookie(cfCookie);
+        //    Thread.Sleep(1000);
+        //    Driver.WebDriver.Navigate().GoToUrl("https://www.prod.juiceplus.com/mx/en");
         [SetUp]
         public void SetUpTest()
         {

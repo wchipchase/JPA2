@@ -138,7 +138,7 @@ namespace AutomationTests.Tests
             ppac.AddProductsToCart();
             ppac.CheckoutWithItems();
             ppac.CheckoutLogin();
-            ppac.FillInDeliveryAddressAndProceed();
+            ppac.USFillInDeliveryAddressAndProceed();
             ppac.EnterInvalidPaymentInfoAndConfirmOrder();
         }
 
@@ -162,7 +162,7 @@ namespace AutomationTests.Tests
             ppac.AddProductsToCart();
             ppac.CheckoutWithItems();
             ppac.CheckoutLogin();
-            ppac.FillInDeliveryAddressAndProceed();
+            ppac.USFillInDeliveryAddressAndProceed();
             ppac.EnterPaymentInfoAndConfirmOrder();
         }
 

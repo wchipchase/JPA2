@@ -60,7 +60,7 @@ namespace AutomationTests.PageActions.PartnerPortal
             Task.Delay(500).Wait(1500);
             
             cpo.ScrollViewport("500");
-            cpo.ShopNowPremiumCapsules.Click();
+            cpo.USShopNowFruitVegetableCapsules.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Juice Plus+"));
             cpo.ScrollViewport("1200");
             copo.AddToCartOrderCapsules.Click();
@@ -126,6 +126,21 @@ namespace AutomationTests.PageActions.PartnerPortal
             cpo.DeliveryAddress1.SendKeys(Config.AddressInfo.ShippingAddress.StreetAddShipping.StreetAdd1);
             cpo.DeliveryCity.SendKeys(Config.AddressInfo.ShippingAddress.CityShipping.City1);
             cpo.DeliveryCounty.SendKeys(Config.AddressInfo.ShippingAddress.CountyShipping.County);
+            cpo.ProceedToCheckoutButton.Click();
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Secure Payment"));
+        }
+
+        public void USFillInDeliveryAddressAndProceed()
+        {
+            CheckoutPageObjects cpo = new CheckoutPageObjects(Driver);
+            Thread.Sleep(1000);
+            cpo.ScrollViewport();
+            //cpo.DeliveryAddress1.SendKeys(Config.AddressInfo.ShippingAddress.StreetAddShipping.StreetAddUS1);
+
+            Thread.Sleep(3000);
+            //cpo.DeliveryCity.SendKeys(Config.AddressInfo.ShippingAddress.CityShipping.CityUS1);
+            cpo.StateDeliveryTextbox.SendKeys(Config.AddressInfo.ShippingAddress.StateShipping.StateUS1);
+            cpo.CountyDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.CountyShipping.CountyUS1);
             cpo.ProceedToCheckoutButton.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Secure Payment"));
         }

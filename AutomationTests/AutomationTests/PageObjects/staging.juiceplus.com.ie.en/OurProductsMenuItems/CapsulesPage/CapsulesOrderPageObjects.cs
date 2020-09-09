@@ -42,10 +42,10 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.OurProductsMen
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='Add to cart']")]
         public IWebElement AddToCartOrderCapsules { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//button[@class='m-input-number__increment-button']/span[@class='h-icon h-icon--chevron-down-small']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "button.m-input-number__increment-button > .h-icon")]
         public IWebElement IncrementArrowOrderCapsules { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//button[@class='m-input-number__decrement-button']/span[@class='h-icon h-icon--chevron-down-small']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "button.m-input-number__decrement-button > .h-icon")]
         public IWebElement DecrementArrowOrderCapsules { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "input-number")]
