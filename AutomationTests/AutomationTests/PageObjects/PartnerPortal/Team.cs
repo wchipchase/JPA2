@@ -51,6 +51,10 @@ namespace AutomationTests.PageObjects.PartnerPortal
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='Last Name']")]
         public IWebElement LastNameFilter { get; set; }
 
+        
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='Last Name(s)']")]
+        public IWebElement IELastNameFilter { get; set; }
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[@class='m-flyout__content js-m-flyout__content m-flyout__content--attached m-flyout__content--select m-flyout__content--dropdown']//a[contains(.,'Last Name')]")]
         public IWebElement LastNameFilterSelection { get; set; }
 

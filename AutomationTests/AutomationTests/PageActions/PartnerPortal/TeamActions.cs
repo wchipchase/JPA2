@@ -1,6 +1,7 @@
 ﻿using AutomationTests.ConfigElements;
 using AutomationTests.PageObjects.PartnerPortal;
 using AutomationTests.PageObjects.staging.juiceplus.com.ie.en;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace AutomationTests.PageActions.PartnerPortal
         public void ClickFilterButton()
         {
             Team tpo = new Team(Driver);
-            Thread.Sleep(2000);
+            Thread.Sleep(5000);
             tpo.FilterControl.Click();
         }
 
@@ -49,8 +50,17 @@ namespace AutomationTests.PageActions.PartnerPortal
             Thread.Sleep(3000);
             tpo.FirstNameFilter.Click();
             tpo.LastNameFilterSelection.Click();
-            Thread.Sleep(1000);
-            tpo.LastNameFilter.Click();
+            Thread.Sleep(5000);
+            try
+            {
+                IWebElement click1 = tpo.IELastNameFilter;
+                click1.Click();
+            }
+            catch
+            {
+                IWebElement click2 = tpo.IELastNameFilter;
+                click2.Click();
+            }
             tpo.FirstNameFilterSelection.Click();
         }
 
