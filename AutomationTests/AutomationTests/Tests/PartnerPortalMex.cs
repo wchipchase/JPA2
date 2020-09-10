@@ -49,7 +49,7 @@ namespace AutomationTests.Tests
             Driver = new Driver(Driver.BrowserType.Chrome);
             Driver.WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             Driver.WebDriver.Manage().Window.Maximize();
-            Driver.WebDriver.Navigate().GoToUrl("http://prod.juiceplus.com/mx/en");
+            Driver.WebDriver.Navigate().GoToUrl("http://www.staging.juiceplus.com/mx/en");
             lgac = new LoginActionsUS(Driver);
             dbac = new DashboardActions(Driver);
             tmac = new TeamActions(Driver);
@@ -137,7 +137,7 @@ namespace AutomationTests.Tests
         [Category("alltest")]
         public void AddAMemberPartnerPortal()
         {
-            lgac.LoginAsPartner();
+            lgac.MXLoginAsPartner();
             tmac.NavigateToTeams();
             Thread.Sleep(3000);
             tmmxac.ClickOnAddMemberAndFillOutPersonalForm();
@@ -163,7 +163,7 @@ namespace AutomationTests.Tests
         {
             ppac.MXAddProductsToCart();
             ppac.CheckoutWithItems();
-            //ctac.MXCheckoutWithCartItemsAMEX();
+            ctac.MXCheckoutWithCartItemsAMEX();
         }
 
         [Test]
@@ -191,7 +191,7 @@ namespace AutomationTests.Tests
         [Category("alltest")]
         public void SharedCartPortalOrders()
         {
-            lgac.LoginAsPartner();
+            lgac.MXLoginAsPartner();
             csac.NavigateToCustomers();
             csac.SelectFirstCustomer();
             csac.SelectFirstCustomerDetails();
@@ -203,7 +203,7 @@ namespace AutomationTests.Tests
         [Category("alltest")]
         public void SharedCartJuicePlusOrder()
         {
-            lgac.LoginAsPartner();
+            lgac.MXLoginAsPartner();
             spac.NavigateToShop();
             spac.MXFillInContactDetails();
             spac.USSelectProductsAndAddToCart();
@@ -217,6 +217,14 @@ namespace AutomationTests.Tests
         public void ValdiateContactForm()
         {
             nav.NavigateCompany_ContactUs();
+        }
+
+        [Test]
+        [Category("smoketest-mex")]
+        [Category("alltest")]
+        public void CustomerPortalProfile()
+        {
+            lgac.MexLoginAsCustomer();
         }
 
         [TearDown]

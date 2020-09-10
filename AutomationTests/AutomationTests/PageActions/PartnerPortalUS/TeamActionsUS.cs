@@ -1,5 +1,6 @@
 ﻿using AutomationTests.ConfigElements;
 using AutomationTests.PageObjects.PartnerPortal;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace AutomationTests.PageActions.PartnerPortalUS
             Team tpo = new Team(Driver);
             Thread.Sleep(2000);
             tpo.AddMemberButton.Click();
+            tpo.ScrollViewport();
             tpo.FillOutFormButton.Click();
             tpo.FirstNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.FirstNameShipping.FirstName1);
             tpo.LastNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.LastNameShipping.LastName1);
@@ -48,7 +50,16 @@ namespace AutomationTests.PageActions.PartnerPortalUS
             tpo.ContactCity.SendKeys(Config.AddressInfo.ShippingAddress.CityShipping.CityUS1);
             tpo.USStateTextBox.SendKeys(Config.AddressInfo.ShippingAddress.StateShipping.StateUS1);
             tpo.USZipCodeTextBox.SendKeys(Config.AddressInfo.ShippingAddress.ZipCode.ZipcodeUS1);
-            tpo.ContactNextButton.Click();
+            try
+            {
+                IWebElement click1 = tpo.ContactNextButton;
+                click1.Click();
+            }
+            catch (Exception e)
+            {
+                IWebElement click2 = tpo.ContactNextButton;
+                click2.Click();
+            }
             tpo.IAmTheirSponsorButton.Click();
             tpo.SubmitApplicationButton.Click();
             tpo.ToTeamListButton.Click();

@@ -1108,5 +1108,144 @@ namespace AutomationTests.PageActions.PartnerPortal
             carp.NavigateToProceedToCheckoutAndClick();
 
         }
+
+        public void MXAddVegFruitCapsuleToCart()
+        {
+            //Waits for an element to be rendered before allowing the test to proceed
+            WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
+
+
+            try
+            {
+                //From the navigation menu, attempts to click the Capsules product nav selection
+                navac.NavigateOurProductsCapsulesClick();
+                try
+                {
+                    Assert.IsFalse(Driver.WebDriver.PageSource.Contains("£"));
+                    //                    Assert.IsTrue(Driver.WebDriver.PageSource.Contains("€"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+
+                Thread.Sleep(1000);
+                //Accepts the cookie closing the modal
+                lan.CookieAlertAcceptButton.Click();
+                Task.Delay(500).Wait(1500);
+
+                //From the capsule page, clicks teh Premium Capsule Shop Now button
+                try
+                {
+                    IWebElement click1 = caps.MXShopNowFruitVegCapsules;
+                    click1.Click();
+                }
+                catch (Exception e)
+                {
+                    nav.CartIconCounter.Click();
+                    IWebElement click2 = caps.MXShopNowFruitVegCapsules;
+                    click2.Click();
+                }
+
+                try
+                {
+                    //Makes sure you're on the Premium Capsules page
+                    Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Fruit & Vegetable Blend Capsules"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e);
+                }
+                //Scrolls the window so the control is in the view of the user
+                caps.ScrollViewport("1500");
+
+                //Gets the number of products displayed in the counter
+                var NumOfProducts = cpop.NumOfProductOrderCapsules.GetAttribute("value");
+                try
+                {
+                    //Makes sure the product counter starts at 1
+                    Assert.That(NumOfProducts, Is.EqualTo("1"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+                //Clicks the increment arrow next to the product counter
+                cpop.IncrementArrowOrderCapsules.Click();
+                //Gets the value of the product counter again after increase
+                var incrProductCount = cpop.NumOfProductOrderCapsules.GetAttribute("value");
+                Thread.Sleep(500);
+                try
+                {
+                    //Verify the product counter has incremented
+                    Assert.That(incrProductCount, Is.EqualTo("2"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e);
+                }
+                //Clicks the decrement arrow next to product counter
+                cpop.DecrementArrowOrderCapsules.Click();
+
+                //Gets the value of the product counter
+                var decrProductCount = cpop.NumOfProductOrderCapsules.GetAttribute("value");
+                try
+                {
+                    //Validates the number of product counter has decreased
+                    Assert.That(decrProductCount, Is.EqualTo("1"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+
+                //Clicks on "Add To Order"
+                cpop.AddToCartOrderCapsules.Click();
+
+                Thread.Sleep(1000);
+                //Variable for number of items in cart
+                var NumInCart = nav.CartIconCounter.Text;
+                Console.WriteLine(NumInCart);
+                Thread.Sleep(1000);
+                try
+                {
+                    //Validates the number of cart items
+                    Assert.That(NumInCart, Is.EqualTo("1"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+                //Clicks on the cart counter icon
+                nav.CartIconCounter.Click();
+
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e);
+            }
+
+            //Attempts to click on checkout button, if it receives a dead element reference it will click again
+            try
+            {
+                IWebElement click1 = nav.CheckoutButton;
+                click1.Click();
+            }
+            catch (Exception e)
+            {
+                nav.CartIconCounter.Click();
+                IWebElement click2 = nav.CheckoutButton;
+                click2.Click();
+            }
+            //clicks teh "Proceed To Checkout" button
+            carp.NavigateToProceedToCheckoutAndClick();
+
+        }
     }
 }

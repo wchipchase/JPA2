@@ -121,6 +121,7 @@
     <Compile Include="PageActions\PartnerPortalUS\TeamActionsUS.cs" />
     <Compile Include="PageActions\PartnerPortalUS\TeamActionsMX.cs" />
     <Compile Include="PageActions\PartnerPortal\CustomerActions.cs" />
+    <Compile Include="PageActions\PartnerPortal\CustomerPortalActions.cs" />
     <Compile Include="PageActions\PartnerPortal\DashboardActions.cs" />
     <Compile Include="PageActions\PartnerPortal\LoginActions.cs" />
     <Compile Include="PageActions\PartnerPortal\PPCartActions.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="PageObjects\canada.rccq.juiceplus.com.jp\OrchardandGardenBlendscs.cs" />
     <Compile Include="PageObjects\ContactUsPageObjects.cs" />
     <Compile Include="EntryPoint.cs" />
+    <Compile Include="PageObjects\CustomerPortal\CustomerPortalPageObjects.cs" />
     <Compile Include="PageObjects\PartnerPortalUS\CustomerUSPageObjects.cs" />
     <Compile Include="PageObjects\PartnerPortalUS\DashboardUSPageObjects.cs" />
     <Compile Include="PageObjects\PartnerPortalUS\LoginUSPageObjects.cs" />
@@ -184,6 +186,7 @@
     <Compile Include="Tests\TestHeaderNavigationItems.cs" />
     <Compile Include="Tests\TestLandingPageElements.cs" />
     <Compile Include="Tests\WebsiteOrderingIE.cs" />
+    <Compile Include="Tests\WebsiteOrderingMex.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -204,7 +207,6 @@
   <ItemGroup>
     <Folder Include="PageActions\PartnerPortalMex\" />
     <Folder Include="PageActions\staging.juiceplus.com.ie.en\LandingPageActions\" />
-    <Folder Include="PageObjects\PartnerPortalMex\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\packages\WebDriver.ChromeDriver.win32.83.0.4103.39\content\chromedriver.exe">

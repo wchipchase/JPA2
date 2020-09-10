@@ -36,17 +36,26 @@ namespace AutomationTests.PageObjects.PartnerPortalUS
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "login-email-1000883519")]
         public IWebElement MXUsernameTextBox { get; set; }
 
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "login-email-588043121")]
+        public IWebElement MXCustNameTextBox { get; set; }
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "login-password-635282930")]
         public IWebElement PasswordTextBox { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "login-password-1000883519")]
         public IWebElement MXPasswordTextBox { get; set; }
 
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "login-password-588043121")]
+        public IWebElement MXCustPWTextBox { get; set; }
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//button[@class='a-button a-button--primary a-button--small']")]
         public IWebElement CookieAlertAcceptButton { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//div[@class='container responsivegrid l-container l-container--narrow js-toggle__second-option l-container--no-offset section']//div[@class='login aem-GridColumn--default--none aem-GridColumn aem-GridColumn--offset--default--0 aem-GridColumn--default--2 aem-GridColumn--phone--1']//span[@class='a-button__inner']")]
         public IWebElement SignInBtn { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "login-submit-588043121")]
+        public IWebElement MXCustSignInBtn { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[contains(.,'Create an account')]")]
         public IWebElement CreateAccountBtn { get; set; }

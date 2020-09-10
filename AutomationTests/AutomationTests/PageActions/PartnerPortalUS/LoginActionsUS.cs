@@ -49,7 +49,7 @@ namespace AutomationTests.PageActions.PartnerPortalUS
             //waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Id("username")));
             Thread.Sleep(1000);
             lpo.PartnerLoginSlider.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Partner Login"));
             lpo.UsernameTextBox.SendKeys(UserInfo.UserName.UserName1);
             lpo.PasswordTextBox.SendKeys(UserInfo.UserPassword.UserPassword1);
@@ -69,11 +69,45 @@ namespace AutomationTests.PageActions.PartnerPortalUS
             //waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Id("username")));
             Thread.Sleep(1000);
             lpo.MXPartnerLoginSlider.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Partner Login"));
             lpo.MXUsernameTextBox.SendKeys(UserInfo.UserName.UserName1);
             lpo.MXPasswordTextBox.SendKeys(UserInfo.UserPassword.UserPassword1);
             lpo.SignInBtn.Click();
+        }
+
+        public void USLoginAsCustomer()
+        {
+            IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+            WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[.='Sign In']")));
+            LoginUSPageObjects lpo = new LoginUSPageObjects(Driver);
+            lpo.CookieAlertAcceptButton.Click();
+            lpo.LoginButton.Click();
+            //js.ExecuteScript("arguments[0].click();", lpo.PartnerLoginSlider);
+            //waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Id("username")));
+            Thread.Sleep(1000);
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Customer Login"));
+            lpo.UsernameTextBox.SendKeys(UserInfo.UserName.USCustName);
+            lpo.PasswordTextBox.SendKeys(UserInfo.CustomerPWIE.CustPW);
+            lpo.SignInBtn.Click();
+        }
+
+        public void MexLoginAsCustomer()
+        {
+            IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+            WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[.='Sign In']")));
+            LoginUSPageObjects lpo = new LoginUSPageObjects(Driver);
+            lpo.CookieAlertAcceptButton.Click();
+            lpo.LoginButton.Click();
+            //js.ExecuteScript("arguments[0].click();", lpo.PartnerLoginSlider);
+            //waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Id("username")));
+            Thread.Sleep(1000);
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Customer Login"));
+            lpo.MXCustNameTextBox.SendKeys(UserInfo.UserName.MexCustName);
+            lpo.MXCustPWTextBox.SendKeys(UserInfo.CustomerPWIE.CustPW);
+            lpo.MXCustSignInBtn.Click();
         }
     }
 }

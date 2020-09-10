@@ -32,6 +32,8 @@ namespace AutomationTests.Config
         public static class UserName
         {
             public static string UserName1 = "wddot";
+            public static string MexCustName = "berniewalsh54@hotmail.com";
+            public static string USCustName = "Anyadorn@gmail.com";
         }
 
         public static class UserEmail

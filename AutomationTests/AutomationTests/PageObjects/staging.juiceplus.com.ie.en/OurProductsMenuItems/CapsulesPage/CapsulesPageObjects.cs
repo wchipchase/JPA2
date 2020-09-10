@@ -44,6 +44,14 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CapsulesPage
             USShopNowFruitVegetableCapsules.Click();
         }
 
+        public void MXClickVegetablesAndFruitCapsuleShopNow()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
+            js.ExecuteScript("window.scrollBy(0,600)");
+            Thread.Sleep(500);
+            MXShopNowFruitVegCapsules.Click();
+        }
+
         public void ClickBerryCapsuleShopNow()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
@@ -76,7 +84,7 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CapsulesPage
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/mx/en/products/capsules/fruit-vegetable-and-berry-capsules']//span[@class='a-button__inner']")]
         public IWebElement MXShopNowFruitVegBerryCapsules { get; set; }
 
-        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/mx/en/products/capsules/fruit-and-vegetable-capsules']//span[@class='a-button__inner']")]
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//ul[@class='aem-Grid aem-Grid--12']//a[@href='/mx/en/products/capsules/fruit-and-vegetable-capsules']//span[@class='a-button__inner']")]
         public IWebElement MXShopNowFruitVegCapsules { get; set; }
         
 

@@ -84,7 +84,7 @@ namespace AutomationTests.PageActions.PartnerPortal
             tpo.IRBirthdayTextBoxDay.SendKeys(Config.UserInfo.Birthday.USBirthdayDay1);
             tpo.IRBirthdayTextBoxMonth.SendKeys(Config.UserInfo.Birthday.USBirthdayMon1);
             tpo.IRBirthdayTextBoxYear.SendKeys(Config.UserInfo.Birthday.USBirthdayYear1);
-            tpo.PPSNTextBox.SendKeys(Config.UserInfo.PPSN.PPSN1);
+            //tpo.PPSNTextBox.SendKeys(Config.UserInfo.PPSN.PPSN1);
             tpo.ScrollViewport();
             Thread.Sleep(1000);
             tpo.PersonalStuffNextButton.Click();

@@ -361,5 +361,11 @@ namespace AutomationTests.Tests
             lgac.LoginAsCustomer();
             //cart.CheckoutWithCartItemsVisa();
         }
+
+        [TearDown]
+        public void TearDown()
+        {
+            Driver.Teardown();
+        }
     }
 }
