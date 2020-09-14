@@ -59,8 +59,8 @@ namespace AutomationTests.Tests
 
         public void WOGuestFullPayRecurSingleItemMC()
         {
-            woac.AddCompleteJuicePlusBarsToCartPayInFull();
-            cart.CheckoutWithCartItemsMC();
+            woac.MXAddOmegaToCartRecurring();
+            cart.MXCheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -69,28 +69,8 @@ namespace AutomationTests.Tests
 
         public void WOGuestFullPayRecurSingleItemVisa()
         {
-            woac.AddCompleteJuicePlusBarsToCartPayInFull();
-            cart.CheckoutWithCartItemsVisa();
-        }
-
-        [Test]
-        [Category("smoketest")]
-        [Category("alltest")]
-
-        public void WOGuest2ItemsInstallmentMC()
-        {
-            woac.Add2ItemsToCart();
-            cart.CheckoutWithCartItemsMC();
-        }
-
-        [Test]
-        [Category("smoketest")]
-        [Category("alltest")]
-
-        public void WOGuest2ItemsInstallmentVisa()
-        {
-            woac.Add2ItemsToCart();
-            cart.CheckoutWithCartItemsVisa();
+            woac.MXAddOmegaToCartRecurring();
+            cart.MXCheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -99,8 +79,8 @@ namespace AutomationTests.Tests
 
         public void WOGuest2ItemsPayInFullMC()
         {
-            woac.Add2ItemsToCartPayInFull();
-            cart.CheckoutWithCartItemsMC();
+            woac.MXAdd2ItemsPayInFull();
+            cart.MXCheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -109,8 +89,8 @@ namespace AutomationTests.Tests
 
         public void WOGuest2ItemsPayInFullVisa()
         {
-            woac.Add2ItemsToCartPayInFull();
-            cart.CheckoutWithCartItemsVisa();
+            woac.MXAdd2ItemsPayInFull();
+            cart.MXCheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -119,8 +99,8 @@ namespace AutomationTests.Tests
 
         public void WOGuestRecurringAndPayInFullMC()
         {
-            woac.AddRecurringAndPayInFull();
-            cart.CheckoutWithCartItemsMC();
+            woac.MXAddRecurringAndPayInFull();
+            cart.MXCheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -129,8 +109,8 @@ namespace AutomationTests.Tests
 
         public void WOGuestRecurringAndPayInFullVisa()
         {
-            woac.AddRecurringAndPayInFull();
-            cart.CheckoutWithCartItemsVisa();
+            woac.MXAddRecurringAndPayInFull();
+            cart.MXCheckoutWithCartItemsVisa();
         }
 
         [TearDown]

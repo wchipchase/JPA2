@@ -109,7 +109,16 @@ namespace AutomationTests.PageActions.PartnerPortal
             tpo.ScrollViewport();
             tpo.ContactCity.SendKeys(Config.AddressInfo.ShippingAddress.CityShipping.City1);
             tpo.ContactCounty.SendKeys(Config.AddressInfo.ShippingAddress.CountyShipping.County);
-            tpo.ContactNextButton.Click();
+            try
+            {
+                IWebElement click1 = tpo.ContactNextButton;
+                click1.Click();
+            }
+            catch
+            {
+                IWebElement click2 = tpo.ContactNextButton;
+                click2.Click();
+            }
             tpo.IAmTheirSponsorButton.Click();
             tpo.SubmitApplicationButton.Click();
             tpo.ToTeamListButton.Click();

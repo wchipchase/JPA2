@@ -19,6 +19,7 @@ namespace AutomationTests.PageObjects.OmegaPage
             PageFactory.InitElements(Driver.WebDriver, this);
         }
 
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = ".m-product-detail-header__title")]
         public IWebElement JuicePlusOmegaBlendLogo { get; set; }
 

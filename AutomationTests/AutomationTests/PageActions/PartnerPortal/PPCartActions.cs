@@ -60,6 +60,22 @@ namespace AutomationTests.PageActions.PartnerPortal
             Task.Delay(500).Wait(1500);
             
             cpo.ScrollViewport("500");
+            cpo.ShopNowFruitVegetableCapsules.Click();
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Juice Plus+"));
+            cpo.ScrollViewport("1200");
+            copo.AddToCartOrderCapsules.Click();
+            Thread.Sleep(1000);
+        }
+
+        public void USAddProductsToCart()
+        {
+            CapsulesPageObjects cpo = new CapsulesPageObjects(Driver);
+
+            CapsulesOrderPageObjects copo = new CapsulesOrderPageObjects(Driver);
+            navac.NavigateOurProductsCapsulesClick();
+            Task.Delay(500).Wait(1500);
+
+            cpo.ScrollViewport("500");
             cpo.USShopNowFruitVegetableCapsules.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Juice Plus+"));
             cpo.ScrollViewport("1200");

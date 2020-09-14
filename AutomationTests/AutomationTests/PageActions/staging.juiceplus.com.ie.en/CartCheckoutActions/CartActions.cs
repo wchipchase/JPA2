@@ -140,8 +140,9 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
                 cop.EmailShippingTextbox.SendKeys(AddressInfo.ShippingAddress.EmailShipping.Email1);
                 cop.StreetAddressDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.StreetAddShipping.StreetAdd1);
                 cop.CityDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.CityShipping.CityUS1);
-                cop.StateDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.StateShipping.StateUS1);
                 cop.ScrollViewport();
+                cop.StateDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.StateShipping.StateUS1);
+
                 cop.PostalCodeTextbox.SendKeys(AddressInfo.ShippingAddress.ZipCode.ZipcodeUS1);
                 cop.CountyDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.CountyShipping.CountyUS1);
                 js.ExecuteScript("arguments[0].click();", cop.ReferringRepNoRadioButton);
@@ -271,6 +272,84 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
                 cop.StreetAddressDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.StreetAddShipping.StreetAdd1);
                 cop.OptionalStreetAddressDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.OptionalStreetShipping.OptionalStreet);
                 cop.CityDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.CityShipping.City1);
+                cop.CountyDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.CountyShipping.County);
+                js.ExecuteScript("arguments[0].click();", cop.ReferringRepNoRadioButton);
+                /*js.ExecuteScript("arguments[0].click();", cop.ReferringRepYesRadioButton);
+                cop.ReferringRepNameIdTextbox.SendKeys("IR002626");*/
+                cpo.ScrollViewport();
+                /*waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[contains(.,'Martin Deegan')]"))); 
+                Actions action = new Actions(Driver.WebDriver);
+                action.MoveToElement(cop.ReferringRepNameTextbox).Perform();
+                cop.ReferringRepNameTextbox.Click();*/
+                try
+                {
+                    IWebElement click1 = cop.ProceedToCheckoutButton;
+                    click1.Click();
+                }
+                catch (Exception e)
+                {
+                    nav.CartIconCounter.Click();
+                    IWebElement click2 = cop.ProceedToCheckoutButton;
+                    click2.Click();
+                }
+                //cop.ProceedToCheckoutButton.Click();
+                Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Secure Payment"));
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Name("payment.cardNumber")));
+                Thread.Sleep(500);
+                js.ExecuteScript("arguments[0].click();", cop.MCPaymentMethodButton);
+                cop.PaymentCCNumberTextbox.SendKeys(CreditCardInfo.CreditCardNumber.MasterCardCCNum.ccnumberValid);
+                cop.PaymentCCExpirationDateTextbox.SendKeys(CreditCardInfo.CCExpDate.MasterCardCCExpDate.MasterCardCCExpDateValid);
+                cop.PaymentCVVTextbox.SendKeys(CreditCardInfo.CreditCardCCV.MasterCardCCV.MasterCardCCVValid);
+                js.ExecuteScript("arguments[0].click();", cop.TOSAcceptCheckbox);
+                js.ExecuteScript("arguments[0].click();", cop.ConfirmOrderButton);
+
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-checkout-confirmation__title")));
+                Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Thank you! Your order is confirmed."));
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e);
+            }
+
+        }
+
+        public void USCheckoutWithCartItemsMC()
+        {
+            try
+            {
+                IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+                WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(60));
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+                ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
+                //nav.CheckoutButton.Click();
+                //Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Your Cart"));
+                //CartPageObjects cpo = new CartPageObjects();
+                //cpo.ProceedToCheckoutButton.Click();
+
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[.='Checkout as guest']")));
+                try
+                {
+                    Assert.IsTrue(Driver.WebDriver.PageSource.Contains("New to Juice Plus+?"));
+                }
+
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+                CheckoutPageObjects cop = new CheckoutPageObjects(Driver);
+                cop.CheckoutAsGuestButton.Click();
+                Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Billing Address"));
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Name("shipping.contact.firstName")));
+                Thread.Sleep(500);
+                cop.FirstNameShippingTextbox.SendKeys(AddressInfo.ShippingAddress.FirstNameShipping.FirstName1);
+                cop.LastNameShippingTextbox.SendKeys(AddressInfo.ShippingAddress.LastNameShipping.LastName1);
+                cop.DaytimePhoneNumberShippingTextbox.SendKeys(AddressInfo.ShippingAddress.PrimaryPhoneShipping.PrimaryPhoneUS1);
+                cop.AlternatePhoneNumberShippingTextbox.SendKeys(AddressInfo.ShippingAddress.AlternatePhoneShipping.AlternatePhoneUS1);
+                cop.EmailShippingTextbox.SendKeys(AddressInfo.ShippingAddress.EmailShipping.Email1);
+                cop.StreetAddressDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.StreetAddShipping.StreetAddUS1);
+                cop.CityDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.CityShipping.CityUS1);
+                cop.StateDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.StateShipping.StateUS1);
+                cop.PostalCodeTextbox.SendKeys(AddressInfo.ShippingAddress.ZipCode.ZipcodeUS1);
                 cop.CountyDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.CountyShipping.County);
                 js.ExecuteScript("arguments[0].click();", cop.ReferringRepNoRadioButton);
                 /*js.ExecuteScript("arguments[0].click();", cop.ReferringRepYesRadioButton);

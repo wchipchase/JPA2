@@ -35,12 +35,36 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CompletePage
             JuiceBarsShopNowComplete.Click();
         }
 
+        public void USClickCompleteJuiceBarsShopNow()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
+            js.ExecuteScript("window.scrollBy(0,600)");
+            Thread.Sleep(500);
+            USJuiceBarsShopNowComplete.Click();
+        }
+
+        public void MXClickOmegaShopNow()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
+            js.ExecuteScript("window.scrollBy(0,600)");
+            Thread.Sleep(500);
+            MXJuiceBarsShopNowComplete.Click();
+        }
+
         public void ClickCompleteVegetableSoupShopNow()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
             js.ExecuteScript("window.scrollBy(0,1250)");
             Thread.Sleep(500);
             VegetableSoupShopNowComplete.Click();
+        }
+
+        public void USClickCompleteShakeShopNow()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
+            js.ExecuteScript("window.scrollBy(0,1250)");
+            Thread.Sleep(500);
+           USShakeShopNowComplete.Click();
         }
 
         public void ClickCompleteCombiBoxShopNow()
@@ -83,8 +107,17 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CompletePage
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/ie/en/products/complete/bars/chocolate-bars']//span[@class='a-button__inner']")]
         public IWebElement JuiceBarsShopNowComplete { get; set; }
 
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/us/en/products/complete/bars/dark-chocolate-and-fig-bars']//span[@class='a-button__inner']")]
+        public IWebElement USJuiceBarsShopNowComplete { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/mx/en/products/complete/bars/chocolate-bars']//span[@class='a-button__inner']")]
+        public IWebElement MXJuiceBarsShopNowComplete { get; set; }
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/ie/en/products/complete/vegetable-soup']//span[@class='a-button__inner']")]
         public IWebElement VegetableSoupShopNowComplete { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/us/en/products/complete/shakes/french-vanilla-shakes']//span[@class='a-button__inner']")]
+        public IWebElement USShakeShopNowComplete { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/ie/en/products/complete/complete-combi-box/vanilla-shake-combi-box']//span[@class='a-button__inner']")]
         public IWebElement CombiBoxShopNowComplete { get; set; }

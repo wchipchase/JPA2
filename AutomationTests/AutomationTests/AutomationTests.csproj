@@ -187,6 +187,7 @@
     <Compile Include="Tests\TestLandingPageElements.cs" />
     <Compile Include="Tests\WebsiteOrderingIE.cs" />
     <Compile Include="Tests\WebsiteOrderingMex.cs" />
+    <Compile Include="Tests\websiteOrderingUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

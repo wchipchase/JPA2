@@ -59,6 +59,14 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CapsulesPage
             Thread.Sleep(500);
             ShopNowBerryCapsules.Click();
         }
+
+        public void USClickBerryCapsuleShopNow()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
+            js.ExecuteScript("window.scrollBy(0,1500)");
+            Thread.Sleep(500);
+            USShopNowBerryCapsules.Click();
+        }
         public void ScrollViewport(string scrollDist)
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
@@ -96,6 +104,9 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CapsulesPage
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/ie/en/products/capsules/berry-capsules']//span[@class='a-button__inner']")]
         public IWebElement ShopNowBerryCapsules { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/us/en/products/capsules/berry-capsules']//span[@class='a-button__inner']")]
+        public IWebElement USShopNowBerryCapsules { get; set; }
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[contains(.,'View Range')]")]
         public IWebElement OmegaViewRangeCapsules { get; set; }
