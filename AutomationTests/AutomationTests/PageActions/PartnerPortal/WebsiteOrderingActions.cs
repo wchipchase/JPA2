@@ -72,7 +72,7 @@ namespace AutomationTests.PageActions.PartnerPortal
 
                 Thread.Sleep(1000);
                 //Accepts the cookie closing the modal
-                lan.CookieAlertAcceptButton.Click();
+                //lan.CookieAlertAcceptButton.Click();
                 Task.Delay(500).Wait(1500);
                 //From the capsule page, clicks teh Premium Capsule Shop Now button
                 caps.ClickPremiumCapsuleShopNow();
@@ -311,7 +311,6 @@ namespace AutomationTests.PageActions.PartnerPortal
                     Console.WriteLine(e); ;
                 }
                 Thread.Sleep(1000);
-                lan.CookieAlertAcceptButton.Click();
                 Task.Delay(500).Wait(1500);
                 cpob.ClickCompleteJuiceBarsShopNow();
 
@@ -425,7 +424,6 @@ namespace AutomationTests.PageActions.PartnerPortal
                 }
 
                 Thread.Sleep(1000);
-                lan.CookieAlertAcceptButton.Click();
                 Task.Delay(500).Wait(1500);
                 caps.ClickPremiumCapsuleShopNow();
 
@@ -598,7 +596,6 @@ namespace AutomationTests.PageActions.PartnerPortal
                     Console.WriteLine(e); ;
                 }
                 Thread.Sleep(1000);
-                lan.CookieAlertAcceptButton.Click();
                 Task.Delay(500).Wait(1500);
                 cpob.ClickCompleteJuiceBarsShopNow();
 
@@ -1563,19 +1560,8 @@ namespace AutomationTests.PageActions.PartnerPortal
                     Console.WriteLine(e); ;
                 }
                 Thread.Sleep(1000);
-                lan.CookieAlertAcceptButton.Click();
                 Task.Delay(500).Wait(1500);
-                cpob.ClickCompleteJuiceBarsShopNow();
-
-                try
-                {
-                    Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Chocolate Bar"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e);
-                }
+                cpob.USClickCompleteJuiceBarsShopNow();
 
                 cpob.ScrollViewport("500");
                 var NumOfProducts = copo.NumOfProductOrder.GetAttribute("value");
@@ -1679,7 +1665,6 @@ namespace AutomationTests.PageActions.PartnerPortal
 
                 Thread.Sleep(1000);
                 //Accepts the cookie closing the modal
-                lan.CookieAlertAcceptButton.Click();
                 Task.Delay(500).Wait(1500);
                 //From the capsule page, clicks teh Premium Capsule Shop Now button
                 caps.USClickVegetablesAndFruitCapsuleShopNow();
@@ -2035,7 +2020,6 @@ namespace AutomationTests.PageActions.PartnerPortal
             {
                 navac.NavigateOurProductsCompleteClick();
                 Thread.Sleep(1000);
-                lan.CookieAlertAcceptButton.Click();
                 Task.Delay(500).Wait(1500);
                 cpob.USClickCompleteJuiceBarsShopNow();
 
@@ -2092,9 +2076,18 @@ namespace AutomationTests.PageActions.PartnerPortal
                 }
 
                 navac.NavigateOurProductsCompleteClick();
-                cpob.ScrollViewport("500");
-                cpob.USClickCompleteShakeShopNow();
-                cpob.ScrollViewport("500");
+                cpob.ScrollViewport("1000");
+                try
+                {
+                    IWebElement click1 = cpob.USShakeShopNowComplete;
+                    click1.Click();
+                }
+
+                catch
+                {
+                    IWebElement click2 = cpob.USShakeShopNowComplete;
+                    click2.Click();
+                }
                 try
                 {
                     Assert.That(NumOfProducts, Is.EqualTo("1"));
@@ -2105,30 +2098,17 @@ namespace AutomationTests.PageActions.PartnerPortal
                     Console.WriteLine(e); ;
                 }
 
-                copo.IncrementArrowOrder.Click();
-                Thread.Sleep(500);
                 try
                 {
-                    Assert.That(incrProductCount, Is.EqualTo("2"));
+                    IWebElement click1 = copo.AddToCartOrder;
+                    click1.Click();
                 }
-                catch (Exception e)
+                catch
                 {
-
-                    Console.WriteLine(e);
+                    IWebElement click2 = copo.AddToCartOrder;
+                    click2.Click();
                 }
 
-                copo.DecrementArrowOrder.Click();
-                try
-                {
-                    Assert.That(decrProductCount, Is.EqualTo("1"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e); ;
-                }
-
-                copo.AddToCartOrder.Click();
                 Thread.Sleep(1000);
                 Console.WriteLine(NumInCart);
                 Thread.Sleep(1000);
@@ -2179,19 +2159,8 @@ namespace AutomationTests.PageActions.PartnerPortal
             {
                 navac.NavigateOurProductsCapsulesClick();
                 Thread.Sleep(1000);
-                lan.CookieAlertAcceptButton.Click();
                 Task.Delay(500).Wait(1500);
                 caps.USClickVegetablesAndFruitCapsuleShopNow();
-
-                try
-                {
-                    Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Premium Capsules"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e);
-                }
 
                 caps.ScrollViewport("1500");
                 var NumOfProducts = cpop.NumOfProductOrderCapsules.GetAttribute("value");
@@ -2230,7 +2199,16 @@ namespace AutomationTests.PageActions.PartnerPortal
                     Console.WriteLine(e); ;
                 }
 
-                cpop.AddToCartOrderCapsules.Click();
+                try
+                {
+                    IWebElement click1 = cpop.AddToCartOrderCapsules;
+                    click1.Click();
+                }
+                catch (Exception e)
+                {
+                    IWebElement click2 = cpop.AddToCartOrderCapsules;
+                    click2.Click();
+                }
 
                 Thread.Sleep(1000);
                 var NumInCart = nav.CartIconCounter.Text;
@@ -2246,8 +2224,17 @@ namespace AutomationTests.PageActions.PartnerPortal
                     Console.WriteLine(e); ;
                 }
                 navac.NavigateOurProductsCapsulesClick();
-                caps.USClickBerryCapsuleShopNow();
-                caps.ScrollViewport("2000");
+                try
+                {
+                    IWebElement click1 = caps.USShopNowBerryCapsules;
+                    click1.Click();
+                }
+                catch
+                {
+                    IWebElement click1 = caps.USShopNowBerryCapsules;
+                    click1.Click();
+                }
+                
                 try
                 {
                     Assert.That(NumOfProducts, Is.EqualTo("1"));
@@ -2258,30 +2245,16 @@ namespace AutomationTests.PageActions.PartnerPortal
                     Console.WriteLine(e); ;
                 }
 
-                cpop.IncrementArrowOrderCapsules.Click();
-                Thread.Sleep(500);
                 try
                 {
-                    Assert.That(incrProductCount, Is.EqualTo("2"));
+                    IWebElement click1 = cpop.AddToCartOrderCapsules;
+                    click1.Click();
                 }
                 catch (Exception e)
                 {
-
-                    Console.WriteLine(e);
+                    IWebElement click2 = cpop.AddToCartOrderCapsules;
+                    click2.Click();
                 }
-
-                cpop.DecrementArrowOrderCapsules.Click();
-                try
-                {
-                    Assert.That(decrProductCount, Is.EqualTo("1"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e); ;
-                }
-
-                cpop.AddToCartOrderCapsules.Click();
 
                 Thread.Sleep(1000);
                 Console.WriteLine(NumInCart);

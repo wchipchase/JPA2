@@ -15,9 +15,11 @@ namespace AutomationTests.Config
             public static string FirstName1 = "Test";
         }
 
-        public static class CustomerEmailIE
+        public static class CustomerEmail
         {
-            public static string CustEmail = "ANYADORN@GMAIL.COM";
+            public static string CustEmailIE = "kawasaki@juiceplus.com";
+            public static string CustEmailMX = "berniewalsh54@hotmail.com";
+            public static string CustEmailUS = "";
         }
 
         public static class CustomerPWIE

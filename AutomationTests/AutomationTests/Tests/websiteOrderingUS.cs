@@ -252,9 +252,9 @@ namespace AutomationTests.Tests
 
         public void LIPartInstallmentSingleRecurringMC()
         {
-            woac.LICustAddPremiumCapsuleToCart();
-            lgac.LoginAsPartner2();
-            cart.CheckoutWithCartItemsMC();
+            lgac.USLoginAsPartner();
+            woac.USAddFruitVegCapsuleToCart();
+            cart.USPartnerCheckoutWithCartItemsMC();
 
         }
 
@@ -264,9 +264,9 @@ namespace AutomationTests.Tests
 
         public void LIPartInstallmentSingleRecurringVisa()
         {
-            lgac.LoginAsCustomer();
-            woac.AddPremiumCapsuleToCart();
-            cart.CheckoutWithCartItemsVisa();
+            lgac.USLoginAsPartner();
+            woac.USAddFruitVegCapsuleToCart();
+            cart.USPartnerCheckoutWithCartItemsVisa();
         }
 
 
@@ -276,9 +276,9 @@ namespace AutomationTests.Tests
 
         public void LIPartFullPayRecurSingleItemMC()
         {
-            lgac.LoginAsCustomer();
-            woac.AddCompleteJuicePlusBarsToCartPayInFull();
-            cart.CheckoutWithCartItemsMC();
+            lgac.USLoginAsPartner();
+            woac.USAddCompleteJuicePlusBarsToCartPayInFull();
+            cart.USPartnerCheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -287,9 +287,9 @@ namespace AutomationTests.Tests
 
         public void LIPartFullPayRecurSingleItemVisa()
         {
-            lgac.LoginAsCustomer();
-            woac.AddCompleteJuicePlusBarsToCartPayInFull();
-            cart.CheckoutWithCartItemsVisa();
+            lgac.USLoginAsPartner();
+            woac.USAddCompleteJuicePlusBarsToCartPayInFull();
+            cart.USPartnerCheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -298,9 +298,9 @@ namespace AutomationTests.Tests
 
         public void LIPart2ItemsInstallmentMC()
         {
-            lgac.LoginAsCustomer();
-            woac.Add2ItemsToCart();
-            cart.CheckoutWithCartItemsMC();
+            lgac.USLoginAsPartner();
+            woac.USAdd2ItemsToCart();
+            cart.USPartnerCheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -309,9 +309,9 @@ namespace AutomationTests.Tests
 
         public void LIPart2ItemsInstallmentVisa()
         {
-            lgac.LoginAsCustomer();
-            woac.Add2ItemsToCart();
-            cart.CheckoutWithCartItemsVisa();
+            lgac.USLoginAsPartner();
+            woac.USAdd2ItemsToCart();
+            cart.USPartnerCheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -320,9 +320,9 @@ namespace AutomationTests.Tests
 
         public void LIPart2ItemsPayInFullMC()
         {
-            lgac.LoginAsCustomer();
-            woac.Add2ItemsToCartPayInFull();
-            cart.CheckoutWithCartItemsMC();
+            lgac.USLoginAsPartner();
+            woac.USAdd2ItemsToCartPayInFull();
+            cart.USPartnerCheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -331,9 +331,9 @@ namespace AutomationTests.Tests
 
         public void LIPart2ItemsPayInFullVisa()
         {
-            lgac.LoginAsCustomer();
-            woac.Add2ItemsToCartPayInFull();
-            cart.CheckoutWithCartItemsVisa();
+            lgac.USLoginAsPartner();
+            woac.USAdd2ItemsToCartPayInFull();
+            cart.USPartnerCheckoutWithCartItemsVisa();
         }
 
         [Test]
@@ -342,9 +342,9 @@ namespace AutomationTests.Tests
 
         public void LIPartRecurringAndPayInFullMC()
         {
-            lgac.LoginAsCustomer();
-            woac.AddRecurringAndPayInFull();
-            cart.CheckoutWithCartItemsMC();
+            lgac.USLoginAsPartner();
+            woac.USAddRecurringAndPayInFull();
+            cart.USPartnerCheckoutWithCartItemsMC();
         }
 
         [Test]
@@ -353,9 +353,9 @@ namespace AutomationTests.Tests
 
         public void LIPartRecurringAndPayInFullVisa()
         {
-            woac.AddRecurringAndPayInFull();
-            lgac.LoginAsCustomer();
-            //cart.CheckoutWithCartItemsVisa();
+            lgac.USLoginAsPartner();
+            woac.USAddRecurringAndPayInFull();
+            cart.USPartnerCheckoutWithCartItemsVisa();
         }
 
         [TearDown]

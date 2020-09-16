@@ -64,7 +64,7 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CompletePage
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver.WebDriver;
             js.ExecuteScript("window.scrollBy(0,1250)");
             Thread.Sleep(500);
-           USShakeShopNowComplete.Click();
+            USShakeShopNowComplete.Click();
         }
 
         public void ClickCompleteCombiBoxShopNow()
