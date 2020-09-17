@@ -109,6 +109,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions.cs" />
     <Compile Include="Config\AddressInfo.cs" />
     <Compile Include="Config\CreditCardInfo.cs" />
     <Compile Include="Config\UserInfo.cs" />

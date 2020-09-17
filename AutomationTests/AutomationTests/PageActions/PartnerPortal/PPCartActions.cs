@@ -38,7 +38,7 @@ namespace AutomationTests.PageActions.PartnerPortal
             LandingPageObjects lan = new LandingPageObjects(Driver);
             CheckoutPageObjects cpo = new CheckoutPageObjects(Driver);
             Driver.WebDriver.Navigate().GoToUrl("https://sculpt.staging.juiceplus.com/ie/en");
-            lan.CookieAlertAcceptButton.Click();
+            lan.CookieAlertAcceptButton.ClickWithRetry();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Healthy Living Made Easier"));
         }
 
@@ -47,7 +47,7 @@ namespace AutomationTests.PageActions.PartnerPortal
             LandingPageObjects lan = new LandingPageObjects(Driver);
             CheckoutPageObjects cpo = new CheckoutPageObjects(Driver);
             Driver.WebDriver.Navigate().GoToUrl("https://sculpt.staging.juiceplus.com/us/en");
-            lan.CookieAlertAcceptButton.Click();
+            lan.CookieAlertAcceptButton.ClickWithRetry();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Healthy Living Made Easier"));
         }
 
@@ -60,10 +60,10 @@ namespace AutomationTests.PageActions.PartnerPortal
             Task.Delay(500).Wait(1500);
             
             cpo.ScrollViewport("500");
-            cpo.ShopNowFruitVegetableCapsules.Click();
+            cpo.ShopNowFruitVegetableCapsules.ClickWithRetry();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Juice Plus+"));
             cpo.ScrollViewport("1200");
-            copo.AddToCartOrderCapsules.Click();
+            copo.AddToCartOrderCapsules.ClickWithRetry();
             Thread.Sleep(1000);
         }
 
@@ -76,10 +76,10 @@ namespace AutomationTests.PageActions.PartnerPortal
             Task.Delay(500).Wait(1500);
 
             cpo.ScrollViewport("500");
-            cpo.USShopNowFruitVegetableCapsules.Click();
+            cpo.USShopNowFruitVegetableCapsules.ClickWithRetry();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Juice Plus+"));
             cpo.ScrollViewport("1200");
-            copo.AddToCartOrderCapsules.Click();
+            copo.AddToCartOrderCapsules.ClickWithRetry();
             Thread.Sleep(1000);
         }
 
@@ -92,10 +92,10 @@ namespace AutomationTests.PageActions.PartnerPortal
             Task.Delay(500).Wait(1500);
 
             cpo.ScrollViewport("500");
-            cpo.MXShopNowFruitVegBerryCapsules.Click();
+            cpo.MXShopNowFruitVegBerryCapsules.ClickWithRetry();
             //Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Fruit, Vegetable & Berry Capsules"));
             cpo.ScrollViewport("1500");
-            copo.AddToCartOrderCapsules.Click();
+            copo.AddToCartOrderCapsules.ClickWithRetry();
             Thread.Sleep(1000);
         }
 
@@ -107,17 +107,8 @@ namespace AutomationTests.PageActions.PartnerPortal
             waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-icon-badge__counter")));
             nav.CartIconCounter.Click();
             //waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[@class='m-product-count-container__flyout-content m-flyout__content js-m-flyout__content m-flyout__content--attached m-flyout__content--dropdown']//span[@class='a-button__inner']")));
-            try
-            {
-                IWebElement click1 = nav.CheckoutButton;
-                click1.Click();
-            }
-            catch (Exception e)
-            {
-                nav.CartIconCounter.Click();
-                IWebElement click2 = nav.CheckoutButton;
-                click2.Click();
-            }
+            Driver.WaitForElementToBeClickable(nav.CheckoutButton, 5);
+            nav.CheckoutButton.Click();
             //nav.CheckoutButton.Click();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Your Cart"));
             carp.NavigateToProceedToCheckoutAndClick();

@@ -32,7 +32,7 @@ namespace AutomationTests.PageActions.PartnerPortal
         }
         public void NavigateToShop()
         {
-            lgin.ShopNavTab.Click();
+            lgin.ShopNavTab.ClickWithRetry();
             shop.ShopButton.Click();
         }
 
@@ -84,7 +84,7 @@ namespace AutomationTests.PageActions.PartnerPortal
             shop.ContactFirstNameTextBox.SendKeys(Config.UserInfo.FirstName.FirstName1);
             shop.ContactLastNameTextBox.SendKeys(Config.UserInfo.LastName.LastName1);
             shop.ContactEmailTextBox.SendKeys(Config.UserInfo.UserEmail.UserEmail1);
-            shop.ContactGenderTextBox.Click();
+            shop.ContactGenderTextBox.ClickWithRetry();
             shop.ContactMaleGenderTextBox.Click();
             shop.ContactPhoneTextBox.SendKeys(Config.AddressInfo.ShippingAddress.PrimaryPhoneShipping.PrimaryPhoneUS1);
             ScrollViewport("500");
@@ -101,7 +101,7 @@ namespace AutomationTests.PageActions.PartnerPortal
             //shop.StateDropdown.Click();
             shop.PostalCodeTextBox.SendKeys(Config.AddressInfo.ShippingAddress.ZipCode.ZipCodeMex1);
             Thread.Sleep(3000);
-            shop.IAmSponsorRadioButton.Click();
+            shop.IAmSponsorRadioButton.ClickWithRetry();
             waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[.='Next']")));
             IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
             js.ExecuteScript("arguments[0].click();", shop.NextButton);
@@ -118,6 +118,7 @@ namespace AutomationTests.PageActions.PartnerPortal
 
         public void SelectProductsAndAddToCart()
         {
+            Driver.ScrollToElement(shop.PremCapsAddToCart);
             shop.PremCapsAddToCart.Click();
             ScrollViewport("500");
             //shop.ReviewOrderButton.Click();
@@ -131,7 +132,7 @@ namespace AutomationTests.PageActions.PartnerPortal
         public void USSelectProductsAndAddToCart()
         {
             Thread.Sleep(2000);
-            shop.FruitVegCapsAddToCart.Click();
+            shop.FruitVegCapsAddToCart.ClickWithRetry();
             ScrollViewport("1500");
             //shop.ReviewOrderButton.Click();
             IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
@@ -144,17 +145,8 @@ namespace AutomationTests.PageActions.PartnerPortal
         public void ShareCart()
         {
             ScrollViewport("900");
-            try
-            {
-                IWebElement click1 = shop.ShareCartButton;
-                click1.Click();
-            }
-            catch (Exception e)
-            {
-                IWebElement click2 = shop.ShareCartButton;
-                click2.Click();
-            }
-            shop.ShareCartLinkIcon.Click();
+            shop.ShareCartButton.ClickWithRetry();
+            shop.ShareCartLinkIcon.ClickWithRetry();
             Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Successfully copied to clipboard!"));
         }
 

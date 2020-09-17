@@ -39,9 +39,11 @@ namespace AutomationTests.PageActions.PartnerPortal
             Customers cpo = new Customers(Driver);
             cpo.FilterSelectCountryUSA.Click();
             Thread.Sleep(1000);
-            cpo.FilterSelectCountryUK.Click();
+            Driver.ScrollToElement(cpo.FilterSelectCountryUK, true);
+            cpo.FilterSelectCountryUK.ClickWithRetry();
             Thread.Sleep(1000);
-            cpo.FilterSelectCountryEIR.Click();
+            Driver.ScrollToElement(cpo.FilterSelectCountryEIR, true);
+            cpo.FilterSelectCountryEIR.ClickWithRetry();
             Thread.Sleep(1000);
             cpo.FilterSelectApply.Click();
             Thread.Sleep(1000);
@@ -70,7 +72,7 @@ namespace AutomationTests.PageActions.PartnerPortal
         public void SelectFirstCustomerDetails()
         {
             Customers cpo = new Customers(Driver);
-            cpo.DetailsTab.Click();
+            cpo.DetailsTab.ClickWithRetry();
         }
 
         public void SelectFirstCustomerOrders()

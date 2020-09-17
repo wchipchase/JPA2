@@ -154,7 +154,8 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
                 /* waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[contains(.,'Martin Deegan')]")));
                  Thread.Sleep(3000);
                  cop.ReferringRepNameTextbox.Click();*/
-                cop.ProceedToCheckoutButton.Click();
+                Driver.ScrollToElement(cop.ProceedToCheckoutButton);
+                cop.ProceedToCheckoutButton.ClickWithRetry();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Secure Payment"));
                 waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Name("payment.cardNumber")));
                 Thread.Sleep(500);
@@ -163,7 +164,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
                 cop.PaymentCVVTextbox.SendKeys(CreditCardInfo.CreditCardCCV.VisaCCV.VisaCCVValid);
                 js.ExecuteScript("arguments[0].click();", cop.TOSAcceptCheckbox);
                 js.ExecuteScript("arguments[0].click();", cop.ConfirmOrderButton);
-                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-checkout-confirmation__title")));
+                Driver.WaitForElementToBeVisible(By.CssSelector(".m-checkout-confirmation__title"), 30);
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Thank you! Your order is confirmed."));
             }
             catch (ArgumentException e)
@@ -521,17 +522,8 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
                 Actions action = new Actions(Driver.WebDriver);
                 action.MoveToElement(cop.ReferringRepNameTextbox).Perform();
                 cop.ReferringRepNameTextbox.Click();*/
-                try
-                {
-                    IWebElement click1 = cop.ProceedToCheckoutButton;
-                    click1.Click();
-                }
-                catch (Exception e)
-                {
-                    nav.CartIconCounter.Click();
-                    IWebElement click2 = cop.ProceedToCheckoutButton;
-                    click2.Click();
-                }
+                Driver.ScrollToElement(cop.ProceedToCheckoutButton);
+                cop.ProceedToCheckoutButton.ClickWithRetry();
                 //cop.ProceedToCheckoutButton.Click();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Secure Payment"));
                 waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Name("payment.cardNumber")));
@@ -616,18 +608,8 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
                 Actions action = new Actions(Driver.WebDriver);
                 action.MoveToElement(cop.ReferringRepNameTextbox).Perform();
                 cop.ReferringRepNameTextbox.Click();*/
-                try
-                {
-                    IWebElement click1 = cop.ProceedToCheckoutButton;
-                    click1.Click();
-                }
-                catch (Exception e)
-                {
-                    nav.CartIconCounter.Click();
-                    IWebElement click2 = cop.ProceedToCheckoutButton;
-                    click2.Click();
-                }
-                //cop.ProceedToCheckoutButton.Click();
+                Driver.ScrollToElement(cop.ProceedToCheckoutButton);
+                cop.ProceedToCheckoutButton.ClickWithRetry();
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Secure Payment"));
                 waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Name("payment.cardNumber")));
                 Thread.Sleep(500);
