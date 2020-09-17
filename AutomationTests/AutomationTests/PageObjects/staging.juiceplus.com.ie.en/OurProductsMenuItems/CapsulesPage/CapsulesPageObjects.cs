@@ -108,6 +108,9 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CapsulesPage
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/us/en/products/capsules/berry-capsules']//span[@class='a-button__inner']")]
         public IWebElement USShopNowBerryCapsules { get; set; }
 
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//a[@href='/mx/en/products/capsules/berry-capsules']//span[@class='a-button__inner']")]
+        public IWebElement MXShopNowBerryCapsules { get; set; }
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[contains(.,'View Range')]")]
         public IWebElement OmegaViewRangeCapsules { get; set; }
 

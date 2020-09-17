@@ -66,11 +66,11 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void ValidateDashboardCards()
         {
-            lgac.LoginAsPartner();
+            lgac.IELoginAsPartner2();
             dbac.ValidatePerformanceBonusCard();
             Thread.Sleep(2000);
             dbac.ValidatePromoteOutBonusCard();
@@ -79,49 +79,49 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void TeamFilterValidation()
         {
-            lgac.LoginAsPartner();
+            lgac.IELoginAsPartner2();
             tmac.NavigateToTeams();
             tmac.ClickFilterButton();
             tmac.AddAndApplyFilters();
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void ValidatingFirstAndLastNameFilters()
         {
-            lgac.LoginAsPartner();
+            lgac.IELoginAsPartner2();
             tmac.NavigateToTeams();
             tmac.ValidateNameFilter();
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void ValidateDownloadCSV()
         {
-            lgac.LoginAsPartner();
+            lgac.IELoginAsPartner2();
             tmac.NavigateToTeams();
             tmac.ClickDownloadAndSelectCSV();
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void CustomerFilterValidation()
         {
-            lgac.LoginAsPartner();
+            lgac.IELoginAsPartner2();
             csac.NavigateToCustomers();
             csac.ClickFilterButton();
             csac.AddAndApplyFilters();
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void PurchaseProductsWithInvalidCC()
         {
@@ -134,18 +134,18 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void AddAMemberPartnerPortal()
         {
-            lgac.LoginAsPartner();
+            lgac.IELoginAsPartner2();
             tmac.NavigateToTeams();
             tmac.ClickOnAddMemberAndFillOutPersonalForm();
             tmac.FillOutContactFormAndSubmitApplication();
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void PurchaseProductsASLoggedInAssociate()
         {
@@ -158,7 +158,7 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void GuestCheckoutPremiumCapsulesVisa()
         {
@@ -167,18 +167,18 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void AddAMemberPartnerPortalDifferentSponsor()
         {
-            lgac.LoginAsPartner();
+            lgac.IELoginAsPartner2();
             tmac.NavigateToTeams();
             tmac.ClickOnAddMemberAndFillOutPersonalForm();
             tmac.FillOutContactFormAndSubmitApplicationOtherSponsor();
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void ValdiateContactForm()
         {
@@ -186,7 +186,7 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void SwitchCountryInCart()
         {
@@ -196,11 +196,11 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void SharedCartPortalOrders()
         {
-            lgac.LoginAsPartner();
+            lgac.IELoginAsPartner2();
             csac.NavigateToCustomers();
             csac.SelectFirstCustomer();
             csac.SelectFirstCustomerDetails();
@@ -208,11 +208,11 @@ namespace AutomationTests
         }
 
         [Test]
-        [Category("smoketest-ireland")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
         public void SharedCartJuicePlusOrder()
         {
-            lgac.LoginAsPartner();
+            lgac.IELoginAsPartner2();
             spac.NavigateToShop();
             spac.FillInContactDetails();
             spac.SelectProductsAndAddToCart();

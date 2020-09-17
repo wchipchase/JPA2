@@ -71,7 +71,6 @@ namespace AutomationTests.PageActions.PartnerPortal
         {
             Customers cpo = new Customers(Driver);
             cpo.DetailsTab.Click();
-            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Customer information"));
         }
 
         public void SelectFirstCustomerOrders()

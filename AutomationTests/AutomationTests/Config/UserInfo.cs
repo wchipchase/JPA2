@@ -22,6 +22,30 @@ namespace AutomationTests.Config
             public static string CustEmailUS = "";
         }
 
+        public static class FacebookLogin
+        {
+            public static string FacebookLoginIE = "";
+            public static string FacebookLoginMX = "janetest1kitchen@gmail.com";
+            public static string FacebookLoginUS = "";
+        }
+
+        public static class GmailLogin
+        {
+            public static string GmailLoginIE = "";
+            public static string GmailLoginMX = "jwhitmiretester@gmail.com";
+            public static string GmailLoginUS = "";
+        }
+
+        public static class FacebookPassword
+        {
+            public static string FaceBookPwdMX = "MommaBef1";
+        }
+
+        public static class GmailPassword
+        {
+            public static string GmailPwdMX = "Terminix#5";
+        }
+
         public static class CustomerPWIE
         {
             public static string CustPW= "Abcd1234";

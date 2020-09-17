@@ -65,7 +65,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
 
         public void ValidateDashboardCards()
@@ -79,7 +79,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void TeamFilterValidation()
         {
@@ -90,7 +90,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void ValidatingFirstAndLastNameFilters()
         {
@@ -100,7 +100,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void ValidateDownloadCSV()
         {
@@ -110,7 +110,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void CustomerFilterValidation()
         {
@@ -121,7 +121,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void PurchaseProductsWithInvalidCC()
         {
@@ -133,7 +133,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void AddAMemberPartnerPortal()
         {
@@ -145,7 +145,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void PurchaseProductsASLoggedInAssociate()
         {
@@ -157,7 +157,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void GuestCheckoutPremiumCapsulesVisa()
         {
@@ -167,7 +167,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void AddAMemberPartnerPortalDifferentSponsor()
         {
@@ -178,7 +178,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void SwitchCountryInCart()
         {
@@ -187,7 +187,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void SharedCartPortalOrders()
         {
@@ -199,7 +199,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void SharedCartJuicePlusOrder()
         {
@@ -212,7 +212,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void ValdiateContactForm()
         {
@@ -220,7 +220,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest-mex")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
         public void CustomerPortalProfile()
         {

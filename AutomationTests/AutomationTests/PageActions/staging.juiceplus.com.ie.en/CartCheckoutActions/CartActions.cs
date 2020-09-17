@@ -552,7 +552,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
                 js.ExecuteScript("arguments[0].click();", cop.TOSAcceptCheckbox);
                 js.ExecuteScript("arguments[0].click();", cop.ConfirmOrderButton);
 
-                //waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-checkout-confirmation__title")));
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-checkout-confirmation__title")));
                 Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Thank you! Your order is confirmed."));
             }
             catch (ArgumentException e)
@@ -918,6 +918,86 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
                 cop.PaymentCCNumberTextbox.SendKeys(CreditCardInfo.CreditCardNumber.VisaCCNum.ccnumberValid);
                 cop.PaymentCCExpirationDateTextbox.SendKeys(CreditCardInfo.CCExpDate.VisaCCExpDate.VisaCCExpDateValid);
                 cop.PaymentCVVTextbox.SendKeys(CreditCardInfo.CreditCardCCV.VisaCCV.VisaCCVValid);
+                js.ExecuteScript("arguments[0].click();", cop.TOSAcceptCheckbox);
+                js.ExecuteScript("arguments[0].click();", cop.ConfirmOrderButton);
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-checkout-confirmation__title")));
+                Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Thank you! Your order is confirmed."));
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e);
+            }
+
+        }
+        public void MXPartnerCheckoutWithCartItemsAMEX()
+        {
+            try
+            {
+                IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+                WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(60));
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+                ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
+                //nav.CheckoutButton.Click();
+                //Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Your Cart"));
+                //CartPageObjects cpo = new CartPageObjects();
+                //cpo.ProceedToCheckoutButton.Click();
+                CheckoutPageObjects cop = new CheckoutPageObjects(Driver);
+                Thread.Sleep(500);
+                cop.FirstNameShippingTextbox.Clear();
+                cop.FirstNameShippingTextbox.SendKeys("APRO");
+                cop.LastNameShippingTextbox.Clear();
+                cop.LastNameShippingTextbox.SendKeys(AddressInfo.ShippingAddress.LastNameShipping.LastName1);
+                cop.DaytimePhoneNumberShippingTextbox.Clear();
+                cop.DaytimePhoneNumberShippingTextbox.SendKeys(AddressInfo.ShippingAddress.PrimaryPhoneShipping.PrimaryPhoneMex1);
+                cop.AlternatePhoneNumberShippingTextbox.Clear();
+                cop.AlternatePhoneNumberShippingTextbox.SendKeys(AddressInfo.ShippingAddress.AlternatePhoneShipping.AlternatePhoneMex1);
+                cop.GenderDropdown.Click();
+                cop.MaleSelection.Click();
+                cop.EmailShippingTextbox.Clear();
+                cop.EmailShippingTextbox.SendKeys(UserInfo.UserEmail.UserEmail1);
+                cop.ScrollViewport();
+                cop.StreetAddressDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.StreetAddShipping.StreetAddMex1);
+                cop.MXDeliveryNeighborhood.SendKeys(AddressInfo.ShippingAddress.NeighborhoodorColony.NeighborhoodMex1);
+                cop.CityDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.CityShipping.CityMex1);
+                cop.StateDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.StateShipping.StateMex1);
+                cop.ScrollViewport();
+                cop.PostalCodeTextbox.SendKeys(AddressInfo.ShippingAddress.ZipCode.ZipCodeMex1);
+                //js.ExecuteScript("arguments[0].click();", cop.ReferringRepNoRadioButton);
+                /*js.ExecuteScript("arguments[0].click();", cop.ReferringRepYesRadioButton);
+                cop.ReferringRepNameIdTextbox.SendKeys("IR002626");*/
+                cpo.ScrollViewport();
+                /*waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[contains(.,'Martin Deegan')]"))); 
+                Actions action = new Actions(Driver.WebDriver);
+                action.MoveToElement(cop.ReferringRepNameTextbox).Perform();
+                cop.ReferringRepNameTextbox.Click();*/
+                try
+                {
+                    IWebElement click1 = cop.ProceedToCheckoutButton;
+                    click1.Click();
+                }
+                catch (Exception e)
+                {
+                    nav.CartIconCounter.Click();
+                    IWebElement click2 = cop.ProceedToCheckoutButton;
+                    click2.Click();
+                }
+                //cop.ProceedToCheckoutButton.Click();
+                Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Secure Payment"));
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.Name("payment.cardNumber")));
+                Thread.Sleep(500);
+                js.ExecuteScript("arguments[0].click();", cop.AMEXPaymentMethodButton);
+                Thread.Sleep(1000);
+                String stringValue = "371180303257522";
+                Char[] stringArray = stringValue.ToCharArray();
+                for (int i = 0; i < stringValue.Length; i++)
+                {
+                    cop.PaymentCCNumberTextbox.SendKeys(stringArray[i].ToString());
+                    Thread.Sleep(500);
+                }
+                //cop.PaymentCCNumberTextbox.SendKeys("371180303257522");
+                //cop.PaymentCCNumberTextbox.Clear();
+                cop.PaymentCCExpirationDateTextbox.SendKeys(CreditCardInfo.CCExpDate.AmexCardCCExpDate.AmexCCExpDateValidMex1);
+                cop.PaymentCVVTextbox.SendKeys(CreditCardInfo.CreditCardCCV.AmexCCV.AmexCardCCValidMex1);
                 js.ExecuteScript("arguments[0].click();", cop.TOSAcceptCheckbox);
                 js.ExecuteScript("arguments[0].click();", cop.ConfirmOrderButton);
                 waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-checkout-confirmation__title")));

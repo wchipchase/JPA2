@@ -47,7 +47,16 @@ namespace AutomationTests.PageObjects.PartnerPortal
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//div[@class='container responsivegrid l-container l-container--narrow js-toggle__second-option l-container--no-offset section']//input[@name='password']")]
         public IWebElement USPartPasswordTextBox { get; set; }
- 
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//div[@class='container responsivegrid l-container l-container--narrow js-toggle__first-option l-container--no-offset section']//input[@name='username']")]
+        public IWebElement MXCustUsernameTextBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "//div[@class='container responsivegrid l-container l-container--narrow js-toggle__first-option l-container--no-offset section']//input[@name='password']")]
+        public IWebElement MXCustPasswordTextBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//div[@class='container responsivegrid l-container l-container--narrow js-toggle__first-option l-container--no-offset section']//button[@class='a-button a-button--full-width a-button--primary js-form__submit a-button--large']")]
+        public IWebElement MXCustSignInBtn { get; set; }
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[for='rememberMe']")]
         public IWebElement PRememberMeCheckbox { get; set; }
 
@@ -86,5 +95,26 @@ namespace AutomationTests.PageObjects.PartnerPortal
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[alt='/content/ie/juiceplus/en/portal/dashboard']")]
         public IWebElement JuicePlusSiteLink { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = ".m-social-login__button--facebook")]
+        public IWebElement MXFacebookSignInBtn { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = ".m-social-login__button--google")]
+        public IWebElement MXGmailSignInBtn { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[alt='/content/ie/juiceplus/en/portal/dashboard']")]
+        public IWebElement MXFacebookUserNameTxtBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.CssSelector, Using = "[alt='/content/ie/juiceplus/en/portal/dashboard']")]
+        public IWebElement MXFacebookPwdTxtBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Id, Using = "identifierId")]
+        public IWebElement MXGmailUserNameTxtBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "password")]
+        public IWebElement MXGmailPwdTxtBox { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qIypjc TrZEUc']/div[@class='VfPpkd-RLmnJb']")]
+        public IWebElement MXGmailNextButton { get; set; }
     }
 }

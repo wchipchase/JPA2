@@ -44,214 +44,112 @@ namespace AutomationTests.Tests
 
         public void WOGuestInstallmentSingleRecurringMC()
         {
+            lgac.GuestCookieAccept();
             woac.AddPremiumCapsuleToCart();
             cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void WOGuestInstallmentSingleRecurringVisa()
         {
+            lgac.GuestCookieAccept();
             woac.AddPremiumCapsuleToCart();
             cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void WOGuestFullPayRecurSingleItemMC()
         {
+            lgac.GuestCookieAccept();
             woac.AddCompleteJuicePlusBarsToCartPayInFull();
             cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void WOGuestFullPayRecurSingleItemVisa()
         {
+            lgac.GuestCookieAccept();
             woac.AddCompleteJuicePlusBarsToCartPayInFull();
             cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void WOGuest2ItemsInstallmentMC()
         {
+            lgac.GuestCookieAccept();
             woac.Add2ItemsToCart();
             cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void WOGuest2ItemsInstallmentVisa()
         {
+            lgac.GuestCookieAccept();
             woac.Add2ItemsToCart();
             cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void WOGuest2ItemsPayInFullMC()
         {
+            lgac.GuestCookieAccept();
             woac.Add2ItemsToCartPayInFull();
             cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void WOGuest2ItemsPayInFullVisa()
         {
+            lgac.GuestCookieAccept();
             woac.Add2ItemsToCartPayInFull();
             cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void WOGuestRecurringAndPayInFullMC()
         {
+            lgac.GuestCookieAccept();
             woac.AddRecurringAndPayInFull();
             cart.CheckoutWithCartItemsMC();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void WOGuestRecurringAndPayInFullVisa()
         {
+            lgac.GuestCookieAccept();
             woac.AddRecurringAndPayInFull();
             cart.CheckoutWithCartItemsVisa();
         }
 
         [Test]
-        [Category("smoketest")]
-        [Category("alltest")]
-
-        public void LICustInstallmentSingleRecurringMC()
-        {
-            lgac.LoginAsCustomer();
-            woac.LICustAddPremiumCapsuleToCart();
-            cart.CheckoutWithCartItemsMC();
-
-        }
-
-        [Test]
-        [Category("smoketest")]
-        [Category("alltest")]
-
-        public void LICustInstallmentSingleRecurringVisa()
-        {
-            lgac.LoginAsCustomer();
-            woac.AddPremiumCapsuleToCart();
-            //cart.CheckoutWithCartItemsVisa();
-        }
-
-
-        [Test]
-        [Category("smoketest")]
-        [Category("alltest")]
-
-        public void LICustFullPayRecurSingleItemMC()
-        {
-            lgac.LoginAsCustomer();
-            woac.AddCompleteJuicePlusBarsToCartPayInFull();
-            cart.CheckoutWithCartItemsMC();
-        }
-
-        [Test]
-        [Category("smoketest")]
-        [Category("alltest")]
-
-        public void LICustFullPayRecurSingleItemVisa()
-        {
-            lgac.LoginAsCustomer();
-            woac.AddCompleteJuicePlusBarsToCartPayInFull();
-            cart.CheckoutWithCartItemsVisa();
-        }
-
-        [Test]
-        [Category("smoketest")]
-        [Category("alltest")]
-
-        public void LICust2ItemsInstallmentMC()
-        {
-            lgac.LoginAsCustomer();
-            woac.Add2ItemsToCart();
-            cart.CheckoutWithCartItemsMC();
-        }
-
-        [Test]
-        [Category("smoketest")]
-        [Category("alltest")]
-
-        public void LICust2ItemsInstallmentVisa()
-        {
-            lgac.LoginAsCustomer();
-            woac.Add2ItemsToCart();
-            cart.CheckoutWithCartItemsVisa();
-        }
-
-        [Test]
-        [Category("smoketest")]
-        [Category("alltest")]
-
-        public void LICust2ItemsPayInFullMC()
-        {
-            lgac.LoginAsCustomer();
-            woac.Add2ItemsToCartPayInFull();
-            cart.CheckoutWithCartItemsMC();
-        }
-
-        [Test]
-        [Category("smoketest")]
-        [Category("alltest")]
-
-        public void LICust2ItemsPayInFullVisa()
-        {
-            lgac.LoginAsCustomer();
-            woac.Add2ItemsToCartPayInFull();
-            cart.CheckoutWithCartItemsVisa();
-        }
-
-        [Test]
-        [Category("smoketest")]
-        [Category("alltest")]
-
-        public void LICustRecurringAndPayInFullMC()
-        {
-            lgac.LoginAsCustomer();
-            woac.AddRecurringAndPayInFull();
-            cart.CheckoutWithCartItemsMC();
-        }
-
-        [Test]
-        [Category("smoketest")]
-        [Category("alltest")]
-
-        public void LICustRecurringAndPayInFullVisa()
-        {
-            woac.AddRecurringAndPayInFull();
-            lgac.LoginAsCustomer();
-            //cart.CheckoutWithCartItemsVisa();
-        }
-
-        [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void LIPartInstallmentSingleRecurringMC()
@@ -263,7 +161,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void LIPartInstallmentSingleRecurringVisa()
@@ -275,7 +173,7 @@ namespace AutomationTests.Tests
 
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void LIPartFullPayRecurSingleItemMC()
@@ -286,7 +184,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void LIPartFullPayRecurSingleItemVisa()
@@ -297,7 +195,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void LIPart2ItemsInstallmentMC()
@@ -308,7 +206,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void LIPart2ItemsInstallmentVisa()
@@ -319,7 +217,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void LIPart2ItemsPayInFullMC()
@@ -330,7 +228,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void LIPart2ItemsPayInFullVisa()
@@ -341,7 +239,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void LIPartRecurringAndPayInFullMC()
@@ -352,7 +250,7 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-ie")]
         [Category("alltest")]
 
         public void LIPartRecurringAndPayInFullVisa()

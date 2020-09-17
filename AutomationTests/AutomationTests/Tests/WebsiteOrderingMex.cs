@@ -35,80 +35,336 @@ namespace AutomationTests.Tests
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
-        public void WOGuestInstallmentSingleRecurringMC()
+        public void WOGuestInstallmentSingleRecurringAMEX()
         {
+            lgac.GuestCookieAccept();
             woac.MXAddVegFruitCapsuleToCart();
-            cart.MXCheckoutWithCartItemsMC();
+            cart.MXCheckoutWithCartItemsAMEX();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
 
         public void WOGuestInstallmentSingleRecurringVisa()
         {
+            lgac.GuestCookieAccept();
             woac.MXAddVegFruitCapsuleToCart();
             cart.MXCheckoutWithCartItemsVisa();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
 
-        public void WOGuestFullPayRecurSingleItemMC()
+        public void WOGuestFullPayRecurSingleItemAMEX()
         {
+            lgac.GuestCookieAccept();
             woac.MXAddOmegaToCartRecurring();
-            cart.MXCheckoutWithCartItemsMC();
+            cart.MXCheckoutWithCartItemsAMEX();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
 
         public void WOGuestFullPayRecurSingleItemVisa()
         {
+            lgac.GuestCookieAccept();
             woac.MXAddOmegaToCartRecurring();
             cart.MXCheckoutWithCartItemsVisa();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
 
-        public void WOGuest2ItemsPayInFullMC()
+        public void WOGuest2ItemsInstallmentAMEX()
         {
-            woac.MXAdd2ItemsPayInFull();
-            cart.MXCheckoutWithCartItemsMC();
+            lgac.GuestCookieAccept();
+            woac.MXAdd2ItemsToCart();
+            cart.MXCheckoutWithCartItemsAMEX();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void WOGuest2ItemsInstallmentVisa()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAdd2ItemsToCart();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void WOGuest2ItemsPayInFullAMEX()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAdd2ItemsPayInFull();
+            cart.MXCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
         [Category("alltest")]
 
         public void WOGuest2ItemsPayInFullVisa()
         {
+            lgac.GuestCookieAccept();
             woac.MXAdd2ItemsPayInFull();
             cart.MXCheckoutWithCartItemsVisa();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
 
-        public void WOGuestRecurringAndPayInFullMC()
+        public void WOGuestRecurringAndPayInFullAMEX()
         {
+            lgac.GuestCookieAccept();
             woac.MXAddRecurringAndPayInFull();
-            cart.MXCheckoutWithCartItemsMC();
+            cart.MXCheckoutWithCartItemsAMEX();
         }
 
         [Test]
-        [Category("smoketest")]
+        [Category("smoketest-mx")]
         [Category("alltest")]
 
         public void WOGuestRecurringAndPayInFullVisa()
         {
+            lgac.GuestCookieAccept();
+            woac.MXAddRecurringAndPayInFull();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+        public void PartnerInstallmentSingleRecurringAMEX()
+        {
+            lgac.MXLoginAsPartner();
+            woac.MXAddVegFruitCapsuleToCart();
+            cart.MXPartnerCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void PartnerInstallmentSingleRecurringVisa()
+        {
+            lgac.MXLoginAsPartner();
+            woac.MXAddVegFruitCapsuleToCart();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void PartnerFullPayRecurSingleItemAMEX()
+        {
+            lgac.MXLoginAsPartner();
+            woac.MXAddOmegaToCartRecurring();
+            cart.MXPartnerCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void PartnerFullPayRecurSingleItemVisa()
+        {
+            lgac.MXLoginAsPartner();
+            woac.MXAddOmegaToCartRecurring();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void Partner2ItemsInstallmentAMEX()
+        {
+            lgac.MXLoginAsPartner();
+            woac.MXAdd2ItemsToCart();
+            cart.MXPartnerCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void Partner2ItemsInstallmentVisa()
+        {
+            lgac.MXLoginAsPartner();
+            woac.MXAdd2ItemsToCart();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void Partner2ItemsPayInFullAMEX()
+        {
+            lgac.MXLoginAsPartner();
+            woac.MXAdd2ItemsPayInFull();
+            cart.MXPartnerCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void Partner2ItemsPayInFullVisa()
+        {
+            lgac.MXLoginAsPartner();
+            woac.MXAdd2ItemsPayInFull();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void PartnerRecurringAndPayInFullAMEX()
+        {
+            lgac.MXLoginAsPartner();
+            woac.MXAddRecurringAndPayInFull();
+            cart.MXPartnerCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void PartnerRecurringAndPayInFullVisa()
+        {
+            lgac.MXLoginAsPartner();
+            woac.MXAddRecurringAndPayInFull();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+        public void CustomerInstallmentSingleRecurringAMEX()
+        {
+            lgac.MXLoginAsGuest();
+            woac.MXAddVegFruitCapsuleToCart();
+            cart.MXCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void CustomerInstallmentSingleRecurringVisa()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAddVegFruitCapsuleToCart();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void CustomerFullPayRecurSingleItemAMEX()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAddOmegaToCartRecurring();
+            cart.MXCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void CustomerFullPayRecurSingleItemVisa()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAddOmegaToCartRecurring();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void Customer2ItemsInstallmentAMEX()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAdd2ItemsToCart();
+            cart.MXCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void Customer2ItemsInstallmentVisa()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAdd2ItemsToCart();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void Customer2ItemsPayInFullAMEX()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAdd2ItemsPayInFull();
+            cart.MXCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void Customer2ItemsPayInFullVisa()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAdd2ItemsPayInFull();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void CustomerRecurringAndPayInFullAMEX()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAddRecurringAndPayInFull();
+            cart.MXCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void CustomertRecurringAndPayInFullVisa()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAddRecurringAndPayInFull();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void GMailRecurringAndPayInFullVisa()
+        {
+            lgac.MXLoginGmail();
             woac.MXAddRecurringAndPayInFull();
             cart.MXCheckoutWithCartItemsVisa();
         }
