@@ -29,7 +29,8 @@ namespace AutomationTests.PageActions.PartnerPortalUS
             tpo.LastNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.LastNameShipping.LastName1);
             tpo.ScrollViewport();
             tpo.GenderDropdown.SendKeys("m");
-            tpo.FirstNameTextBox.Click();
+            Driver.ScrollToElement(tpo.FirstNameTextBox);
+            tpo.FirstNameTextBox.ClickWithRetry();
             tpo.MXBirthdayTextBoxDay.SendKeys(Config.UserInfo.Birthday.USBirthdayDay1);
             tpo.MXBirthdayTextBoxMonth.SendKeys(Config.UserInfo.Birthday.USBirthdayMon1);
             tpo.MXBirthdayTextBoxYear.SendKeys(Config.UserInfo.Birthday.USBirthdayYear1);

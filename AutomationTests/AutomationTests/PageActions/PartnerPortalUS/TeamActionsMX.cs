@@ -25,11 +25,11 @@ namespace AutomationTests.PageActions.PartnerPortalUS
             Thread.Sleep(2000);
             tpo.AddMemberButton.Click();
             Thread.Sleep(1000);
-            tpo.FillOutFormButton.Click();
+            tpo.FillOutFormButton.ClickWithRetry();
             tpo.FirstNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.FirstNameShipping.FirstName1);
             tpo.LastNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.LastNameShipping.LastName1);
             tpo.ScrollViewport();
-            tpo.GenderDropdown.Click();
+            tpo.GenderDropdown.ClickWithRetry();
             tpo.MaleGenderSelection.Click();
             //tpo.MaleGenderSelection.SendKeys(Keys.Enter);
             Thread.Sleep(2000);
@@ -57,7 +57,7 @@ namespace AutomationTests.PageActions.PartnerPortalUS
             tpo.ContactNextButton.Click();
             tpo.IAmTheirSponsorButton.Click();
             tpo.SubmitApplicationButton.Click();
-            tpo.ToTeamListButton.Click();
+            tpo.ToTeamListButton.ClickWithRetry();
         }
     }
 }

@@ -280,5 +280,81 @@ namespace AutomationTests.ConfigElements
         {
             Thread.Sleep(9999999);
         }
+
+        public void ScrollToElement(IWebElement webElement)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                try
+                {
+                    IJavaScriptExecutor js = (IJavaScriptExecutor)_webDriver;
+                    Thread.Sleep(1000);
+                    js.ExecuteScript("arguments[0].scrollIntoView(false);", webElement);
+                    Thread.Sleep(1000);
+                    js.ExecuteScript("window.scrollBy(0," + -_webDriver.Manage().Window.Size.Height / 2 + ")");
+                    Thread.Sleep(1000);
+                    break;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    Thread.Sleep(1000);
+                    if (i == 4)
+                    {
+                        throw e;
+                    }
+                }
+            }
+
+        }
+
+        public void ScrollToElement(IWebElement webElement, Boolean flag)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                try
+                {
+                    IJavaScriptExecutor js = (IJavaScriptExecutor)_webDriver;
+                    Thread.Sleep(1000);
+                    if (flag)
+                    {
+                        js.ExecuteScript("arguments[0].scrollIntoView(true);", webElement);
+                    }
+                    else
+                    {
+                        js.ExecuteScript("arguments[0].scrollIntoView(false);", webElement);
+                    }
+                    Thread.Sleep(1000);
+                    break;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    Thread.Sleep(1000);
+                    if (i == 4)
+                    {
+                        throw e;
+                    }
+                }
+            }
+        }
+
+        public void WaitForElementToBeVisible(By by, int waitTime)
+        {
+            WebDriverWait wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(waitTime));
+            wait.Until(ExpectedConditions.ElementIsVisible(by));
+        }
+
+        public void WaitForElementToBeClickable(By by, int waitTime)
+        {
+            WebDriverWait wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(waitTime));
+            wait.Until(ExpectedConditions.ElementToBeClickable(by));
+        }
+
+        public void WaitForElementToBeClickable(IWebElement webElement, int waitTime)
+        {
+            WebDriverWait wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(waitTime));
+            wait.Until(ExpectedConditions.ElementToBeClickable(webElement));
+        }
     }
 }

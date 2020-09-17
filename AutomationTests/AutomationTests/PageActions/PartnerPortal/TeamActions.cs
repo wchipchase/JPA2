@@ -86,10 +86,10 @@ namespace AutomationTests.PageActions.PartnerPortal
             Team tpo = new Team(Driver);
             Thread.Sleep(3000);
             tpo.AddMemberButton.Click();
-            tpo.FillOutFormButton.Click();
+            tpo.FillOutFormButton.ClickWithRetry();
             tpo.FirstNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.FirstNameShipping.FirstName1);
             tpo.LastNameTextBox.SendKeys(Config.AddressInfo.ShippingAddress.LastNameShipping.LastName1);
-            tpo.GenderDropdown.Click();
+            tpo.GenderDropdown.ClickWithRetry();
             tpo.MaleGenderSelection.Click();
             tpo.IRBirthdayTextBoxDay.SendKeys(Config.UserInfo.Birthday.USBirthdayDay1);
             tpo.IRBirthdayTextBoxMonth.SendKeys(Config.UserInfo.Birthday.USBirthdayMon1);
@@ -109,19 +109,10 @@ namespace AutomationTests.PageActions.PartnerPortal
             tpo.ScrollViewport();
             tpo.ContactCity.SendKeys(Config.AddressInfo.ShippingAddress.CityShipping.City1);
             tpo.ContactCounty.SendKeys(Config.AddressInfo.ShippingAddress.CountyShipping.County);
-            try
-            {
-                IWebElement click1 = tpo.ContactNextButton;
-                click1.Click();
-            }
-            catch
-            {
-                IWebElement click2 = tpo.ContactNextButton;
-                click2.Click();
-            }
+            tpo.ContactNextButton.ClickWithRetry();
             tpo.IAmTheirSponsorButton.Click();
             tpo.SubmitApplicationButton.Click();
-            tpo.ToTeamListButton.Click();
+            tpo.ToTeamListButton.ClickWithRetry();
         }
 
         public void FillOutContactFormAndSubmitApplicationOtherSponsor()
