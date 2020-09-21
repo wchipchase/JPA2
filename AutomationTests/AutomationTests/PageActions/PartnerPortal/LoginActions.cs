@@ -294,9 +294,10 @@ namespace AutomationTests.PageActions.PartnerPortal
                 lpo.MXGmailUserNameTxtBox.SendKeys(UserInfo.GmailLogin.GmailLoginMX);
                 lpo.MXGmailNextButton.Click();
                 lpo.MXGmailPwdTxtBox.SendKeys(UserInfo.GmailPassword.GmailPwdMX);
-                lpo.MXGmailNextButton.Click();
+                lpo.MXGmailPwdNextButton.Click();
                 Thread.Sleep(1000);
-            }
+                lpo.JuicePlusSiteLink.Click();
+            }   
             catch (Exception e)
             {
                 Console.WriteLine(e);

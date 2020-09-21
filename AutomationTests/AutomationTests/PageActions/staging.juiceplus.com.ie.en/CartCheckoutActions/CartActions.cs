@@ -808,7 +808,7 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
                 js.ExecuteScript("arguments[0].click();", cop.TOSAcceptCheckbox);
                 js.ExecuteScript("arguments[0].click();", cop.ConfirmOrderButton);
                 waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-checkout-confirmation__title")));
-                Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Thank you! Your order is confirmed."));
+                //Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Thank you! Your order is confirmed."));
             }
             catch (ArgumentException e)
             {
@@ -962,7 +962,15 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
                 cop.StateDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.StateShipping.StateMex1);
                 cop.ScrollViewport();
                 cop.PostalCodeTextbox.SendKeys(AddressInfo.ShippingAddress.ZipCode.ZipCodeMex1);
-                //js.ExecuteScript("arguments[0].click();", cop.ReferringRepNoRadioButton);
+                try
+                {
+                    js.ExecuteScript("arguments[0].click();", cop.ReferringRepNoRadioButton);
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("Referrer rep no was already selected");
+                }
+                
                 /*js.ExecuteScript("arguments[0].click();", cop.ReferringRepYesRadioButton);
                 cop.ReferringRepNameIdTextbox.SendKeys("IR002626");*/
                 cpo.ScrollViewport();
@@ -1007,6 +1015,170 @@ namespace AutomationTests.PageActions.staging.juiceplus.com.ie.en.CartCheckoutAc
             {
                 Console.WriteLine(e);
             }
+
+        }
+
+        public void MXOfflineCheckoutWithCartItems()
+        {
+            try
+            {
+                IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+                WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(60));
+                NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+                ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
+                //nav.CheckoutButton.Click();
+                //Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Your Cart"));
+                //CartPageObjects cpo = new CartPageObjects();
+                //cpo.ProceedToCheckoutButton.Click();
+                CheckoutPageObjects cop = new CheckoutPageObjects(Driver);
+                waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[.='Checkout as guest']")));
+                Assert.IsTrue(Driver.WebDriver.PageSource.Contains("New to Juice Plus+?"));
+                cop.CheckoutAsGuestButton.Click();
+                Thread.Sleep(500);
+                cop.FirstNameShippingTextbox.Clear();
+                cop.FirstNameShippingTextbox.SendKeys("APRO");
+                cop.LastNameShippingTextbox.Clear();
+                cop.LastNameShippingTextbox.SendKeys(AddressInfo.ShippingAddress.LastNameShipping.LastName1);
+                cop.DaytimePhoneNumberShippingTextbox.Clear();
+                cop.DaytimePhoneNumberShippingTextbox.SendKeys(AddressInfo.ShippingAddress.PrimaryPhoneShipping.PrimaryPhoneMex1);
+                cop.AlternatePhoneNumberShippingTextbox.Clear();
+                cop.AlternatePhoneNumberShippingTextbox.SendKeys(AddressInfo.ShippingAddress.AlternatePhoneShipping.AlternatePhoneMex1);
+                cop.GenderDropdown.Click();
+                cop.MaleSelection.Click();
+                cop.EmailShippingTextbox.Clear();
+                cop.EmailShippingTextbox.SendKeys(UserInfo.UserEmail.UserEmail1);
+                cop.ScrollViewport();
+                cop.StreetAddressDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.StreetAddShipping.StreetAddMex1);
+                cop.MXDeliveryNeighborhood.SendKeys(AddressInfo.ShippingAddress.NeighborhoodorColony.NeighborhoodMex1);
+                cop.CityDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.CityShipping.CityMex1);
+                cop.StateDeliveryTextbox.SendKeys(AddressInfo.ShippingAddress.StateShipping.StateMex1);
+                cop.ScrollViewport();
+                cop.PostalCodeTextbox.SendKeys(AddressInfo.ShippingAddress.ZipCode.ZipCodeMex1);
+                try
+                {
+                    js.ExecuteScript("arguments[0].click();", cop.ReferringRepNoRadioButton);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Referrer rep no was already selected");
+                }
+
+                /*js.ExecuteScript("arguments[0].click();", cop.ReferringRepYesRadioButton);
+                cop.ReferringRepNameIdTextbox.SendKeys("IR002626");*/
+                cpo.ScrollViewport();
+                /*waitForElement.Until(ExpectedConditions.ElementIsVisible(By.XPath("//span[contains(.,'Martin Deegan')]"))); 
+                Actions action = new Actions(Driver.WebDriver);
+                action.MoveToElement(cop.ReferringRepNameTextbox).Perform();
+                cop.ReferringRepNameTextbox.Click();*/
+                try
+                {
+                    IWebElement click1 = cop.ProceedToCheckoutButton;
+                    click1.Click();
+                }
+                catch (Exception e)
+                {
+                    nav.CartIconCounter.Click();
+                    IWebElement click2 = cop.ProceedToCheckoutButton;
+                    click2.Click();
+                }
+                //cop.ProceedToCheckoutButton.Click();
+                Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Secure Payment"));
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e);
+            }
+
+        }
+
+        public void OtherOxxo()
+        {
+            IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+            WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(60));
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
+            CheckoutPageObjects cop = new CheckoutPageObjects(Driver);
+            //cop.ProceedToCheckoutButton.Click();
+            Thread.Sleep(500);
+            js.ExecuteScript("arguments[0].click();", cop.OtherPaymentMethodButton);
+            Thread.Sleep(1000);
+            js.ExecuteScript("arguments[0].click()", cop.OxxoPaymentMethodButton);
+            js.ExecuteScript("arguments[0].click();", cop.TOSAcceptCheckbox);
+            js.ExecuteScript("arguments[0].click();", cop.ConfirmOrderButton);
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-checkout-confirmation__title")));
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Thank you! Your order is confirmed."));
+            cop.PrintVoucherBtn.Click();
+        }
+
+        public void OtherBnamex()
+        {
+            IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+            WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(60));
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
+            CheckoutPageObjects cop = new CheckoutPageObjects(Driver);
+            //cop.ProceedToCheckoutButton.Click();
+            Thread.Sleep(500);
+            js.ExecuteScript("arguments[0].click();", cop.OtherPaymentMethodButton);
+            Thread.Sleep(1000);
+            js.ExecuteScript("arguments[0].click()", cop.BnamexPaymentMethodButton);
+            js.ExecuteScript("arguments[0].click();", cop.TOSAcceptCheckbox);
+            js.ExecuteScript("arguments[0].click();", cop.ConfirmOrderButton);
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-checkout-confirmation__title")));
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Thank you! Your order is confirmed."));
+            cop.PrintVoucherBtn.Click();
+        }
+
+        public void OtherBancomer()
+        {
+            IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+            WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(60));
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
+            CheckoutPageObjects cop = new CheckoutPageObjects(Driver);
+            //cop.ProceedToCheckoutButton.Click();
+            Thread.Sleep(500);
+            js.ExecuteScript("arguments[0].click();", cop.OtherPaymentMethodButton);
+            Thread.Sleep(1000);
+            js.ExecuteScript("arguments[0].click()", cop.BancomerPaymentMethodButton);
+            js.ExecuteScript("arguments[0].click();", cop.TOSAcceptCheckbox);
+            js.ExecuteScript("arguments[0].click();", cop.ConfirmOrderButton);
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-checkout-confirmation__title")));
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Thank you! Your order is confirmed."));
+            cop.PrintVoucherBtn.Click();
+        }
+
+        public void OtherSerfin()
+        {
+            IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+            WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(60));
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
+            CheckoutPageObjects cop = new CheckoutPageObjects(Driver);
+            //cop.ProceedToCheckoutButton.Click();
+            Thread.Sleep(500);
+            js.ExecuteScript("arguments[0].click();", cop.OtherPaymentMethodButton);
+            Thread.Sleep(1000);
+            js.ExecuteScript("arguments[0].click()", cop.SerfinPaymentMethodButton);
+            js.ExecuteScript("arguments[0].click();", cop.TOSAcceptCheckbox);
+            js.ExecuteScript("arguments[0].click();", cop.ConfirmOrderButton);
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-checkout-confirmation__title")));
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Thank you! Your order is confirmed."));
+            cop.PrintVoucherBtn.Click();
+        }
+
+        public void OtherPlsUseCC()
+        {
+            IJavaScriptExecutor js = ((IJavaScriptExecutor)Driver.WebDriver);
+            WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(60));
+            NavigationHeaderPageObjects nav = new NavigationHeaderPageObjects(Driver);
+            ChewablesPageObjects cpo = new ChewablesPageObjects(Driver);
+            CheckoutPageObjects cop = new CheckoutPageObjects(Driver);
+            //cop.ProceedToCheckoutButton.Click();
+            Thread.Sleep(500);
+            js.ExecuteScript("arguments[0].click();", cop.OtherPaymentMethodButton);
+            Thread.Sleep(1000);
+            Assert.IsTrue(Driver.WebDriver.PageSource.Contains("Please use a credit card to pay in monthly installments."));
 
         }
     }

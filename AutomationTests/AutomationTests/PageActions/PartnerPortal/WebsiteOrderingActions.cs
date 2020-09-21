@@ -480,15 +480,6 @@ namespace AutomationTests.PageActions.PartnerPortal
                 var NumInCart = nav.CartIconCounter.Text;
                 Console.WriteLine(NumInCart);
                 Thread.Sleep(1000);
-                try
-                {
-                    Assert.That(NumInCart, Is.EqualTo("1"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e); ;
-                }
                 navac.NavigateOurProductsCapsulesClick();
                 caps.ClickVegetablesAndFruitCapsuleShopNow();
 
@@ -541,15 +532,6 @@ namespace AutomationTests.PageActions.PartnerPortal
                 Thread.Sleep(1000);
                 Console.WriteLine(NumInCart);
                 Thread.Sleep(1000);
-                try
-                {
-                    Assert.That(NumInCart, Is.EqualTo("1"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e); ;
-                }
 
                 nav.CartIconCounter.Click();
 
@@ -1320,6 +1302,79 @@ namespace AutomationTests.PageActions.PartnerPortal
 
         }
 
+        public void MXAddOmegaToCartShipment()
+        {
+            WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
+
+            try
+            {
+                navac.NavigateOurProductsOmegaClick();
+
+                try
+                {
+                    Assert.IsFalse(Driver.WebDriver.PageSource.Contains("£"));
+                    //Assert.IsTrue(Driver.WebDriver.PageSource.Contains("€"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+                Task.Delay(500).Wait(1500);
+
+                cpob.ScrollViewport("500");
+                var NumOfProducts = oopo.NumOfProductOrder.GetAttribute("value");
+                try
+                {
+                    Assert.That(NumOfProducts, Is.EqualTo("1"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+                copo.AddToCartOrder.Click();
+                Thread.Sleep(1000);
+                var NumInCart = nav.CartIconCounter.Text;
+                Console.WriteLine(NumInCart);
+                Thread.Sleep(1000);
+                try
+                {
+                    Assert.That(NumInCart, Is.EqualTo("1"));
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e); ;
+                }
+
+                nav.CartIconCounter.Click();
+
+                try
+                {
+                    IWebElement click1 = nav.CheckoutButton;
+                    click1.Click();
+                }
+                catch (Exception e)
+                {
+                    nav.CartIconCounter.Click();
+                    IWebElement click2 = nav.CheckoutButton;
+                    click2.Click();
+                }
+
+
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e);
+            }
+
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".m-icon-badge__counter")));
+            carp.PayPerShipment.Click();
+            carp.NavigateToProceedToCheckoutAndClick();
+
+        }
+
         public void MXAddRecurringAndPayInFull()
         {
             WebDriverWait waitForElement = new WebDriverWait(Driver.WebDriver, TimeSpan.FromSeconds(30));
@@ -1357,15 +1412,6 @@ namespace AutomationTests.PageActions.PartnerPortal
                 var NumInCart = nav.CartIconCounter.Text;
                 Console.WriteLine(NumInCart);
                 Thread.Sleep(1000);
-                try
-                {
-                    Assert.That(NumInCart, Is.EqualTo("1"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e); ;
-                }
 
                 navac.NavigateOurProductsCapsulesClick();
                 cpob.ScrollViewport("500");
@@ -1375,16 +1421,6 @@ namespace AutomationTests.PageActions.PartnerPortal
                 Thread.Sleep(1000);
                 Console.WriteLine(NumInCart);
                 Thread.Sleep(1000);
-                try
-                {
-                    Assert.That(NumInCart, Is.EqualTo("1"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e); ;
-                }
-
 
                 nav.CartIconCounter.Click();
 
@@ -2242,42 +2278,6 @@ namespace AutomationTests.PageActions.PartnerPortal
                 caps.MXClickVegetablesAndFruitCapsuleShopNow();
 
                 caps.ScrollViewport("1500");
-                var NumOfProducts = cpop.NumOfProductOrderCapsules.GetAttribute("value");
-                try
-                {
-                    Assert.That(NumOfProducts, Is.EqualTo("1"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e); ;
-                }
-
-                cpop.IncrementArrowOrderCapsules.Click();
-                var incrProductCount = cpop.NumOfProductOrderCapsules.GetAttribute("value");
-                Thread.Sleep(500);
-                try
-                {
-                    Assert.That(incrProductCount, Is.EqualTo("2"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e);
-                }
-
-                cpop.DecrementArrowOrderCapsules.Click();
-                var decrProductCount = cpop.NumOfProductOrderCapsules.GetAttribute("value");
-                try
-                {
-                    Assert.That(decrProductCount, Is.EqualTo("1"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e); ;
-                }
-
                 try
                 {
                     IWebElement click1 = cpop.AddToCartOrderCapsules;
@@ -2293,15 +2293,6 @@ namespace AutomationTests.PageActions.PartnerPortal
                 var NumInCart = nav.CartIconCounter.Text;
                 Console.WriteLine(NumInCart);
                 Thread.Sleep(1000);
-                try
-                {
-                    Assert.That(NumInCart, Is.EqualTo("1"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e); ;
-                }
                 navac.NavigateOurProductsCapsulesClick();
                 cpob.ScrollViewport("1500");
                 try
@@ -2313,16 +2304,6 @@ namespace AutomationTests.PageActions.PartnerPortal
                 {
                     IWebElement click1 = caps.MXShopNowBerryCapsules;
                     click1.Click();
-                }
-
-                try
-                {
-                    Assert.That(NumOfProducts, Is.EqualTo("1"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e); ;
                 }
 
                 cpob.ScrollViewport("1000");
@@ -2341,16 +2322,6 @@ namespace AutomationTests.PageActions.PartnerPortal
                 Thread.Sleep(1000);
                 Console.WriteLine(NumInCart);
                 Thread.Sleep(1000);
-                try
-                {
-                    Assert.That(NumInCart, Is.EqualTo("1"));
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e); ;
-                }
-
                 nav.CartIconCounter.Click();
 
             }

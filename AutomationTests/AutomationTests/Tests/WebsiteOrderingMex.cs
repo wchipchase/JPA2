@@ -358,6 +358,79 @@ namespace AutomationTests.Tests
             cart.MXCheckoutWithCartItemsVisa();
         }
 
+        public void GmailInstallmentSingleRecurringVisa()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAddVegFruitCapsuleToCart();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void GmailFullPayRecurSingleItemAMEX()
+        {
+            lgac.MXLoginGmail();
+            woac.MXAddOmegaToCartRecurring();
+            cart.MXPartnerCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void GmailFullPayRecurSingleItemVisa()
+        {
+            lgac.MXLoginGmail();
+            woac.MXAddOmegaToCartRecurring();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void Gmail2ItemsInstallmentAMEX()
+        {
+            lgac.MXLoginGmail();
+            woac.MXAdd2ItemsToCart();
+            cart.MXPartnerCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void Gmail2ItemsInstallmentVisa()
+        {
+            lgac.MXLoginGmail();
+            woac.MXAdd2ItemsToCart();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void Gmail2ItemsPayInFullAMEX()
+        {
+            lgac.MXLoginGmail();
+            woac.MXAdd2ItemsPayInFull();
+            cart.MXPartnerCheckoutWithCartItemsAMEX();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void Gmail2ItemsPayInFullVisa()
+        {
+            lgac.MXLoginGmail();
+            woac.MXAdd2ItemsPayInFull();
+            cart.MXCheckoutWithCartItemsVisa();
+        }
+
+
         [Test]
         [Category("smoketest-mx")]
         [Category("alltest")]
@@ -367,6 +440,75 @@ namespace AutomationTests.Tests
             lgac.MXLoginGmail();
             woac.MXAddRecurringAndPayInFull();
             cart.MXCheckoutWithCartItemsVisa();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+
+        public void GMailRecurringAndPayInFullAMEX()
+        {
+            lgac.MXLoginGmail();
+            woac.MXAddRecurringAndPayInFull();
+            cart.MXPartnerCheckoutWithCartItemsAMEX();
+        }
+
+
+
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+        public void OfflineShipmentOxxo()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAddOmegaToCartShipment();
+            cart.MXOfflineCheckoutWithCartItems();
+            cart.OtherOxxo();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+        public void OfflineShipmentBnamex()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAddOmegaToCartShipment();
+            cart.MXOfflineCheckoutWithCartItems();
+            cart.OtherBnamex();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+        public void OfflineShipmentSerfin()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAddOmegaToCartShipment();
+            cart.MXOfflineCheckoutWithCartItems();
+            cart.OtherSerfin();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+        public void OfflineShipmentBancomer()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAddOmegaToCartShipment();
+            cart.MXOfflineCheckoutWithCartItems();
+            cart.OtherBancomer();
+        }
+
+        [Test]
+        [Category("smoketest-mx")]
+        [Category("alltest")]
+        public void OfflineShipmentPlsUseCC()
+        {
+            lgac.GuestCookieAccept();
+            woac.MXAddOmegaToCartRecurring();
+            cart.MXOfflineCheckoutWithCartItems();
+            cart.OtherPlsUseCC();
         }
 
         [TearDown]

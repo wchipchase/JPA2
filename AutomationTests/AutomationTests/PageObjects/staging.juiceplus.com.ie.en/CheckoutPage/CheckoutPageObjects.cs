@@ -152,6 +152,24 @@ namespace AutomationTests.PageObjects.staging.juiceplus.com.ie.en.CheckoutPage
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//input[@value='amx']")]
         public IWebElement AMEXPaymentMethodButton { get; set; }
 
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//label[contains(.,'Other')]")]
+        public IWebElement OtherPaymentMethodButton { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//label[contains(.,'oxxo')]")]
+        public IWebElement OxxoPaymentMethodButton { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//label[.='bancomer']")]
+        public IWebElement BancomerPaymentMethodButton { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//label[contains(.,'bnamex')]")]
+        public IWebElement BnamexPaymentMethodButton { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//label[contains(.,'serfin')]")]
+        public IWebElement SerfinPaymentMethodButton { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//span[.='Print Voucher']")]
+        public IWebElement PrintVoucherBtn { get; set; }
+
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.Name, Using = "payment.cardNumber")]
         public IWebElement PaymentCCNumberTextbox { get; set; }
 

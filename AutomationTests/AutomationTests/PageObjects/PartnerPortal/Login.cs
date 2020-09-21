@@ -116,5 +116,9 @@ namespace AutomationTests.PageObjects.PartnerPortal
 
         [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qIypjc TrZEUc']/div[@class='VfPpkd-RLmnJb']")]
         public IWebElement MXGmailNextButton { get; set; }
+
+        [OpenQA.Selenium.Support.PageObjects.FindsBy(How = How.XPath, Using = "//*[@id='passwordNext']/div/button/div[2]")]
+        public IWebElement MXGmailPwdNextButton { get; set; }
+        
     }
 }
